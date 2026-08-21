@@ -88,7 +88,7 @@ sumo:desires
     odsr:commitsToContentStance odsr:StateOfAffairsContent ;
     odsr:noAttributableCommitmentOn odsr:FamilyAxis ;
     odsr:commitmentEvidence "(instance desires PropositionalAttitude) (domain desires 1 CognitiveAgent) (domain desires 2 Formula); wants is an ObjectAttitude, and (=> (and (wants ?AGENT ?OBJ) (instance ?OBJ Object)) (desires ?AGENT (possesses ?AGENT ?OBJ)))." ;
-    odsr:commitmentNote "Undeclared. SUMO takes an explicit side on the content axis and reduces object-desire to a propositional desire about possession -- precisely the disambiguation the philosophical literature rejects for cases like Nora's tea, where the likely satisfier is drinking soon, not possessing. No essence-level commitment is attributable: the axioms fix content and inferential role, not what desiring essentially is." .
+    odsr:commitmentNote "Undeclared. SUMO takes an explicit side on the content axis and reduces object-desire to a propositional desire about possession -- precisely the disambiguation the philosophical literature rejects for cases like Nora's tea, where the likely satisfier is drinking soon, not possessing. No essence-level commitment is attributable: the axioms fix content and inferential role, not what desiring essentially is. Maintainer response (A. Pease, ontologyportal/sumo#614, 2026-08-21): confirms that desires takes a full formula (content coding upheld) and stresses that the possession bridge axiom concerns only the object-attitude wants, not desire content in general; coding retained with this scoping." .
 
 #### BDI Ontology (FOSSR) -- file-audited ####
 
