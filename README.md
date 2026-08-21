@@ -18,6 +18,8 @@ Namespace: `https://w3id.org/ontodesire#` (prefix `odsr:`). Registration of the
 w3id redirect is pending; until it resolves, the ontology is served from this
 repository and its documentation site.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22037194.svg)](https://doi.org/10.5281/zenodo.22037194)
+
 ## Artifacts
 
 | File | IRI / purpose |
