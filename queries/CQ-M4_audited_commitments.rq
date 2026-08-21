@@ -1,0 +1,23 @@
+# CQ-M4: To which family/stance does each audited external term commit, on
+# which axis -- and what are the machine-readable audit outcomes (no
+# attributable commitment / deliberately uncommitted / declared by source)?
+# Computed from the audit file alone (plus the commitments module it
+# imports), exemplifying third-party usage. Axis-specific subproperties are
+# queried explicitly (plain-SPARQL engines do not apply rdfs:subPropertyOf).
+PREFIX odsr: <https://w3id.org/ontodesire#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?term ?axis (GROUP_CONCAT(?target; separator="; ") AS ?targets)
+WHERE {
+  VALUES (?p ?axis) {
+    (odsr:commitsToFamily            "family")
+    (odsr:commitsToContentStance     "content stance")
+    (odsr:commitsToCategorialStance  "categorial stance")
+    (odsr:commitsToStructuralStance  "structural stance")
+    (odsr:commitsTo                  "unspecified axis")
+    (odsr:noAttributableCommitmentOn "NO ATTRIBUTABLE commitment on")
+    (odsr:deliberatelyUncommittedOn  "DELIBERATELY UNCOMMITTED on")
+    (odsr:declaredBySourceOn         "DECLARED BY SOURCE on")
+  }
+  ?term ?p ?tgt . ?tgt rdfs:label ?target .
+}
+GROUP BY ?term ?axis ORDER BY ?term ?axis

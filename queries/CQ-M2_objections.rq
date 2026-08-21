@@ -1,0 +1,11 @@
+# CQ-M2: Which objections hit which theories, and which theory answers one?
+PREFIX odsr: <https://w3id.org/ontodesire#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?objection ?relation ?theory
+WHERE {
+  { ?t odsr:suffersObjection ?o . BIND("suffered by" AS ?relation) }
+  UNION
+  { ?t odsr:answersObjection ?o . BIND("answered by" AS ?relation) }
+  ?o rdfs:label ?objection . ?t rdfs:label ?theory .
+}
+ORDER BY ?objection DESC(?relation) ?theory

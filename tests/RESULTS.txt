@@ -1,0 +1,11 @@
+# OntoDesire provocation tests (owlready2 0.51, HermiT bundled)
+[PASS] T1 base ontology: expected consistent, got consistent
+[PASS] T2 monofactorial theory with two distinct marks: expected INCONSISTENT, got INCONSISTENT
+[PASS] T3 desire with two distinct bearers: expected INCONSISTENT, got INCONSISTENT
+[PASS] T4 desire both occurrent and standing: expected INCONSISTENT, got INCONSISTENT
+[PASS] T5 unlabelled theory with three distinct marks classified holistic: expected INFERRED holistic, got INFERRED holistic
+[PASS] S1 released files: expected conforms=True, got True
+[PASS] S2 desire with no asserted content: expected conforms=False, got False
+[PASS] S3 commitsToFamily targeting a categorial stance: expected conforms=False, got False
+[PASS] S4 structural-stance self-declaration without evidence: expected conforms=False, got False
+ALL PASS

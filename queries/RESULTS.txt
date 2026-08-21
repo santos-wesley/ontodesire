@@ -1,0 +1,75 @@
+# OntoDesire query results (tool: rdflib 7.6.0)
+Triples core+commitments: 1043
+Triples core+commitments+audit: 1075
+
+== queries/CQ-D1_nora_partitions.rq ==
+desire for a state of affairs | by content kind
+occurrent desire | by mode of manifestation
+first-order desire | by order
+
+== queries/CQ-M1_marks_per_theory.rq ==
+Davidsonian interpretationism | disposition to take the actions one believes conducive to p; disposition to pleasure at its seeming that p, displeasure at its seeming that not-p; disposition to believe that p is good; disposition to have attention drawn to reasons in favour of p
+Lewisian functionalism | disposition to take the actions one believes conducive to p; disposition to pleasure at its seeming that p, displeasure at its seeming that not-p; disposition to believe that p is good; disposition to have attention drawn to reasons in favour of p; capture of attention by information bearing on whether p
+caring theory | disposition to take the actions one believes conducive to p; disposition to pleasure at its seeming that p, displeasure at its seeming that not-p; disposition to have attention drawn to reasons in favour of p
+desire as belief in the good | disposition to believe that p is good
+desire as perception of the good | disposition for p to appear good (perceptually or quasi-perceptually)
+directed-attention theory | disposition to have attention drawn to reasons in favour of p
+hedonic dispositional theory | disposition to pleasure at its seeming that p, displeasure at its seeming that not-p
+hedonic neural-identity theory | disposition to pleasure at its seeming that p, displeasure at its seeming that not-p
+reward-learning theory | use of representations of p to drive reward-based learning
+simple action-dispositional theory | disposition to take the actions one believes conducive to p
+sophisticated action-dispositional theory | disposition to take the actions one believes conducive to p
+teleofunctional action theory | having the (biological) function of producing action
+
+== queries/CQ-M2_objections.rq ==
+Lewis's decision-theoretic objection | suffered by | desire as belief in the good
+Lewis's decision-theoretic objection | answered by | desire as perception of the good
+a priori implausibility objection | suffered by | reward-learning theory
+behavioral tic objection | suffered by | simple action-dispositional theory
+causal priority of desire over pleasure | suffered by | hedonic dispositional theory
+double fault objection (Stampe) | suffered by | sophisticated action-dispositional theory
+double fault objection (Stampe) | answered by | teleofunctional action theory
+motivating belief-in-good objection | suffered by | sophisticated action-dispositional theory
+motivating belief-in-good objection | suffered by | teleofunctional action theory
+narrow attentional focus objection | suffered by | directed-attention theory
+non-human animal objection | suffered by | desire as belief in the good
+non-human animal objection | suffered by | desire as perception of the good
+unactionable desires objection | suffered by | sophisticated action-dispositional theory
+
+== queries/CQ-M3_categories.rq ==
+simple action-dispositional theory | desire as disposition
+sophisticated action-dispositional theory | desire as disposition
+hedonic dispositional theory | desire as disposition to occurrent affective states
+desire as belief in the good | desire as doxastic state (a kind of belief)
+desire as perception of the good | desire as high-level perceptual state
+directed-attention theory | desire as mental process
+hedonic neural-identity theory | desire as occurrent affective episode
+reward-learning theory | desire as reward-learning mechanism
+Davidsonian interpretationism | desire as state type occupying a causal role
+Lewisian functionalism | desire as state type occupying a causal role
+caring theory | desire as state type occupying a causal role
+teleofunctional action theory | desire as state with a biological function
+
+== queries/CQ-M4_audited_commitments.rq ==
+http://purl.obolibrary.org/obo/MFOEM_000220 | NO ATTRIBUTABLE commitment on | theory-family (essence-level) axis
+http://purl.obolibrary.org/obo/MFOEM_000220 | categorial stance | desire as occurrent affective episode
+http://purl.obolibrary.org/obo/MFOEM_000220 | content stance | desires are for states of affairs
+http://purl.obolibrary.org/obo/MF_0000045 | NO ATTRIBUTABLE commitment on | theory-family (essence-level) axis
+http://purl.obolibrary.org/obo/MF_0000045 | categorial stance | desire as mental process
+http://purl.obolibrary.org/obo/MF_0000045 | content stance | desires are for states of affairs
+https://w3id.org/fossr/ontology/bdi/Desire | NO ATTRIBUTABLE commitment on | theory-family (essence-level) axis
+https://w3id.org/fossr/ontology/bdi/Desire | categorial stance | desire as state type occupying a causal role
+https://w3id.org/ontodesire#proxy-UFOC-Desire | DECLARED BY SOURCE on | categorial-stance axis
+https://w3id.org/ontodesire#proxy-UFOC-Desire | NO ATTRIBUTABLE commitment on | theory-family (essence-level) axis
+https://w3id.org/ontodesire#proxy-UFOC-Desire | categorial stance | desire as mental moment (trope) inhering in an agent
+https://w3id.org/ontodesire#proxy-UFOC-Desire | content stance | desires are for states of affairs
+https://w3id.org/sumo/kb/desires | NO ATTRIBUTABLE commitment on | theory-family (essence-level) axis
+https://w3id.org/sumo/kb/desires | content stance | desires are for states of affairs
+
+== queries/CQ-M5_self_declared.rq ==
+desire | deliberate neutrality | theory-family (essence-level) axis | skos:definition of Desire: 'Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about.'
+desire | structural commitment | every desire has exactly one bearer | Desire rdfs:subClassOf [ owl:onProperty hasBearer ; owl:cardinality 1 ] (this module, Section 12).
+desire | structural commitment | every desire has world-to-mind direction of fit | Desire rdfs:subClassOf [ owl:onProperty hasDirectionOfFit ; owl:hasValue WorldToMind ] (this module, Section 7). The axiom is universal, not exclusive: nothing caps hasDirectionOfFit, so a desire may consistently also bear mind-to-world fit.
+desire | structural commitment | standing desires are genuine desires, and every desire is occurrent or standing | Desire owl:equivalentClass [ owl:unionOf ( OccurrentDesire StandingDesire ) ] (this module, Section 3.3).
+is satisfied by | structural commitment | satisfaction conditions are states of affairs | isSatisfiedBy rdfs:range StateOfAffairs (this module, Section 10).
+proposition | structural commitment | propositions modelled as states of affairs | Proposition rdfs:subClassOf StateOfAffairs (this module, Section 1).

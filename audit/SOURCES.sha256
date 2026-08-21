@@ -1,0 +1,8 @@
+# Audited sources retrieved 2026-08-21T00:46:35Z
+owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/MFOEM/2025-07-31/MFOEM.owl"/>
+b3b5f3a74be326350df3fffd24992dee9b990af3da0690a9d302cc1de2940894  audit/sources/MFOEM.owl
+owl:versionIRI rdf:resource="&obo;MF/2025-07-08/MF.owl"/>
+1c0166102ddfc57a5415b541b86a4894116e00a36f66d49fd2bafb647f67b587  audit/sources/MF.owl
+# SUMO commit: 4444031ad0c1643a9fa6808c35e5f47ecd7f1e3a
+50e55126c0afb25b1686c090a29172b26e0f2fe1987bc94dac1979d615629503  audit/sources/Merge.kif
+250e02bf7987802f6051fbf01f9af53990863f5edc3a8ea52de09c382cbde984  audit/sources/fossr-bdi.ttl

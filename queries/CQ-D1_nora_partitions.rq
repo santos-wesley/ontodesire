@@ -1,0 +1,11 @@
+# CQ-D1: Under which partitions does Nora's occurrent tea desire fall?
+PREFIX odsr: <https://w3id.org/ontodesire#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?class ?criterion
+WHERE {
+  odsr:norasDesireForTea rdf:type ?c .
+  ?c odsr:partitionedBy ?crit .
+  ?c rdfs:label ?class . ?crit rdfs:label ?criterion .
+}
+ORDER BY ?criterion

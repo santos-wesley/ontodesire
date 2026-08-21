@@ -1,0 +1,1400 @@
+<https://w3id.org/ontodesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ontodesire> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ontodesire/0.3.0> .
+<https://w3id.org/ontodesire> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/ontodesire/commitments> .
+<https://w3id.org/ontodesire> <http://purl.org/dc/terms/description> "A reference ontology of desire that reifies rival philosophical theories of desire as first-class entities, keeping the Desire class deliberately underdetermined. Includes characteristic marks, objections, the four orthogonal partitions of desire, per-theory categorial stances, and bibliographic anchoring."@en .
+<https://w3id.org/ontodesire> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/ontodesire> <http://purl.org/dc/terms/source> <https://plato.stanford.edu/entries/desire/> .
+<https://w3id.org/ontodesire> <http://purl.org/dc/terms/title> "OntoDesire"@en .
+<https://w3id.org/ontodesire> <http://www.w3.org/2000/01/rdf-schema#comment> "For declaring commitments only, import <https://w3id.org/ontodesire/commitments> alone."@en .
+<https://w3id.org/ontodesire> <http://www.w3.org/2002/07/owl#versionInfo> "0.3.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ontodesire#commitmentEvidence
+<https://w3id.org/ontodesire#commitmentEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ontodesire#commitmentNote
+<https://w3id.org/ontodesire#commitmentNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ontodesire#commitsToStructuralStance
+<https://w3id.org/ontodesire#commitsToStructuralStance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ontodesire#deliberatelyUncommittedOn
+<https://w3id.org/ontodesire#deliberatelyUncommittedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ontodesire#generates
+<https://w3id.org/ontodesire#generates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/ontodesire#generates> <http://www.w3.org/2000/01/rdf-schema#label> "generates"@en .
+<https://w3id.org/ontodesire#generates> <http://www.w3.org/2004/02/skos/core#scopeNote> "Annotates an origin mechanism with the desire classes (by justificatory structure) whose instances it typically generates."@en .
+# 
+# https://w3id.org/ontodesire#partitionedBy
+<https://w3id.org/ontodesire#partitionedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/ontodesire#partitionedBy> <http://www.w3.org/2000/01/rdf-schema#label> "partitioned by"@en .
+<https://w3id.org/ontodesire#partitionedBy> <http://www.w3.org/2004/02/skos/core#definition> "Annotates a subclass of Desire with the orthogonal criterion that generates it, so that the four facets are not mistaken for a single tree."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ontodesire#answersObjection
+<https://w3id.org/ontodesire#answersObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#answersObjection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#answersObjection> <http://www.w3.org/2000/01/rdf-schema#label> "answers objection"@en .
+# 
+# https://w3id.org/ontodesire#anticipatedBy
+<https://w3id.org/ontodesire#anticipatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#anticipatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#anticipatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "anticipated by"@en .
+# 
+# https://w3id.org/ontodesire#attributedTo
+<https://w3id.org/ontodesire#attributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#attributedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#attributedTo> <http://www.w3.org/2000/01/rdf-schema#label> "attributed to"@en .
+# 
+# https://w3id.org/ontodesire#belongsToFamily
+<https://w3id.org/ontodesire#belongsToFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#belongsToFamily> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#TheoryOfDesire> .
+<https://w3id.org/ontodesire#TheoryOfDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#belongsToFamily> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#TheoryFamily> .
+<https://w3id.org/ontodesire#TheoryFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#belongsToFamily> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to family"@en .
+# 
+# https://w3id.org/ontodesire#defendedBy
+<https://w3id.org/ontodesire#defendedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#defendedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#defendedBy> <http://www.w3.org/2000/01/rdf-schema#label> "defended by"@en .
+# 
+# https://w3id.org/ontodesire#hasBearer
+<https://w3id.org/ontodesire#hasBearer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#hasBearer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#hasBearer> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Bearer> .
+<https://w3id.org/ontodesire#hasBearer> <http://www.w3.org/2000/01/rdf-schema#label> "has bearer"@en .
+# 
+# https://w3id.org/ontodesire#hasContent
+<https://w3id.org/ontodesire#hasContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#hasContent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#hasContent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Content> .
+<https://w3id.org/ontodesire#hasContent> <http://www.w3.org/2000/01/rdf-schema#label> "has content"@en .
+# 
+# https://w3id.org/ontodesire#hasDirectionOfFit
+<https://w3id.org/ontodesire#hasDirectionOfFit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#hasDirectionOfFit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#hasDirectionOfFit> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#DirectionOfFit> .
+<https://w3id.org/ontodesire#hasDirectionOfFit> <http://www.w3.org/2000/01/rdf-schema#label> "has direction of fit"@en .
+# 
+# https://w3id.org/ontodesire#hasObjectAttitude
+<https://w3id.org/ontodesire#hasObjectAttitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#hasObjectAttitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/ontodesire#hasObjectAttitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#hasObjectAttitude> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#hasObjectAttitude> <http://www.w3.org/2000/01/rdf-schema#label> "has as object (a lower-order attitude)"@en .
+# 
+# https://w3id.org/ontodesire#hasStrength
+<https://w3id.org/ontodesire#hasStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#hasStrength> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#hasStrength> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#DesireStrength> .
+<https://w3id.org/ontodesire#hasStrength> <http://www.w3.org/2000/01/rdf-schema#label> "has strength"@en .
+# 
+# https://w3id.org/ontodesire#identifiesDesireWith
+<https://w3id.org/ontodesire#identifiesDesireWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#identifiesDesireWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#TheoryOfDesire> .
+<https://w3id.org/ontodesire#identifiesDesireWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#identifiesDesireWith> <http://www.w3.org/2000/01/rdf-schema#label> "identifies desire with"@en .
+# 
+# https://w3id.org/ontodesire#impliesCategory
+<https://w3id.org/ontodesire#impliesCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#impliesCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#TheoryOfDesire> .
+<https://w3id.org/ontodesire#impliesCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#CategorialStance> .
+<https://w3id.org/ontodesire#CategorialStance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#impliesCategory> <http://www.w3.org/2000/01/rdf-schema#label> "implies ontological category"@en .
+<https://w3id.org/ontodesire#impliesCategory> <http://www.w3.org/2004/02/skos/core#definition> "Relates a theory to the ontological category that desire would fall under if the theory were true. The theories disagree about category, not only about essence."@en .
+# 
+# https://w3id.org/ontodesire#isMeansTo
+<https://w3id.org/ontodesire#isMeansTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#isMeansTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/ontodesire#isMeansTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#isMeansTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#isMeansTo> <http://www.w3.org/2000/01/rdf-schema#label> "is means to"@en .
+# 
+# https://w3id.org/ontodesire#isSatisfiedBy
+<https://w3id.org/ontodesire#isSatisfiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#isSatisfiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#isSatisfiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#StateOfAffairs> .
+<https://w3id.org/ontodesire#isSatisfiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is satisfied by"@en .
+<https://w3id.org/ontodesire#isSatisfiedBy> <http://www.w3.org/2004/02/skos/core#scopeNote> "For desires, satisfaction is the actual realization of the state of affairs, not the belief that it obtained."@en .
+<https://w3id.org/ontodesire#isSatisfiedBy> <https://w3id.org/ontodesire#commitsToStructuralStance> <https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid1 <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/ontodesire#isSatisfiedBy> .
+_:genid1 <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/ontodesire#commitsToStructuralStance> .
+_:genid1 <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs> .
+_:genid1 <https://w3id.org/ontodesire#commitmentEvidence> "isSatisfiedBy rdfs:range StateOfAffairs (this module, Section 10)." .
+_:genid1 <https://w3id.org/ontodesire#commitmentNote> "Declared by OntoDesire itself: even object-desires are given state-of-affairs satisfiers -- structurally adjacent to the possession-rewrite the audit flags in SUMO, retained here because satisfaction conditions, unlike contents, are standardly worldly; object-desire theorists may contest it." .
+# 
+# https://w3id.org/ontodesire#locatesDesireIn
+<https://w3id.org/ontodesire#locatesDesireIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#locatesDesireIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#TheoryOfDesire> .
+<https://w3id.org/ontodesire#locatesDesireIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#NeuralRealizer> .
+<https://w3id.org/ontodesire#locatesDesireIn> <http://www.w3.org/2000/01/rdf-schema#label> "locates desire in"@en .
+# 
+# https://w3id.org/ontodesire#preferredTo
+<https://w3id.org/ontodesire#preferredTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#preferredTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/ontodesire#preferredTo> <http://www.w3.org/2000/01/rdf-schema#label> "preferred to"@en .
+# 
+# https://w3id.org/ontodesire#raisedBy
+<https://w3id.org/ontodesire#raisedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#raisedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#raisedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#raisedBy> <http://www.w3.org/2000/01/rdf-schema#label> "raised by"@en .
+# 
+# https://w3id.org/ontodesire#realizes
+<https://w3id.org/ontodesire#realizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#realizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<https://w3id.org/ontodesire#realizes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#RealizerDesire> .
+<https://w3id.org/ontodesire#realizes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#IntrinsicDesire> .
+<https://w3id.org/ontodesire#realizes> <http://www.w3.org/2000/01/rdf-schema#label> "realizes"@en .
+<https://w3id.org/ontodesire#realizes> <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinct from isMeansTo: the realizer is an instance of the end, not a means of reaching it."@en .
+# 
+# https://w3id.org/ontodesire#strongerThan
+<https://w3id.org/ontodesire#strongerThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#strongerThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/ontodesire#strongerThan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#strongerThan> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#strongerThan> <http://www.w3.org/2000/01/rdf-schema#label> "stronger than"@en .
+<https://w3id.org/ontodesire#strongerThan> <http://www.w3.org/2004/02/skos/core#definition> "D1 is stronger than D2 iff the agent is disposed to act on D1 when: all else is equal, each desire is believed satisfiable by a distinct action, and they are believed not jointly satisfiable."@en .
+# 
+# https://w3id.org/ontodesire#suffersObjection
+<https://w3id.org/ontodesire#suffersObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontodesire#suffersObjection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#suffersObjection> <http://www.w3.org/2000/01/rdf-schema#label> "suffers objection"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ontodesire#isConscious
+<https://w3id.org/ontodesire#isConscious> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontodesire#isConscious> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#isConscious> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/ontodesire#isConscious> <http://www.w3.org/2000/01/rdf-schema#label> "is conscious"@en .
+<https://w3id.org/ontodesire#isConscious> <http://www.w3.org/2004/02/skos/core#note> "Contested: some hold every occurrent desire is an element of conscious life; against this, the direction of fit of desire has been argued incompatible with that of elements of consciousness (Hulse, Read and Schroeder 2004)."@en .
+# 
+# https://w3id.org/ontodesire#isInnate
+<https://w3id.org/ontodesire#isInnate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontodesire#isInnate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#isInnate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/ontodesire#isInnate> <http://www.w3.org/2000/01/rdf-schema#label> "is innate"@en .
+# 
+# https://w3id.org/ontodesire#isSatisfied
+<https://w3id.org/ontodesire#isSatisfied> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontodesire#isSatisfied> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#isSatisfied> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/ontodesire#isSatisfied> <http://www.w3.org/2000/01/rdf-schema#label> "is satisfied"@en .
+# 
+# https://w3id.org/ontodesire#strengthDegree
+<https://w3id.org/ontodesire#strengthDegree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontodesire#strengthDegree> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontodesire#DesireStrength> .
+<https://w3id.org/ontodesire#strengthDegree> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontodesire#strengthDegree> <http://www.w3.org/2000/01/rdf-schema#label> "strength degree"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ontodesire#AppearanceOfGood
+<https://w3id.org/ontodesire#AppearanceOfGood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#AppearanceOfGood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#AppearanceOfGood> <http://www.w3.org/2000/01/rdf-schema#label> "appearance of good"@en .
+<https://w3id.org/ontodesire#AppearanceOfGood> <http://www.w3.org/2004/02/skos/core#scopeNote> "High-level perceptual state, distinct from the judgment that something is good (Stampe 1987; Oddie 2005)."@en .
+# 
+# https://w3id.org/ontodesire#Bearer
+<https://w3id.org/ontodesire#Bearer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Bearer> <http://www.w3.org/2000/01/rdf-schema#label> "bearer"@en .
+<https://w3id.org/ontodesire#Bearer> <http://www.w3.org/2004/02/skos/core#definition> "An agent -- an organism or an artificial system -- capable of instantiating mental states. Restricting bearers to organisms would itself be a theoretical commitment, negated by the BDI agent-modelling use cases that motivate this resource."@en .
+# 
+# https://w3id.org/ontodesire#Belief
+<https://w3id.org/ontodesire#Belief> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Belief> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#Belief> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontodesire#MindToWorld> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasDirectionOfFit> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#Belief> <http://www.w3.org/2000/01/rdf-schema#label> "belief"@en .
+# 
+# https://w3id.org/ontodesire#BeliefInTheGood
+<https://w3id.org/ontodesire#BeliefInTheGood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#BeliefInTheGood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Belief> .
+<https://w3id.org/ontodesire#BeliefInTheGood> <http://www.w3.org/2000/01/rdf-schema#label> "belief in the good"@en .
+# 
+# https://w3id.org/ontodesire#Besire
+<https://w3id.org/ontodesire#Besire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Besire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#Besire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#minCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasDirectionOfFit> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#Besire> <http://www.w3.org/2000/01/rdf-schema#label> "besire"@en .
+<https://w3id.org/ontodesire#Besire> <http://www.w3.org/2004/02/skos/core#definition> "Hybrid state posited as having both belief-like and desire-like directions of fit."@en .
+# 
+# https://w3id.org/ontodesire#Caring
+<https://w3id.org/ontodesire#Caring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Caring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#Caring> <http://www.w3.org/2000/01/rdf-schema#label> "caring"@en .
+<https://w3id.org/ontodesire#Caring> <http://www.w3.org/2004/02/skos/core#scopeNote> "Jaworska: a package of motivation, affect, attention and emotion directed at someone's welfare; readable as a holistic theory of a subclass of desires."@en .
+# 
+# https://w3id.org/ontodesire#CategorialStance
+# 
+# https://w3id.org/ontodesire#CharacteristicMark
+<https://w3id.org/ontodesire#CharacteristicMark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#CharacteristicMark> <http://www.w3.org/2000/01/rdf-schema#label> "characteristic mark of desire"@en .
+<https://w3id.org/ontodesire#CharacteristicMark> <http://www.w3.org/2004/02/skos/core#definition> "An effect or disposition typically associated with desire. Each monofactorial theory elects exactly one as essential and treats the rest as contingent accompaniments."@en .
+# 
+# https://w3id.org/ontodesire#ConditionalDesire
+<https://w3id.org/ontodesire#ConditionalDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#ConditionalDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#ConditionalDesire> <http://www.w3.org/2000/01/rdf-schema#label> "conditional desire"@en .
+<https://w3id.org/ontodesire#ConditionalDesire> <http://www.w3.org/2004/02/skos/core#scopeNote> "Hard case for content specification (McDaniel and Bradley 2008)."@en .
+# 
+# https://w3id.org/ontodesire#Content
+<https://w3id.org/ontodesire#Content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Content> <http://www.w3.org/2000/01/rdf-schema#label> "intentional content"@en .
+# 
+# https://w3id.org/ontodesire#Craving
+<https://w3id.org/ontodesire#Craving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Craving> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#Craving> <http://www.w3.org/2000/01/rdf-schema#label> "craving"@en .
+# 
+# https://w3id.org/ontodesire#Desire
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#StandingDesire> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#OccurrentDesire> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontodesire#WorldToMind> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasDirectionOfFit> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasContent> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasBearer> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasStrength> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/2000/01/rdf-schema#label> "desire"@en .
+<https://w3id.org/ontodesire#Desire> <http://www.w3.org/2004/02/skos/core#definition> "A conative mental state whose content specifies a satisfaction condition to be realized in the world. Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about."@en .
+<https://w3id.org/ontodesire#Desire> <https://w3id.org/ontodesire#commitsToStructuralStance> <https://w3id.org/ontodesire#SingleBearer> .
+<https://w3id.org/ontodesire#Desire> <https://w3id.org/ontodesire#commitsToStructuralStance> <https://w3id.org/ontodesire#StandingDesiresGenuine> .
+<https://w3id.org/ontodesire#Desire> <https://w3id.org/ontodesire#commitsToStructuralStance> <https://w3id.org/ontodesire#UniversalWorldToMindFit> .
+<https://w3id.org/ontodesire#Desire> <https://w3id.org/ontodesire#deliberatelyUncommittedOn> <https://w3id.org/ontodesire#FamilyAxis> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/ontodesire#Desire> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/ontodesire#commitsToStructuralStance> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/ontodesire#SingleBearer> .
+_:genid11 <https://w3id.org/ontodesire#commitmentEvidence> "Desire rdfs:subClassOf [ owl:onProperty hasBearer ; owl:cardinality 1 ] (this module, Section 12)." .
+_:genid11 <https://w3id.org/ontodesire#commitmentNote> "Declared by OntoDesire itself. Excludes plural/shared subjects of one desire token; collective-conation theorists would contest it." .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid12 <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/ontodesire#Desire> .
+_:genid12 <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/ontodesire#commitsToStructuralStance> .
+_:genid12 <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/ontodesire#StandingDesiresGenuine> .
+_:genid12 <https://w3id.org/ontodesire#commitmentEvidence> "Desire owl:equivalentClass [ owl:unionOf ( OccurrentDesire StandingDesire ) ] (this module, Section 3.3)." .
+_:genid12 <https://w3id.org/ontodesire#commitmentNote> "Declared by OntoDesire itself. Some dispositionalists deny that standing desires are genuine desires, reading them as mere dispositions to generate occurrent ones (see the skos:note on StandingDesire)." .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid13 <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/ontodesire#Desire> .
+_:genid13 <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/ontodesire#commitsToStructuralStance> .
+_:genid13 <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/ontodesire#UniversalWorldToMindFit> .
+_:genid13 <https://w3id.org/ontodesire#commitmentEvidence> "Desire rdfs:subClassOf [ owl:onProperty hasDirectionOfFit ; owl:hasValue WorldToMind ] (this module, Section 7). The axiom is universal, not exclusive: nothing caps hasDirectionOfFit, so a desire may consistently also bear mind-to-world fit." .
+_:genid13 <https://w3id.org/ontodesire#commitmentNote> "Declared by OntoDesire itself. Retained deliberately: universal world-to-mind fit is the closest thing to common ground the debate has, but it is contested in the desire-as-belief debate that Lewis (1988) opened by attacking the thesis, by its contemporary defenders (Gregory 2021), and in the besire literature -- a commitment, not a neutral fact." .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid14 <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/ontodesire#Desire> .
+_:genid14 <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/ontodesire#deliberatelyUncommittedOn> .
+_:genid14 <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/ontodesire#FamilyAxis> .
+_:genid14 <https://w3id.org/ontodesire#commitmentEvidence> "skos:definition of Desire: 'Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about.'" .
+_:genid14 <https://w3id.org/ontodesire#commitmentNote> "The flagship design decision in machine-readable form: the essence-level axis is deliberately uncommitted -- the rival theories are reified, not adjudicated." .
+# 
+# https://w3id.org/ontodesire#DesireStrength
+<https://w3id.org/ontodesire#DesireStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#DesireStrength> <http://www.w3.org/2000/01/rdf-schema#label> "desire strength"@en .
+<https://w3id.org/ontodesire#DesireStrength> <http://www.w3.org/2004/02/skos/core#definition> "A continuous magnitude, canonically characterized by causal power over the control of action; each theory of desire induces its own corresponding metric."@en .
+<https://w3id.org/ontodesire#DesireStrength> <http://www.w3.org/2004/02/skos/core#note> "Puzzle: manifestations of strength fluctuate (mood, fatigue, temporal distance) without the strength itself seeming to vary — an advantage of holistic and learning-based theories, which do not reduce strength to a single observable."@en .
+# 
+# https://w3id.org/ontodesire#DirectionOfFit
+<https://w3id.org/ontodesire#DirectionOfFit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#DirectionOfFit> <http://www.w3.org/2000/01/rdf-schema#label> "direction of fit"@en .
+# 
+# https://w3id.org/ontodesire#Displeasure
+<https://w3id.org/ontodesire#Displeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Displeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#Displeasure> <http://www.w3.org/2000/01/rdf-schema#label> "displeasure"@en .
+# 
+# https://w3id.org/ontodesire#FirstOrderDesire
+<https://w3id.org/ontodesire#FirstOrderDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#FirstOrderDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#FirstOrderDesire> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontodesire#SecondOrderDesire> .
+<https://w3id.org/ontodesire#FirstOrderDesire> <http://www.w3.org/2000/01/rdf-schema#label> "first-order desire"@en .
+<https://w3id.org/ontodesire#FirstOrderDesire> <http://www.w3.org/2004/02/skos/core#definition> "A desire whose object is not itself a pro-attitude of the same bearer; carried by the absence of hasObjectAttitude (see module comment)."@en .
+<https://w3id.org/ontodesire#FirstOrderDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byOrder> .
+# 
+# https://w3id.org/ontodesire#Goal
+<https://w3id.org/ontodesire#Goal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Goal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#Goal> <http://www.w3.org/2000/01/rdf-schema#label> "goal"@en .
+# 
+# https://w3id.org/ontodesire#HolisticTheory
+<https://w3id.org/ontodesire#HolisticTheory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#HolisticTheory> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid15 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/ontodesire#CharacteristicMark> .
+_:genid17 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#identifiesDesireWith> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#TheoryOfDesire> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontodesire#HolisticTheory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#TheoryOfDesire> .
+<https://w3id.org/ontodesire#HolisticTheory> <http://www.w3.org/2000/01/rdf-schema#label> "holistic theory"@en .
+<https://w3id.org/ontodesire#HolisticTheory> <http://www.w3.org/2004/02/skos/core#definition> "Refuses to privilege any mark; having a desire is exhibiting enough (a vague threshold) of the whole set."@en .
+# 
+# https://w3id.org/ontodesire#Human
+<https://w3id.org/ontodesire#Human> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Human> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Bearer> .
+<https://w3id.org/ontodesire#Human> <http://www.w3.org/2000/01/rdf-schema#label> "human"@en .
+# 
+# https://w3id.org/ontodesire#Inclination
+<https://w3id.org/ontodesire#Inclination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Inclination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#Inclination> <http://www.w3.org/2000/01/rdf-schema#label> "inclination"@en .
+<https://w3id.org/ontodesire#Inclination> <http://www.w3.org/2004/02/skos/core#scopeNote> "Kantian term: a motive whose presence, for Kant, removes the moral praiseworthiness of an action."@en .
+# 
+# https://w3id.org/ontodesire#InstrumentalDesire
+<https://w3id.org/ontodesire#InstrumentalDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#InstrumentalDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#InstrumentalDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontodesire#Desire> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#isMeansTo> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#InstrumentalDesire> <http://www.w3.org/2000/01/rdf-schema#label> "instrumental desire"@en .
+<https://w3id.org/ontodesire#InstrumentalDesire> <http://www.w3.org/2004/02/skos/core#altLabel> "extrinsic desire"@en .
+<https://w3id.org/ontodesire#InstrumentalDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byJustificatoryStructure> .
+# 
+# https://w3id.org/ontodesire#Intention
+<https://w3id.org/ontodesire#Intention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Intention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#Intention> <http://www.w3.org/2000/01/rdf-schema#label> "intention"@en .
+# 
+# https://w3id.org/ontodesire#IntrinsicDesire
+<https://w3id.org/ontodesire#IntrinsicDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#IntrinsicDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#IntrinsicDesire> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontodesire#MerelyInstrumentalDesire> .
+<https://w3id.org/ontodesire#IntrinsicDesire> <http://www.w3.org/2000/01/rdf-schema#label> "intrinsic desire"@en .
+<https://w3id.org/ontodesire#IntrinsicDesire> <http://www.w3.org/2004/02/skos/core#definition> "A desire whose object is wanted at least partly for its own sake."@en .
+<https://w3id.org/ontodesire#IntrinsicDesire> <http://www.w3.org/2004/02/skos/core#note> "NOT disjoint from InstrumentalDesire: the same desire can be partly for its own sake and partly as a means (Schroeder's father case)."@en .
+<https://w3id.org/ontodesire#IntrinsicDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byJustificatoryStructure> .
+# 
+# https://w3id.org/ontodesire#MentalState
+<https://w3id.org/ontodesire#MentalState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#MentalState> <http://www.w3.org/2000/01/rdf-schema#label> "mental state"@en .
+# 
+# https://w3id.org/ontodesire#MerelyInstrumentalDesire
+<https://w3id.org/ontodesire#MerelyInstrumentalDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#MerelyInstrumentalDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#InstrumentalDesire> .
+<https://w3id.org/ontodesire#MerelyInstrumentalDesire> <http://www.w3.org/2000/01/rdf-schema#label> "merely instrumental desire"@en .
+<https://w3id.org/ontodesire#MerelyInstrumentalDesire> <http://www.w3.org/2004/02/skos/core#definition> "Desired only as a means, in no measure for its own sake. This is the usual reinforced sense of 'instrumental'."@en .
+# 
+# https://w3id.org/ontodesire#MonofactorialTheory
+<https://w3id.org/ontodesire#MonofactorialTheory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#MonofactorialTheory> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/ontodesire#CharacteristicMark> .
+_:genid22 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#identifiesDesireWith> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#TheoryOfDesire> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontodesire#MonofactorialTheory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#TheoryOfDesire> .
+<https://w3id.org/ontodesire#MonofactorialTheory> <http://www.w3.org/2000/01/rdf-schema#label> "monofactorial theory"@en .
+<https://w3id.org/ontodesire#MonofactorialTheory> <http://www.w3.org/2004/02/skos/core#definition> "Privileges exactly one characteristic mark as essential to desire."@en .
+# 
+# https://w3id.org/ontodesire#NeuralRealizer
+<https://w3id.org/ontodesire#NeuralRealizer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#NeuralRealizer> <http://www.w3.org/2000/01/rdf-schema#label> "neural realizer"@en .
+# 
+# https://w3id.org/ontodesire#NonHumanAnimal
+<https://w3id.org/ontodesire#NonHumanAnimal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#NonHumanAnimal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Bearer> .
+<https://w3id.org/ontodesire#NonHumanAnimal> <http://www.w3.org/2000/01/rdf-schema#label> "non-human animal"@en .
+<https://w3id.org/ontodesire#NonHumanAnimal> <http://www.w3.org/2004/02/skos/core#scopeNote> "Test case for good-based theories: the rat seems to desire escape from the cat without representing anything as good."@en .
+# 
+# https://w3id.org/ontodesire#ObjectContentItem
+<https://w3id.org/ontodesire#ObjectContentItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#ObjectContentItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Content> .
+<https://w3id.org/ontodesire#ObjectContentItem> <http://www.w3.org/2000/01/rdf-schema#label> "object (as content)"@en .
+<https://w3id.org/ontodesire#ObjectContentItem> <http://www.w3.org/2004/02/skos/core#scopeNote> "Non-propositional content, posited by those who deny that all desires are propositional attitudes (Thagard 2006)."@en .
+# 
+# https://w3id.org/ontodesire#ObjectDesire
+<https://w3id.org/ontodesire#ObjectDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#ObjectDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#ObjectDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontodesire#ObjectContentItem> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasContent> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#ObjectDesire> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontodesire#StateOfAffairsDesire> .
+<https://w3id.org/ontodesire#ObjectDesire> <http://www.w3.org/2000/01/rdf-schema#label> "desire for an object"@en .
+<https://w3id.org/ontodesire#ObjectDesire> <http://www.w3.org/2004/02/skos/core#scopeNote> "Minority view; faithful to ordinary talk and to animal desire."@en .
+<https://w3id.org/ontodesire#ObjectDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byContent> .
+# 
+# https://w3id.org/ontodesire#Objection
+<https://w3id.org/ontodesire#Objection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Objection> <http://www.w3.org/2000/01/rdf-schema#label> "objection"@en .
+# 
+# https://w3id.org/ontodesire#OccurrentDesire
+<https://w3id.org/ontodesire#OccurrentDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#OccurrentDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#OccurrentDesire> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontodesire#StandingDesire> .
+<https://w3id.org/ontodesire#OccurrentDesire> <http://www.w3.org/2000/01/rdf-schema#label> "occurrent desire"@en .
+<https://w3id.org/ontodesire#OccurrentDesire> <http://www.w3.org/2004/02/skos/core#definition> "A desire playing some role in the psyche at the moment — not necessarily in control of action, nor necessarily conscious."@en .
+<https://w3id.org/ontodesire#OccurrentDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byManifestation> .
+# 
+# https://w3id.org/ontodesire#OriginMechanism
+<https://w3id.org/ontodesire#OriginMechanism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#OriginMechanism> <http://www.w3.org/2000/01/rdf-schema#label> "origin mechanism"@en .
+# 
+# https://w3id.org/ontodesire#PartitionCriterion
+<https://w3id.org/ontodesire#PartitionCriterion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#PartitionCriterion> <http://www.w3.org/2000/01/rdf-schema#label> "partition criterion"@en .
+# 
+# https://w3id.org/ontodesire#Philosopher
+<https://w3id.org/ontodesire#Philosopher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Philosopher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/ontodesire#Philosopher> <http://www.w3.org/2000/01/rdf-schema#label> "philosopher"@en .
+# 
+# https://w3id.org/ontodesire#Pleasure
+<https://w3id.org/ontodesire#Pleasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Pleasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#Pleasure> <http://www.w3.org/2000/01/rdf-schema#label> "pleasure"@en .
+# 
+# https://w3id.org/ontodesire#Preference
+<https://w3id.org/ontodesire#Preference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Preference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#Preference> <http://www.w3.org/2000/01/rdf-schema#label> "preference"@en .
+# 
+# https://w3id.org/ontodesire#ProAttitude
+<https://w3id.org/ontodesire#ProAttitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#ProAttitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#MentalState> .
+<https://w3id.org/ontodesire#ProAttitude> <http://www.w3.org/2000/01/rdf-schema#label> "pro attitude"@en .
+<https://w3id.org/ontodesire#ProAttitude> <http://www.w3.org/2004/02/skos/core#definition> "The umbrella under which cognate conative states are grouped; whether they constitute one mental state or many is disputed."@en .
+# 
+# https://w3id.org/ontodesire#Proposition
+<https://w3id.org/ontodesire#Proposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Proposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#StateOfAffairs> .
+<https://w3id.org/ontodesire#Proposition> <http://www.w3.org/2000/01/rdf-schema#label> "proposition"@en .
+<https://w3id.org/ontodesire#Proposition> <http://www.w3.org/2004/02/skos/core#scopeNote> "Subsuming propositions under states of affairs is a substantive simplification of the ontology of content (abstract truth-bearers vs. worldly truth-makers); it is declared below rather than made silently."@en .
+<https://w3id.org/ontodesire#Proposition> <https://w3id.org/ontodesire#commitsToStructuralStance> <https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid25 <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/ontodesire#Proposition> .
+_:genid25 <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/ontodesire#commitsToStructuralStance> .
+_:genid25 <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs> .
+_:genid25 <https://w3id.org/ontodesire#commitmentEvidence> "Proposition rdfs:subClassOf StateOfAffairs (this module, Section 1)." .
+_:genid25 <https://w3id.org/ontodesire#commitmentNote> "Declared by OntoDesire itself: a content-modelling convenience retained for compatibility with the propositional-attitude mainstream; contested in the ontology of content." .
+# 
+# https://w3id.org/ontodesire#Purpose
+<https://w3id.org/ontodesire#Purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Purpose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#Purpose> <http://www.w3.org/2000/01/rdf-schema#label> "purpose"@en .
+# 
+# https://w3id.org/ontodesire#RealizerDesire
+<https://w3id.org/ontodesire#RealizerDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#RealizerDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#RealizerDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontodesire#IntrinsicDesire> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#realizes> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#RealizerDesire> <http://www.w3.org/2000/01/rdf-schema#label> "realizer desire"@en .
+<https://w3id.org/ontodesire#RealizerDesire> <http://www.w3.org/2004/02/skos/core#definition> "A desire for an end that would count as one possible realization of an intrinsic desire — a realization relation, not a means-end relation."@en .
+<https://w3id.org/ontodesire#RealizerDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byJustificatoryStructure> .
+# 
+# https://w3id.org/ontodesire#SecondOrderDesire
+<https://w3id.org/ontodesire#SecondOrderDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#SecondOrderDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#SecondOrderDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontodesire#Desire> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasObjectAttitude> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#SecondOrderDesire> <http://www.w3.org/2000/01/rdf-schema#label> "second-order desire"@en .
+<https://w3id.org/ontodesire#SecondOrderDesire> <http://www.w3.org/2004/02/skos/core#scopeNote> "Frankfurt: the capacity to form them is what constitutes persons. Typically instrumental, though Lewis requires them intrinsic in valuing (Lewis, D. (1989). Dispositional theories of value. Proceedings of the Aristotelian Society, Supplementary Volume 63, 113-137)."@en .
+<https://w3id.org/ontodesire#SecondOrderDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byOrder> .
+# 
+# https://w3id.org/ontodesire#StandingDesire
+<https://w3id.org/ontodesire#StandingDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#StandingDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#StandingDesire> <http://www.w3.org/2000/01/rdf-schema#label> "standing desire"@en .
+<https://w3id.org/ontodesire#StandingDesire> <http://www.w3.org/2004/02/skos/core#definition> "A desire playing no role in the psyche at the moment."@en .
+<https://w3id.org/ontodesire#StandingDesire> <http://www.w3.org/2004/02/skos/core#note> "Some deny these are genuine desires, treating them as mere dispositions to generate occurrent desires."@en .
+<https://w3id.org/ontodesire#StandingDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byManifestation> .
+# 
+# https://w3id.org/ontodesire#StateOfAffairs
+<https://w3id.org/ontodesire#StateOfAffairs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#StateOfAffairs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Content> .
+<https://w3id.org/ontodesire#StateOfAffairs> <http://www.w3.org/2000/01/rdf-schema#label> "state of affairs"@en .
+# 
+# https://w3id.org/ontodesire#StateOfAffairsDesire
+<https://w3id.org/ontodesire#StateOfAffairsDesire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#StateOfAffairsDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#Desire> .
+<https://w3id.org/ontodesire#StateOfAffairsDesire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontodesire#StateOfAffairs> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontodesire#hasContent> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontodesire#StateOfAffairsDesire> <http://www.w3.org/2000/01/rdf-schema#label> "desire for a state of affairs"@en .
+<https://w3id.org/ontodesire#StateOfAffairsDesire> <http://www.w3.org/2004/02/skos/core#scopeNote> "Majority view: desires are propositional attitudes; enables logical relations among the contents of beliefs, desires and intentions."@en .
+<https://w3id.org/ontodesire#StateOfAffairsDesire> <https://w3id.org/ontodesire#partitionedBy> <https://w3id.org/ontodesire#byContent> .
+# 
+# https://w3id.org/ontodesire#TheoryFamily
+# 
+# https://w3id.org/ontodesire#TheoryOfDesire
+# 
+# https://w3id.org/ontodesire#Wish
+<https://w3id.org/ontodesire#Wish> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontodesire#Wish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontodesire#ProAttitude> .
+<https://w3id.org/ontodesire#Wish> <http://www.w3.org/2000/01/rdf-schema#label> "wish"@en .
+<https://w3id.org/ontodesire#Wish> <http://www.w3.org/2004/02/skos/core#scopeNote> "Theoretical resource of action-based theories for accommodating 'desires' that action cannot satisfy (e.g. that pi be rational)."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ontodesire#ActionBasedFamily
+<https://w3id.org/ontodesire#ActionBasedFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#ActionDisposition
+<https://w3id.org/ontodesire#ActionDisposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#ActionDisposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#ActionDisposition> <http://www.w3.org/2000/01/rdf-schema#label> "disposition to take the actions one believes conducive to p"@en .
+# 
+# https://w3id.org/ontodesire#ActionProductionFunction
+<https://w3id.org/ontodesire#ActionProductionFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#ActionProductionFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#ActionProductionFunction> <http://www.w3.org/2000/01/rdf-schema#label> "having the (biological) function of producing action"@en .
+# 
+# https://w3id.org/ontodesire#AgnieszkaJaworska
+<https://w3id.org/ontodesire#AgnieszkaJaworska> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#AgnieszkaJaworska> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#AgnieszkaJaworska> <http://xmlns.com/foaf/0.1/name> "Agnieszka Jaworska" .
+# 
+# https://w3id.org/ontodesire#AlexGregory
+<https://w3id.org/ontodesire#AlexGregory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#AlexGregory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#AlexGregory> <http://xmlns.com/foaf/0.1/name> "Alex Gregory" .
+# 
+# https://w3id.org/ontodesire#AnimalObjection
+<https://w3id.org/ontodesire#AnimalObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#AnimalObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#AnimalObjection> <http://www.w3.org/2000/01/rdf-schema#label> "non-human animal objection"@en .
+<https://w3id.org/ontodesire#AnimalObjection> <http://www.w3.org/2004/02/skos/core#definition> "Rats seem to desire without representing anything as good; if desire does not require representing the good in them, why in us?"@en .
+# 
+# https://w3id.org/ontodesire#AprioriImplausibilityObjection
+<https://w3id.org/ontodesire#AprioriImplausibilityObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#AprioriImplausibilityObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#AprioriImplausibilityObjection> <http://www.w3.org/2000/01/rdf-schema#label> "a priori implausibility objection"@en .
+<https://w3id.org/ontodesire#AprioriImplausibilityObjection> <http://www.w3.org/2004/02/skos/core#definition> "The theory admits desire in a creature incapable of acting or feeling, provided it represents and learns appropriately."@en .
+# 
+# https://w3id.org/ontodesire#AssociativeLearningAcquisition
+<https://w3id.org/ontodesire#AssociativeLearningAcquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#AssociativeLearningAcquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#OriginMechanism> .
+<https://w3id.org/ontodesire#AssociativeLearningAcquisition> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#TimothySchroeder> .
+<https://w3id.org/ontodesire#AssociativeLearningAcquisition> <http://www.w3.org/2000/01/rdf-schema#label> "acquisition via reward-based associative learning"@en .
+<https://w3id.org/ontodesire#AssociativeLearningAcquisition> <http://www.w3.org/2004/02/skos/core#note> "States of affairs that presage the satisfaction of existing intrinsic desires become intrinsically desired themselves."@en .
+<https://w3id.org/ontodesire#AssociativeLearningAcquisition> <https://w3id.org/ontodesire#generates> <https://w3id.org/ontodesire#IntrinsicDesire> .
+# 
+# https://w3id.org/ontodesire#AttentionBasedFamily
+<https://w3id.org/ontodesire#AttentionBasedFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#BehavioralTicObjection
+<https://w3id.org/ontodesire#BehavioralTicObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#BehavioralTicObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#BehavioralTicObjection> <http://www.w3.org/2000/01/rdf-schema#label> "behavioral tic objection"@en .
+<https://w3id.org/ontodesire#BehavioralTicObjection> <http://www.w3.org/2004/02/skos/core#definition> "The theory is too permissive: one who tends to stutter would count as desiring to stutter."@en .
+# 
+# https://w3id.org/ontodesire#BiologicalFunctionCategory
+<https://w3id.org/ontodesire#BiologicalFunctionCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#CaringTheory
+<https://w3id.org/ontodesire#CaringTheory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#CaringTheory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#HolisticTheory> .
+<https://w3id.org/ontodesire#CaringTheory> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#HolisticFamily> .
+<https://w3id.org/ontodesire#HolisticFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#CaringTheory> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#AgnieszkaJaworska> .
+<https://w3id.org/ontodesire#CaringTheory> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ActionDisposition> .
+<https://w3id.org/ontodesire#CaringTheory> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#PleasureDisposition> .
+<https://w3id.org/ontodesire#CaringTheory> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ReasonsAttention> .
+<https://w3id.org/ontodesire#CaringTheory> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#CausalRoleStateCategory> .
+<https://w3id.org/ontodesire#CausalRoleStateCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#CaringTheory> <http://www.w3.org/2000/01/rdf-schema#label> "caring theory"@en .
+<https://w3id.org/ontodesire#CaringTheory> <http://www.w3.org/2004/02/skos/core#note> "Not intended as a theory of desire, but readable as a holistic theory of the subclass of desires that constitute caring."@en .
+# 
+# https://w3id.org/ontodesire#CarolynMorillo
+<https://w3id.org/ontodesire#CarolynMorillo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#CarolynMorillo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#CarolynMorillo> <http://xmlns.com/foaf/0.1/name> "Carolyn Morillo" .
+# 
+# https://w3id.org/ontodesire#CausalPriorityObjection
+<https://w3id.org/ontodesire#CausalPriorityObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#CausalPriorityObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#CausalPriorityObjection> <http://www.w3.org/2000/01/rdf-schema#label> "causal priority of desire over pleasure"@en .
+<https://w3id.org/ontodesire#CausalPriorityObjection> <http://www.w3.org/2004/02/skos/core#definition> "If desire satisfaction is the standard cause of pleasure, desire and pleasure are ontologically distinct as cause and effect."@en .
+# 
+# https://w3id.org/ontodesire#CausalRoleStateCategory
+# 
+# https://w3id.org/ontodesire#DavidLewis
+<https://w3id.org/ontodesire#DavidLewis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DavidLewis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#DavidLewis> <http://xmlns.com/foaf/0.1/name> "David Lewis" .
+# 
+# https://w3id.org/ontodesire#DavidPapineau
+<https://w3id.org/ontodesire#DavidPapineau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DavidPapineau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#DavidPapineau> <http://xmlns.com/foaf/0.1/name> "David Papineau" .
+# 
+# https://w3id.org/ontodesire#DavidsonianInterpretationism
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#HolisticTheory> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#HolisticFamily> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#DonaldDavidson> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ActionDisposition> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#GoodBeliefDisposition> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#PleasureDisposition> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ReasonsAttention> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#CausalRoleStateCategory> .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <http://www.w3.org/2000/01/rdf-schema#label> "Davidsonian interpretationism"@en .
+<https://w3id.org/ontodesire#DavidsonianInterpretationism> <http://www.w3.org/2004/02/skos/core#scopeNote> "Desires as states of the whole organism, existing in virtue of interpretability."@en .
+# 
+# https://w3id.org/ontodesire#DennisStampe
+<https://w3id.org/ontodesire#DennisStampe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DennisStampe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#DennisStampe> <http://xmlns.com/foaf/0.1/name> "Dennis Stampe" .
+# 
+# https://w3id.org/ontodesire#DesireAsBeliefInGood
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <https://w3id.org/ontodesire#attributedTo> <https://w3id.org/ontodesire#Socrates> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#GoodBasedFamily> .
+<https://w3id.org/ontodesire#GoodBasedFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#AlexGregory> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#GoodBeliefDisposition> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#DoxasticStateCategory> .
+<https://w3id.org/ontodesire#DoxasticStateCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#AnimalObjection> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#LewisDecisionTheoreticObjection> .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <http://www.w3.org/2000/01/rdf-schema#label> "desire as belief in the good"@en .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to believe that p is good (or, in the contemporary variant, that one has normative reason to bring p about)."@en .
+<https://w3id.org/ontodesire#DesireAsBeliefInGood> <http://www.w3.org/2004/02/skos/core#note> "The attribution to Socrates is a classical antecedent (the Socratic thesis that we desire the good), not a formulation of the analysis; the analysis is actively defended in the contemporary literature (Gregory, Desire as Belief, OUP 2021)."@en .
+# 
+# https://w3id.org/ontodesire#DesireAsPerceptionOfGood
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <https://w3id.org/ontodesire#answersObjection> <https://w3id.org/ontodesire#LewisDecisionTheoreticObjection> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#GoodBasedFamily> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#DennisStampe> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#GrahamOddie> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#GoodAppearanceDisposition> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#PerceptualStateCategory> .
+<https://w3id.org/ontodesire#PerceptualStateCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#AnimalObjection> .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <http://www.w3.org/2000/01/rdf-schema#label> "desire as perception of the good"@en .
+<https://w3id.org/ontodesire#DesireAsPerceptionOfGood> <http://www.w3.org/2004/02/skos/core#definition> "To desire p is for p to appear good to the organism — a high-level perceptual state, distinct from judgment."@en .
+# 
+# https://w3id.org/ontodesire#DirectedAttention
+<https://w3id.org/ontodesire#DirectedAttention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DirectedAttention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#DirectedAttention> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#AttentionBasedFamily> .
+<https://w3id.org/ontodesire#DirectedAttention> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#TMScanlon> .
+<https://w3id.org/ontodesire#DirectedAttention> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ReasonsAttention> .
+<https://w3id.org/ontodesire#DirectedAttention> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#MentalProcessCategory> .
+<https://w3id.org/ontodesire#MentalProcessCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DirectedAttention> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#NarrowAttentionObjection> .
+<https://w3id.org/ontodesire#DirectedAttention> <http://www.w3.org/2000/01/rdf-schema#label> "directed-attention theory"@en .
+<https://w3id.org/ontodesire#DirectedAttention> <http://www.w3.org/2004/02/skos/core#definition> "To desire p is for the thought of p to keep occurring in a favourable light, with attention directed insistently toward considerations counting in favour of p."@en .
+<https://w3id.org/ontodesire#DirectedAttention> <http://www.w3.org/2004/02/skos/core#note> "Technically a sufficient condition rather than a full theory; fits occurrent desires best."@en .
+# 
+# https://w3id.org/ontodesire#DispositionCategory
+<https://w3id.org/ontodesire#DispositionCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#DonaldDavidson
+<https://w3id.org/ontodesire#DonaldDavidson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DonaldDavidson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#DonaldDavidson> <http://xmlns.com/foaf/0.1/name> "Donald Davidson" .
+# 
+# https://w3id.org/ontodesire#DopaminergicRewardSystem
+<https://w3id.org/ontodesire#DopaminergicRewardSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DopaminergicRewardSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#NeuralRealizer> .
+<https://w3id.org/ontodesire#DopaminergicRewardSystem> <http://www.w3.org/2000/01/rdf-schema#label> "dopaminergic reward system"@en .
+<https://w3id.org/ontodesire#DopaminergicRewardSystem> <http://www.w3.org/2004/02/skos/core#note> "Common cause of action, pleasure and aspects of thought. Dispute: Morillo takes it to realize pleasure; Schroeder, to be one of its normal causes, its output being reward learning (cf. Berridge and Robinson 1998)."@en .
+# 
+# https://w3id.org/ontodesire#DoubleFaultObjection
+<https://w3id.org/ontodesire#DoubleFaultObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#DoubleFaultObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#DoubleFaultObjection> <https://w3id.org/ontodesire#raisedBy> <https://w3id.org/ontodesire#DennisStampe> .
+<https://w3id.org/ontodesire#DoubleFaultObjection> <http://www.w3.org/2000/01/rdf-schema#label> "double fault objection (Stampe)"@en .
+<https://w3id.org/ontodesire#DoubleFaultObjection> <http://www.w3.org/2004/02/skos/core#definition> "Believing that serving just so will cause a double fault can dispose one to serve just so, without one desiring to double fault."@en .
+# 
+# https://w3id.org/ontodesire#DoxasticStateCategory
+# 
+# https://w3id.org/ontodesire#ElizabethAnscombe
+<https://w3id.org/ontodesire#ElizabethAnscombe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#ElizabethAnscombe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#ElizabethAnscombe> <http://xmlns.com/foaf/0.1/name> "G. E. M. Anscombe" .
+# 
+# https://w3id.org/ontodesire#FredDretske
+<https://w3id.org/ontodesire#FredDretske> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#FredDretske> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#FredDretske> <http://xmlns.com/foaf/0.1/name> "Fred Dretske" .
+# 
+# https://w3id.org/ontodesire#GFSchueler
+<https://w3id.org/ontodesire#GFSchueler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#GFSchueler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#GFSchueler> <http://xmlns.com/foaf/0.1/name> "G. F. Schueler" .
+# 
+# https://w3id.org/ontodesire#GalenStrawson
+<https://w3id.org/ontodesire#GalenStrawson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#GalenStrawson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#GalenStrawson> <http://xmlns.com/foaf/0.1/name> "Galen Strawson" .
+# 
+# https://w3id.org/ontodesire#GoodAppearanceDisposition
+<https://w3id.org/ontodesire#GoodAppearanceDisposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#GoodAppearanceDisposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#GoodAppearanceDisposition> <http://www.w3.org/2000/01/rdf-schema#label> "disposition for p to appear good (perceptually or quasi-perceptually)"@en .
+# 
+# https://w3id.org/ontodesire#GoodBasedFamily
+# 
+# https://w3id.org/ontodesire#GoodBeliefDisposition
+<https://w3id.org/ontodesire#GoodBeliefDisposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#GoodBeliefDisposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#GoodBeliefDisposition> <http://www.w3.org/2000/01/rdf-schema#label> "disposition to believe that p is good"@en .
+# 
+# https://w3id.org/ontodesire#GrahamOddie
+<https://w3id.org/ontodesire#GrahamOddie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#GrahamOddie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#GrahamOddie> <http://xmlns.com/foaf/0.1/name> "Graham Oddie" .
+# 
+# https://w3id.org/ontodesire#HarryFrankfurt
+<https://w3id.org/ontodesire#HarryFrankfurt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#HarryFrankfurt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#HarryFrankfurt> <http://xmlns.com/foaf/0.1/name> "Harry Frankfurt" .
+# 
+# https://w3id.org/ontodesire#HedonicDispositional
+<https://w3id.org/ontodesire#HedonicDispositional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#HedonicDispositional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#HedonicDispositional> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#PleasureBasedFamily> .
+<https://w3id.org/ontodesire#PleasureBasedFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#HedonicDispositional> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#GFSchueler> .
+<https://w3id.org/ontodesire#HedonicDispositional> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#GalenStrawson> .
+<https://w3id.org/ontodesire#HedonicDispositional> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#PleasureDisposition> .
+<https://w3id.org/ontodesire#HedonicDispositional> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#OccurrentFeelingCategory> .
+<https://w3id.org/ontodesire#OccurrentFeelingCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#HedonicDispositional> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#CausalPriorityObjection> .
+<https://w3id.org/ontodesire#HedonicDispositional> <http://www.w3.org/2000/01/rdf-schema#label> "hedonic dispositional theory"@en .
+<https://w3id.org/ontodesire#HedonicDispositional> <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to be disposed to take pleasure in its seeming that p and displeasure in its seeming that not-p."@en .
+# 
+# https://w3id.org/ontodesire#HedonicNeural
+<https://w3id.org/ontodesire#HedonicNeural> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#HedonicNeural> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#HedonicNeural> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#PleasureBasedFamily> .
+<https://w3id.org/ontodesire#HedonicNeural> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#CarolynMorillo> .
+<https://w3id.org/ontodesire#HedonicNeural> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#PleasureDisposition> .
+<https://w3id.org/ontodesire#HedonicNeural> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#OccurrentAffectiveEpisodeCategory> .
+<https://w3id.org/ontodesire#OccurrentAffectiveEpisodeCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#HedonicNeural> <https://w3id.org/ontodesire#locatesDesireIn> <https://w3id.org/ontodesire#DopaminergicRewardSystem> .
+<https://w3id.org/ontodesire#HedonicNeural> <http://www.w3.org/2000/01/rdf-schema#label> "hedonic neural-identity theory"@en .
+<https://w3id.org/ontodesire#HedonicNeural> <http://www.w3.org/2004/02/skos/core#definition> "Pleasure episodes are identical to reward-system activity, and that activity does the work of desire; so desires are pleasure episodes."@en .
+# 
+# https://w3id.org/ontodesire#HolisticFamily
+# 
+# https://w3id.org/ontodesire#InformationAttention
+<https://w3id.org/ontodesire#InformationAttention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#InformationAttention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#InformationAttention> <http://www.w3.org/2000/01/rdf-schema#label> "capture of attention by information bearing on whether p"@en .
+# 
+# https://w3id.org/ontodesire#InnateEndowment
+<https://w3id.org/ontodesire#InnateEndowment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#InnateEndowment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#OriginMechanism> .
+<https://w3id.org/ontodesire#InnateEndowment> <http://www.w3.org/2000/01/rdf-schema#label> "innate endowment"@en .
+<https://w3id.org/ontodesire#InnateEndowment> <http://www.w3.org/2004/02/skos/core#scopeNote> "The psychological hedonist holds there is a single, innate intrinsic desire: for pleasure."@en .
+<https://w3id.org/ontodesire#InnateEndowment> <https://w3id.org/ontodesire#generates> <https://w3id.org/ontodesire#IntrinsicDesire> .
+# 
+# https://w3id.org/ontodesire#JohnMcDowell
+<https://w3id.org/ontodesire#JohnMcDowell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#JohnMcDowell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#JohnMcDowell> <http://xmlns.com/foaf/0.1/name> "John McDowell" .
+# 
+# https://w3id.org/ontodesire#LearningBasedFamily
+<https://w3id.org/ontodesire#LearningBasedFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#LearningMechanismCategory
+<https://w3id.org/ontodesire#LearningMechanismCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#LewisDecisionTheoreticObjection
+<https://w3id.org/ontodesire#LewisDecisionTheoreticObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#LewisDecisionTheoreticObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#LewisDecisionTheoreticObjection> <https://w3id.org/ontodesire#raisedBy> <https://w3id.org/ontodesire#DavidLewis> .
+<https://w3id.org/ontodesire#LewisDecisionTheoreticObjection> <http://www.w3.org/2000/01/rdf-schema#label> "Lewis's decision-theoretic objection"@en .
+<https://w3id.org/ontodesire#LewisDecisionTheoreticObjection> <http://www.w3.org/2004/02/skos/core#definition> "The Desire-as-Belief thesis generates inconsistencies within decision theory, given the differences between rational belief revision and rational motivation revision."@en .
+# 
+# https://w3id.org/ontodesire#LewisianFunctionalism
+<https://w3id.org/ontodesire#LewisianFunctionalism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#HolisticTheory> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#HolisticFamily> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#DavidLewis> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ActionDisposition> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#GoodBeliefDisposition> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#InformationAttention> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#PleasureDisposition> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ReasonsAttention> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#CausalRoleStateCategory> .
+<https://w3id.org/ontodesire#LewisianFunctionalism> <http://www.w3.org/2000/01/rdf-schema#label> "Lewisian functionalism"@en .
+# 
+# https://w3id.org/ontodesire#MeansEndReasoning
+<https://w3id.org/ontodesire#MeansEndReasoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#MeansEndReasoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#OriginMechanism> .
+<https://w3id.org/ontodesire#MeansEndReasoning> <http://www.w3.org/2000/01/rdf-schema#label> "means-end reasoning"@en .
+<https://w3id.org/ontodesire#MeansEndReasoning> <http://www.w3.org/2004/02/skos/core#note> "Largely uncontroversial; the derived desire's strength grows with the intrinsic desire's strength and the apparent usefulness of the means."@en .
+<https://w3id.org/ontodesire#MeansEndReasoning> <https://w3id.org/ontodesire#generates> <https://w3id.org/ontodesire#InstrumentalDesire> .
+<https://w3id.org/ontodesire#MeansEndReasoning> <https://w3id.org/ontodesire#generates> <https://w3id.org/ontodesire#RealizerDesire> .
+# 
+# https://w3id.org/ontodesire#MentalMomentCategory
+<https://w3id.org/ontodesire#MentalMomentCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#MentalProcessCategory
+# 
+# https://w3id.org/ontodesire#MichaelSmith
+<https://w3id.org/ontodesire#MichaelSmith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#MichaelSmith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#MichaelSmith> <http://xmlns.com/foaf/0.1/name> "Michael Smith" .
+# 
+# https://w3id.org/ontodesire#MindToWorld
+<https://w3id.org/ontodesire#MindToWorld> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#MindToWorld> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#DirectionOfFit> .
+<https://w3id.org/ontodesire#MindToWorld> <http://www.w3.org/2000/01/rdf-schema#label> "mind-to-world"@en .
+<https://w3id.org/ontodesire#MindToWorld> <http://www.w3.org/2004/02/skos/core#definition> "Analogous to the declarative sentence: satisfied if the state conforms to the world."@en .
+# 
+# https://w3id.org/ontodesire#MotivatingGoodBeliefObjection
+<https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> <https://w3id.org/ontodesire#raisedBy> <https://w3id.org/ontodesire#JohnMcDowell> .
+<https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> <https://w3id.org/ontodesire#raisedBy> <https://w3id.org/ontodesire#TMScanlon> .
+<https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> <http://www.w3.org/2000/01/rdf-schema#label> "motivating belief-in-good objection"@en .
+<https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> <http://www.w3.org/2004/02/skos/core#definition> "Judgments of what is good or obligatory also dispose to action; action-based theories fail to distinguish desire from goodness judgment."@en .
+# 
+# https://w3id.org/ontodesire#NarrowAttentionObjection
+<https://w3id.org/ontodesire#NarrowAttentionObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#NarrowAttentionObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#NarrowAttentionObjection> <http://www.w3.org/2000/01/rdf-schema#label> "narrow attentional focus objection"@en .
+<https://w3id.org/ontodesire#NarrowAttentionObjection> <http://www.w3.org/2004/02/skos/core#definition> "Desire directs attention also to information about p, to opportunities to obtain it, and to those discussing p — not only to reasons in favour of p."@en .
+# 
+# https://w3id.org/ontodesire#Nora
+<https://w3id.org/ontodesire#Nora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#Nora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Human> .
+<https://w3id.org/ontodesire#Nora> <http://www.w3.org/2000/01/rdf-schema#label> "Nora"@en .
+# 
+# https://w3id.org/ontodesire#ObjectContent
+<https://w3id.org/ontodesire#ObjectContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#OccurrentAffectiveEpisodeCategory
+# 
+# https://w3id.org/ontodesire#OccurrentFeelingCategory
+# 
+# https://w3id.org/ontodesire#PerceptualStateCategory
+# 
+# https://w3id.org/ontodesire#PleasureBasedFamily
+# 
+# https://w3id.org/ontodesire#PleasureDisposition
+<https://w3id.org/ontodesire#PleasureDisposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#PleasureDisposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#PleasureDisposition> <http://www.w3.org/2000/01/rdf-schema#label> "disposition to pleasure at its seeming that p, displeasure at its seeming that not-p"@en .
+<https://w3id.org/ontodesire#PleasureDisposition> <http://www.w3.org/2004/02/skos/core#note> "Family-grain mark: the hedonic neural-identity theory reads it occurrently (desires ARE pleasure/reward episodes) rather than dispositionally, which is why the causal-priority objection targets only the dispositional variant. A dispositional/occurrent mark split, mirroring the good-based split, is a candidate refinement for the next version."@en .
+# 
+# https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs
+<https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#RationalityAcquisition
+<https://w3id.org/ontodesire#RationalityAcquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#RationalityAcquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#OriginMechanism> .
+<https://w3id.org/ontodesire#RationalityAcquisition> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#MichaelSmith> .
+<https://w3id.org/ontodesire#RationalityAcquisition> <http://www.w3.org/2000/01/rdf-schema#label> "acquisition via reasoning about one's rationality"@en .
+<https://w3id.org/ontodesire#RationalityAcquisition> <http://www.w3.org/2004/02/skos/core#note> "Believing that, were one rational, one would desire p tends to generate an intrinsic desire for p; breaks with the Humean dictum that beliefs do not dictate intrinsic desire."@en .
+<https://w3id.org/ontodesire#RationalityAcquisition> <https://w3id.org/ontodesire#generates> <https://w3id.org/ontodesire#IntrinsicDesire> .
+# 
+# https://w3id.org/ontodesire#ReasonsAttention
+<https://w3id.org/ontodesire#ReasonsAttention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#ReasonsAttention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#ReasonsAttention> <http://www.w3.org/2000/01/rdf-schema#label> "disposition to have attention drawn to reasons in favour of p"@en .
+# 
+# https://w3id.org/ontodesire#RewardLearningDrive
+<https://w3id.org/ontodesire#RewardLearningDrive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#RewardLearningDrive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#CharacteristicMark> .
+<https://w3id.org/ontodesire#RewardLearningDrive> <http://www.w3.org/2000/01/rdf-schema#label> "use of representations of p to drive reward-based learning"@en .
+# 
+# https://w3id.org/ontodesire#RewardLearningTheory
+<https://w3id.org/ontodesire#RewardLearningTheory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <https://w3id.org/ontodesire#anticipatedBy> <https://w3id.org/ontodesire#FredDretske> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#LearningBasedFamily> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#TimothySchroeder> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#RewardLearningDrive> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#LearningMechanismCategory> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <https://w3id.org/ontodesire#locatesDesireIn> <https://w3id.org/ontodesire#DopaminergicRewardSystem> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#AprioriImplausibilityObjection> .
+<https://w3id.org/ontodesire#RewardLearningTheory> <http://www.w3.org/2000/01/rdf-schema#label> "reward-learning theory"@en .
+<https://w3id.org/ontodesire#RewardLearningTheory> <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to use representations of p to drive reward-based learning."@en .
+<https://w3id.org/ontodesire#RewardLearningTheory> <http://www.w3.org/2004/02/skos/core#note> "Treats desire as a natural kind; the least a priori credible of the listed theories."@en .
+# 
+# https://w3id.org/ontodesire#RuthMillikan
+<https://w3id.org/ontodesire#RuthMillikan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#RuthMillikan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#RuthMillikan> <http://xmlns.com/foaf/0.1/name> "Ruth Millikan" .
+# 
+# https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs
+<https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#SimpleActionDispositional
+<https://w3id.org/ontodesire#SimpleActionDispositional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#SimpleActionDispositional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#SimpleActionDispositional> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#ActionBasedFamily> .
+<https://w3id.org/ontodesire#SimpleActionDispositional> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ActionDisposition> .
+<https://w3id.org/ontodesire#SimpleActionDispositional> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#DispositionCategory> .
+<https://w3id.org/ontodesire#SimpleActionDispositional> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#BehavioralTicObjection> .
+<https://w3id.org/ontodesire#SimpleActionDispositional> <http://www.w3.org/2000/01/rdf-schema#label> "simple action-dispositional theory"@en .
+<https://w3id.org/ontodesire#SimpleActionDispositional> <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to be disposed to act so as to bring about p."@en .
+# 
+# https://w3id.org/ontodesire#SingleBearer
+<https://w3id.org/ontodesire#SingleBearer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#Socrates
+<https://w3id.org/ontodesire#Socrates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#Socrates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#Socrates> <http://xmlns.com/foaf/0.1/name> "Socrates" .
+# 
+# https://w3id.org/ontodesire#SophisticatedActionDispositional
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#ActionBasedFamily> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#MichaelSmith> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ActionDisposition> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#DispositionCategory> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#DoubleFaultObjection> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#UnactionableDesiresObjection> .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <http://www.w3.org/2000/01/rdf-schema#label> "sophisticated action-dispositional theory"@en .
+<https://w3id.org/ontodesire#SophisticatedActionDispositional> <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to be disposed to take whatever actions one believes are likely to bring about p."@en .
+# 
+# https://w3id.org/ontodesire#StandingDesiresGenuine
+<https://w3id.org/ontodesire#StandingDesiresGenuine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#StateOfAffairsContent
+<https://w3id.org/ontodesire#StateOfAffairsContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#TMScanlon
+<https://w3id.org/ontodesire#TMScanlon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#TMScanlon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#TMScanlon> <http://xmlns.com/foaf/0.1/name> "T. M. Scanlon" .
+# 
+# https://w3id.org/ontodesire#Teleofunctional
+<https://w3id.org/ontodesire#Teleofunctional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#Teleofunctional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#MonofactorialTheory> .
+<https://w3id.org/ontodesire#Teleofunctional> <https://w3id.org/ontodesire#answersObjection> <https://w3id.org/ontodesire#DoubleFaultObjection> .
+<https://w3id.org/ontodesire#Teleofunctional> <https://w3id.org/ontodesire#belongsToFamily> <https://w3id.org/ontodesire#ActionBasedFamily> .
+<https://w3id.org/ontodesire#Teleofunctional> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#DavidPapineau> .
+<https://w3id.org/ontodesire#Teleofunctional> <https://w3id.org/ontodesire#defendedBy> <https://w3id.org/ontodesire#RuthMillikan> .
+<https://w3id.org/ontodesire#Teleofunctional> <https://w3id.org/ontodesire#identifiesDesireWith> <https://w3id.org/ontodesire#ActionProductionFunction> .
+<https://w3id.org/ontodesire#Teleofunctional> <https://w3id.org/ontodesire#impliesCategory> <https://w3id.org/ontodesire#BiologicalFunctionCategory> .
+<https://w3id.org/ontodesire#Teleofunctional> <https://w3id.org/ontodesire#suffersObjection> <https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> .
+<https://w3id.org/ontodesire#Teleofunctional> <http://www.w3.org/2000/01/rdf-schema#label> "teleofunctional action theory"@en .
+<https://w3id.org/ontodesire#Teleofunctional> <http://www.w3.org/2004/02/skos/core#definition> "Desires are states whose function is to produce actions, whether or not they actually dispose the agent."@en .
+# 
+# https://w3id.org/ontodesire#TimothySchroeder
+<https://w3id.org/ontodesire#TimothySchroeder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#TimothySchroeder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Philosopher> .
+<https://w3id.org/ontodesire#TimothySchroeder> <http://xmlns.com/foaf/0.1/name> "Timothy Schroeder" .
+# 
+# https://w3id.org/ontodesire#UnactionableDesiresObjection
+<https://w3id.org/ontodesire#UnactionableDesiresObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#UnactionableDesiresObjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Objection> .
+<https://w3id.org/ontodesire#UnactionableDesiresObjection> <http://www.w3.org/2000/01/rdf-schema#label> "unactionable desires objection"@en .
+<https://w3id.org/ontodesire#UnactionableDesiresObjection> <http://www.w3.org/2004/02/skos/core#definition> "Too restrictive: desiring that pi be rational, or never to have been born, does not seem to exist in virtue of dispositions to act."@en .
+# 
+# https://w3id.org/ontodesire#UniversalWorldToMindFit
+<https://w3id.org/ontodesire#UniversalWorldToMindFit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ontodesire#WorldToMind
+<https://w3id.org/ontodesire#WorldToMind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#WorldToMind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#DirectionOfFit> .
+<https://w3id.org/ontodesire#WorldToMind> <http://www.w3.org/2000/01/rdf-schema#label> "world-to-mind"@en .
+<https://w3id.org/ontodesire#WorldToMind> <http://www.w3.org/2004/02/skos/core#definition> "Analogous to the imperative sentence: satisfied if the world comes to conform to the state."@en .
+# 
+# https://w3id.org/ontodesire#byContent
+<https://w3id.org/ontodesire#byContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#byContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#PartitionCriterion> .
+<https://w3id.org/ontodesire#byContent> <http://www.w3.org/2000/01/rdf-schema#label> "by content kind"@en .
+# 
+# https://w3id.org/ontodesire#byJustificatoryStructure
+<https://w3id.org/ontodesire#byJustificatoryStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#byJustificatoryStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#PartitionCriterion> .
+<https://w3id.org/ontodesire#byJustificatoryStructure> <http://www.w3.org/2000/01/rdf-schema#label> "by justificatory structure"@en .
+# 
+# https://w3id.org/ontodesire#byManifestation
+<https://w3id.org/ontodesire#byManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#byManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#PartitionCriterion> .
+<https://w3id.org/ontodesire#byManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "by mode of manifestation"@en .
+# 
+# https://w3id.org/ontodesire#byOrder
+<https://w3id.org/ontodesire#byOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#byOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#PartitionCriterion> .
+<https://w3id.org/ontodesire#byOrder> <http://www.w3.org/2000/01/rdf-schema#label> "by order"@en .
+# 
+# https://w3id.org/ontodesire#noraDrinksTeaSoon
+<https://w3id.org/ontodesire#noraDrinksTeaSoon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#noraDrinksTeaSoon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Proposition> .
+<https://w3id.org/ontodesire#noraDrinksTeaSoon> <http://www.w3.org/2000/01/rdf-schema#label> "Nora drinks a cup of tea soon"@en .
+<https://w3id.org/ontodesire#noraDrinksTeaSoon> <http://www.w3.org/2004/02/skos/core#scopeNote> "The disambiguation among possessing/drinking and soon/someday is what motivates treating desires as propositional attitudes."@en .
+# 
+# https://w3id.org/ontodesire#noraTriesNewTeas
+<https://w3id.org/ontodesire#noraTriesNewTeas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#noraTriesNewTeas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#Proposition> .
+<https://w3id.org/ontodesire#noraTriesNewTeas> <http://www.w3.org/2000/01/rdf-schema#label> "Nora tries teas she has not tried before"@en .
+# 
+# https://w3id.org/ontodesire#norasDesireForTea
+<https://w3id.org/ontodesire#norasDesireForTea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#norasDesireForTea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#FirstOrderDesire> .
+<https://w3id.org/ontodesire#norasDesireForTea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#OccurrentDesire> .
+<https://w3id.org/ontodesire#norasDesireForTea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#StateOfAffairsDesire> .
+<https://w3id.org/ontodesire#norasDesireForTea> <https://w3id.org/ontodesire#hasBearer> <https://w3id.org/ontodesire#Nora> .
+<https://w3id.org/ontodesire#norasDesireForTea> <https://w3id.org/ontodesire#hasContent> <https://w3id.org/ontodesire#noraDrinksTeaSoon> .
+<https://w3id.org/ontodesire#norasDesireForTea> <https://w3id.org/ontodesire#hasStrength> <https://w3id.org/ontodesire#norasTeaDesireStrength> .
+<https://w3id.org/ontodesire#norasDesireForTea> <https://w3id.org/ontodesire#isSatisfiedBy> <https://w3id.org/ontodesire#noraDrinksTeaSoon> .
+<https://w3id.org/ontodesire#norasDesireForTea> <http://www.w3.org/2000/01/rdf-schema#label> "Nora's desire for tea"@en .
+# 
+# https://w3id.org/ontodesire#norasStandingDesireForNewTeas
+<https://w3id.org/ontodesire#norasStandingDesireForNewTeas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#norasStandingDesireForNewTeas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#IntrinsicDesire> .
+<https://w3id.org/ontodesire#norasStandingDesireForNewTeas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#StandingDesire> .
+<https://w3id.org/ontodesire#norasStandingDesireForNewTeas> <https://w3id.org/ontodesire#hasBearer> <https://w3id.org/ontodesire#Nora> .
+<https://w3id.org/ontodesire#norasStandingDesireForNewTeas> <https://w3id.org/ontodesire#hasContent> <https://w3id.org/ontodesire#noraTriesNewTeas> .
+<https://w3id.org/ontodesire#norasStandingDesireForNewTeas> <http://www.w3.org/2000/01/rdf-schema#label> "Nora's standing desire to try new teas"@en .
+<https://w3id.org/ontodesire#norasStandingDesireForNewTeas> <http://www.w3.org/2004/02/skos/core#note> "Example of the explanatory role of standing desires: explains why the new tin captures her attention and why she is delighted. No strength individual is asserted: under v0.3.0's max-1 axiom a desire need not carry a determinate cardinal strength."@en .
+# 
+# https://w3id.org/ontodesire#norasTeaDesireStrength
+<https://w3id.org/ontodesire#norasTeaDesireStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontodesire#norasTeaDesireStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontodesire#DesireStrength> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid29 <http://www.w3.org/2002/07/owl#members> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#MentalState> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#Content> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#Bearer> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid33 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#PleasureBasedFamily> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#LearningBasedFamily> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#HolisticFamily> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#GoodBasedFamily> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#AttentionBasedFamily> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#ActionBasedFamily> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid40 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#RewardLearningDrive> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#ReasonsAttention> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#PleasureDisposition> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#InformationAttention> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#GoodBeliefDisposition> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#GoodAppearanceDisposition> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#ActionProductionFunction> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#ActionDisposition> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid49 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#UnactionableDesiresObjection> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#NarrowAttentionObjection> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#MotivatingGoodBeliefObjection> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#LewisDecisionTheoreticObjection> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#DoubleFaultObjection> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#CausalPriorityObjection> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#BehavioralTicObjection> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#AprioriImplausibilityObjection> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#AnimalObjection> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid59 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#RationalityAcquisition> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#MeansEndReasoning> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#InnateEndowment> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#AssociativeLearningAcquisition> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid64 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#PerceptualStateCategory> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#OccurrentFeelingCategory> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#OccurrentAffectiveEpisodeCategory> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#MentalProcessCategory> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#MentalMomentCategory> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#LearningMechanismCategory> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#DoxasticStateCategory> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#DispositionCategory> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#CausalRoleStateCategory> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#BiologicalFunctionCategory> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid75 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#Teleofunctional> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#SophisticatedActionDispositional> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#SimpleActionDispositional> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#RewardLearningTheory> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#LewisianFunctionalism> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#HedonicNeural> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#HedonicDispositional> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#DirectedAttention> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#DesireAsPerceptionOfGood> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#DesireAsBeliefInGood> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#DavidsonianInterpretationism> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#CaringTheory> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid88 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid90 .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid89 .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#WorldToMind> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#MindToWorld> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid91 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid92 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#StateOfAffairsContent> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#ObjectContent> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid94 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid99 .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid98 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid97 .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid96 .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid95 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#UniversalWorldToMindFit> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#StandingDesiresGenuine> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#SingleBearer> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid100 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid103 .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid102 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid101 .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#byOrder> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#byManifestation> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#byJustificatoryStructure> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontodesire#byContent> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

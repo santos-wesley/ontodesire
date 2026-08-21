@@ -1,0 +1,20 @@
+# Audited third-party sources are not redistributed; retrieve them with
+# audit/retrieve-sources.sh. The hash record (audit/SOURCES.sha256) is tracked.
+audit/sources/
+
+# Build and tooling artefacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+tmp*/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1447 @@
+@prefix : <https://w3id.org/ontodesire#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/ontodesire#> .
+
+<https://w3id.org/ontodesire> rdf:type owl:Ontology ;
+                               owl:versionIRI <https://w3id.org/ontodesire/0.3.0> ;
+                               owl:imports <https://w3id.org/ontodesire/commitments> ;
+                               <http://purl.org/dc/terms/description> "A reference ontology of desire that reifies rival philosophical theories of desire as first-class entities, keeping the Desire class deliberately underdetermined. Includes characteristic marks, objections, the four orthogonal partitions of desire, per-theory categorial stances, and bibliographic anchoring."@en ;
+                               <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                               <http://purl.org/dc/terms/source> <https://plato.stanford.edu/entries/desire/> ;
+                               <http://purl.org/dc/terms/title> "OntoDesire"@en ;
+                               rdfs:comment "For declaring commitments only, import <https://w3id.org/ontodesire/commitments> alone."@en ;
+                               owl:versionInfo "0.3.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ontodesire#commitmentEvidence
+:commitmentEvidence rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ontodesire#commitmentNote
+:commitmentNote rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ontodesire#commitsToStructuralStance
+:commitsToStructuralStance rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ontodesire#deliberatelyUncommittedOn
+:deliberatelyUncommittedOn rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ontodesire#generates
+:generates rdf:type owl:AnnotationProperty ;
+           rdfs:label "generates"@en ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "Annotates an origin mechanism with the desire classes (by justificatory structure) whose instances it typically generates."@en .
+
+
+###  https://w3id.org/ontodesire#partitionedBy
+:partitionedBy rdf:type owl:AnnotationProperty ;
+               rdfs:label "partitioned by"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Annotates a subclass of Desire with the orthogonal criterion that generates it, so that the four facets are not mistaken for a single tree."@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/ontodesire#answersObjection
+:answersObjection rdf:type owl:ObjectProperty ;
+                  rdfs:range :Objection ;
+                  rdfs:label "answers objection"@en .
+
+
+###  https://w3id.org/ontodesire#anticipatedBy
+:anticipatedBy rdf:type owl:ObjectProperty ;
+               rdfs:range :Philosopher ;
+               rdfs:label "anticipated by"@en .
+
+
+###  https://w3id.org/ontodesire#attributedTo
+:attributedTo rdf:type owl:ObjectProperty ;
+              rdfs:range :Philosopher ;
+              rdfs:label "attributed to"@en .
+
+
+###  https://w3id.org/ontodesire#belongsToFamily
+:belongsToFamily rdf:type owl:ObjectProperty ;
+                 rdfs:domain :TheoryOfDesire ;
+                 rdfs:range :TheoryFamily ;
+                 rdfs:label "belongs to family"@en .
+
+
+###  https://w3id.org/ontodesire#defendedBy
+:defendedBy rdf:type owl:ObjectProperty ;
+            rdfs:range :Philosopher ;
+            rdfs:label "defended by"@en .
+
+
+###  https://w3id.org/ontodesire#hasBearer
+:hasBearer rdf:type owl:ObjectProperty ;
+           rdfs:domain :MentalState ;
+           rdfs:range :Bearer ;
+           rdfs:label "has bearer"@en .
+
+
+###  https://w3id.org/ontodesire#hasContent
+:hasContent rdf:type owl:ObjectProperty ;
+            rdfs:domain :MentalState ;
+            rdfs:range :Content ;
+            rdfs:label "has content"@en .
+
+
+###  https://w3id.org/ontodesire#hasDirectionOfFit
+:hasDirectionOfFit rdf:type owl:ObjectProperty ;
+                   rdfs:domain :MentalState ;
+                   rdfs:range :DirectionOfFit ;
+                   rdfs:label "has direction of fit"@en .
+
+
+###  https://w3id.org/ontodesire#hasObjectAttitude
+:hasObjectAttitude rdf:type owl:ObjectProperty ,
+                            owl:IrreflexiveProperty ;
+                   rdfs:domain :Desire ;
+                   rdfs:range :ProAttitude ;
+                   rdfs:label "has as object (a lower-order attitude)"@en .
+
+
+###  https://w3id.org/ontodesire#hasStrength
+:hasStrength rdf:type owl:ObjectProperty ;
+             rdfs:domain :Desire ;
+             rdfs:range :DesireStrength ;
+             rdfs:label "has strength"@en .
+
+
+###  https://w3id.org/ontodesire#identifiesDesireWith
+:identifiesDesireWith rdf:type owl:ObjectProperty ;
+                      rdfs:domain :TheoryOfDesire ;
+                      rdfs:range :CharacteristicMark ;
+                      rdfs:label "identifies desire with"@en .
+
+
+###  https://w3id.org/ontodesire#impliesCategory
+:impliesCategory rdf:type owl:ObjectProperty ;
+                 rdfs:domain :TheoryOfDesire ;
+                 rdfs:range :CategorialStance ;
+                 rdfs:label "implies ontological category"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Relates a theory to the ontological category that desire would fall under if the theory were true. The theories disagree about category, not only about essence."@en .
+
+
+###  https://w3id.org/ontodesire#isMeansTo
+:isMeansTo rdf:type owl:ObjectProperty ,
+                    owl:TransitiveProperty ;
+           rdfs:domain :Desire ;
+           rdfs:range :Desire ;
+           rdfs:label "is means to"@en .
+
+
+###  https://w3id.org/ontodesire#isSatisfiedBy
+:isSatisfiedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :ProAttitude ;
+               rdfs:range :StateOfAffairs ;
+               rdfs:label "is satisfied by"@en ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "For desires, satisfaction is the actual realization of the state of affairs, not the belief that it obtained."@en ;
+               :commitsToStructuralStance :SatisfactionByStatesOfAffairs .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :isSatisfiedBy ;
+   owl:annotatedProperty :commitsToStructuralStance ;
+   owl:annotatedTarget :SatisfactionByStatesOfAffairs ;
+   :commitmentEvidence "isSatisfiedBy rdfs:range StateOfAffairs (this module, Section 10)." ;
+   :commitmentNote "Declared by OntoDesire itself: even object-desires are given state-of-affairs satisfiers -- structurally adjacent to the possession-rewrite the audit flags in SUMO, retained here because satisfaction conditions, unlike contents, are standardly worldly; object-desire theorists may contest it."
+ ] .
+
+
+###  https://w3id.org/ontodesire#locatesDesireIn
+:locatesDesireIn rdf:type owl:ObjectProperty ;
+                 rdfs:domain :TheoryOfDesire ;
+                 rdfs:range :NeuralRealizer ;
+                 rdfs:label "locates desire in"@en .
+
+
+###  https://w3id.org/ontodesire#preferredTo
+:preferredTo rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             rdfs:label "preferred to"@en .
+
+
+###  https://w3id.org/ontodesire#raisedBy
+:raisedBy rdf:type owl:ObjectProperty ;
+          rdfs:domain :Objection ;
+          rdfs:range :Philosopher ;
+          rdfs:label "raised by"@en .
+
+
+###  https://w3id.org/ontodesire#realizes
+:realizes rdf:type owl:ObjectProperty ,
+                   owl:IrreflexiveProperty ;
+          rdfs:domain :RealizerDesire ;
+          rdfs:range :IntrinsicDesire ;
+          rdfs:label "realizes"@en ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinct from isMeansTo: the realizer is an instance of the end, not a means of reaching it."@en .
+
+
+###  https://w3id.org/ontodesire#strongerThan
+:strongerThan rdf:type owl:ObjectProperty ,
+                       owl:TransitiveProperty ;
+              rdfs:domain :Desire ;
+              rdfs:range :Desire ;
+              rdfs:label "stronger than"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "D1 is stronger than D2 iff the agent is disposed to act on D1 when: all else is equal, each desire is believed satisfiable by a distinct action, and they are believed not jointly satisfiable."@en .
+
+
+###  https://w3id.org/ontodesire#suffersObjection
+:suffersObjection rdf:type owl:ObjectProperty ;
+                  rdfs:range :Objection ;
+                  rdfs:label "suffers objection"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/ontodesire#isConscious
+:isConscious rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Desire ;
+             rdfs:range xsd:boolean ;
+             rdfs:label "is conscious"@en ;
+             <http://www.w3.org/2004/02/skos/core#note> "Contested: some hold every occurrent desire is an element of conscious life; against this, the direction of fit of desire has been argued incompatible with that of elements of consciousness (Hulse, Read and Schroeder 2004)."@en .
+
+
+###  https://w3id.org/ontodesire#isInnate
+:isInnate rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Desire ;
+          rdfs:range xsd:boolean ;
+          rdfs:label "is innate"@en .
+
+
+###  https://w3id.org/ontodesire#isSatisfied
+:isSatisfied rdf:type owl:DatatypeProperty ;
+             rdfs:domain :ProAttitude ;
+             rdfs:range xsd:boolean ;
+             rdfs:label "is satisfied"@en .
+
+
+###  https://w3id.org/ontodesire#strengthDegree
+:strengthDegree rdf:type owl:DatatypeProperty ;
+                rdfs:domain :DesireStrength ;
+                rdfs:range xsd:decimal ;
+                rdfs:label "strength degree"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://w3id.org/ontodesire#AppearanceOfGood
+:AppearanceOfGood rdf:type owl:Class ;
+                  rdfs:subClassOf :MentalState ;
+                  rdfs:label "appearance of good"@en ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "High-level perceptual state, distinct from the judgment that something is good (Stampe 1987; Oddie 2005)."@en .
+
+
+###  https://w3id.org/ontodesire#Bearer
+:Bearer rdf:type owl:Class ;
+        rdfs:label "bearer"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "An agent -- an organism or an artificial system -- capable of instantiating mental states. Restricting bearers to organisms would itself be a theoretical commitment, negated by the BDI agent-modelling use cases that motivate this resource."@en .
+
+
+###  https://w3id.org/ontodesire#Belief
+:Belief rdf:type owl:Class ;
+        rdfs:subClassOf :MentalState ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDirectionOfFit ;
+                          owl:hasValue :MindToWorld
+                        ] ;
+        rdfs:label "belief"@en .
+
+
+###  https://w3id.org/ontodesire#BeliefInTheGood
+:BeliefInTheGood rdf:type owl:Class ;
+                 rdfs:subClassOf :Belief ;
+                 rdfs:label "belief in the good"@en .
+
+
+###  https://w3id.org/ontodesire#Besire
+:Besire rdf:type owl:Class ;
+        rdfs:subClassOf :MentalState ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDirectionOfFit ;
+                          owl:minCardinality "2"^^xsd:nonNegativeInteger
+                        ] ;
+        rdfs:label "besire"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Hybrid state posited as having both belief-like and desire-like directions of fit."@en .
+
+
+###  https://w3id.org/ontodesire#Caring
+:Caring rdf:type owl:Class ;
+        rdfs:subClassOf :ProAttitude ;
+        rdfs:label "caring"@en ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "Jaworska: a package of motivation, affect, attention and emotion directed at someone's welfare; readable as a holistic theory of a subclass of desires."@en .
+
+
+###  https://w3id.org/ontodesire#CategorialStance
+:CategorialStance rdf:type owl:Class .
+
+
+###  https://w3id.org/ontodesire#CharacteristicMark
+:CharacteristicMark rdf:type owl:Class ;
+                    rdfs:label "characteristic mark of desire"@en ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "An effect or disposition typically associated with desire. Each monofactorial theory elects exactly one as essential and treats the rest as contingent accompaniments."@en .
+
+
+###  https://w3id.org/ontodesire#ConditionalDesire
+:ConditionalDesire rdf:type owl:Class ;
+                   rdfs:subClassOf :Desire ;
+                   rdfs:label "conditional desire"@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Hard case for content specification (McDaniel and Bradley 2008)."@en .
+
+
+###  https://w3id.org/ontodesire#Content
+:Content rdf:type owl:Class ;
+         rdfs:label "intentional content"@en .
+
+
+###  https://w3id.org/ontodesire#Craving
+:Craving rdf:type owl:Class ;
+         rdfs:subClassOf :ProAttitude ;
+         rdfs:label "craving"@en .
+
+
+###  https://w3id.org/ontodesire#Desire
+:Desire rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:unionOf ( :OccurrentDesire
+                                            :StandingDesire
+                                          )
+                            ] ;
+        rdfs:subClassOf :ProAttitude ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDirectionOfFit ;
+                          owl:hasValue :WorldToMind
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasContent ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasBearer ;
+                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasStrength ;
+                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                        ] ;
+        rdfs:label "desire"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A conative mental state whose content specifies a satisfaction condition to be realized in the world. Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about."@en ;
+        :commitsToStructuralStance :SingleBearer ,
+                                   :StandingDesiresGenuine ,
+                                   :UniversalWorldToMindFit ;
+        :deliberatelyUncommittedOn :FamilyAxis .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Desire ;
+   owl:annotatedProperty :commitsToStructuralStance ;
+   owl:annotatedTarget :SingleBearer ;
+   :commitmentEvidence "Desire rdfs:subClassOf [ owl:onProperty hasBearer ; owl:cardinality 1 ] (this module, Section 12)." ;
+   :commitmentNote "Declared by OntoDesire itself. Excludes plural/shared subjects of one desire token; collective-conation theorists would contest it."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Desire ;
+   owl:annotatedProperty :commitsToStructuralStance ;
+   owl:annotatedTarget :StandingDesiresGenuine ;
+   :commitmentEvidence "Desire owl:equivalentClass [ owl:unionOf ( OccurrentDesire StandingDesire ) ] (this module, Section 3.3)." ;
+   :commitmentNote "Declared by OntoDesire itself. Some dispositionalists deny that standing desires are genuine desires, reading them as mere dispositions to generate occurrent ones (see the skos:note on StandingDesire)."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Desire ;
+   owl:annotatedProperty :commitsToStructuralStance ;
+   owl:annotatedTarget :UniversalWorldToMindFit ;
+   :commitmentEvidence "Desire rdfs:subClassOf [ owl:onProperty hasDirectionOfFit ; owl:hasValue WorldToMind ] (this module, Section 7). The axiom is universal, not exclusive: nothing caps hasDirectionOfFit, so a desire may consistently also bear mind-to-world fit." ;
+   :commitmentNote "Declared by OntoDesire itself. Retained deliberately: universal world-to-mind fit is the closest thing to common ground the debate has, but it is contested in the desire-as-belief debate that Lewis (1988) opened by attacking the thesis, by its contemporary defenders (Gregory 2021), and in the besire literature -- a commitment, not a neutral fact."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Desire ;
+   owl:annotatedProperty :deliberatelyUncommittedOn ;
+   owl:annotatedTarget :FamilyAxis ;
+   :commitmentEvidence "skos:definition of Desire: 'Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about.'" ;
+   :commitmentNote "The flagship design decision in machine-readable form: the essence-level axis is deliberately uncommitted -- the rival theories are reified, not adjudicated."
+ ] .
+
+
+###  https://w3id.org/ontodesire#DesireStrength
+:DesireStrength rdf:type owl:Class ;
+                rdfs:label "desire strength"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A continuous magnitude, canonically characterized by causal power over the control of action; each theory of desire induces its own corresponding metric."@en ;
+                <http://www.w3.org/2004/02/skos/core#note> "Puzzle: manifestations of strength fluctuate (mood, fatigue, temporal distance) without the strength itself seeming to vary — an advantage of holistic and learning-based theories, which do not reduce strength to a single observable."@en .
+
+
+###  https://w3id.org/ontodesire#DirectionOfFit
+:DirectionOfFit rdf:type owl:Class ;
+                rdfs:label "direction of fit"@en .
+
+
+###  https://w3id.org/ontodesire#Displeasure
+:Displeasure rdf:type owl:Class ;
+             rdfs:subClassOf :MentalState ;
+             rdfs:label "displeasure"@en .
+
+
+###  https://w3id.org/ontodesire#FirstOrderDesire
+:FirstOrderDesire rdf:type owl:Class ;
+                  rdfs:subClassOf :Desire ;
+                  owl:disjointWith :SecondOrderDesire ;
+                  rdfs:label "first-order desire"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A desire whose object is not itself a pro-attitude of the same bearer; carried by the absence of hasObjectAttitude (see module comment)."@en ;
+                  :partitionedBy :byOrder .
+
+
+###  https://w3id.org/ontodesire#Goal
+:Goal rdf:type owl:Class ;
+      rdfs:subClassOf :ProAttitude ;
+      rdfs:label "goal"@en .
+
+
+###  https://w3id.org/ontodesire#HolisticTheory
+:HolisticTheory rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :TheoryOfDesire
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :identifiesDesireWith ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass :CharacteristicMark
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :TheoryOfDesire ;
+                rdfs:label "holistic theory"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Refuses to privilege any mark; having a desire is exhibiting enough (a vague threshold) of the whole set."@en .
+
+
+###  https://w3id.org/ontodesire#Human
+:Human rdf:type owl:Class ;
+       rdfs:subClassOf :Bearer ;
+       rdfs:label "human"@en .
+
+
+###  https://w3id.org/ontodesire#Inclination
+:Inclination rdf:type owl:Class ;
+             rdfs:subClassOf :ProAttitude ;
+             rdfs:label "inclination"@en ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Kantian term: a motive whose presence, for Kant, removes the moral praiseworthiness of an action."@en .
+
+
+###  https://w3id.org/ontodesire#InstrumentalDesire
+:InstrumentalDesire rdf:type owl:Class ;
+                    rdfs:subClassOf :Desire ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :isMeansTo ;
+                                      owl:someValuesFrom :Desire
+                                    ] ;
+                    rdfs:label "instrumental desire"@en ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "extrinsic desire"@en ;
+                    :partitionedBy :byJustificatoryStructure .
+
+
+###  https://w3id.org/ontodesire#Intention
+:Intention rdf:type owl:Class ;
+           rdfs:subClassOf :MentalState ;
+           rdfs:label "intention"@en .
+
+
+###  https://w3id.org/ontodesire#IntrinsicDesire
+:IntrinsicDesire rdf:type owl:Class ;
+                 rdfs:subClassOf :Desire ;
+                 owl:disjointWith :MerelyInstrumentalDesire ;
+                 rdfs:label "intrinsic desire"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A desire whose object is wanted at least partly for its own sake."@en ;
+                 <http://www.w3.org/2004/02/skos/core#note> "NOT disjoint from InstrumentalDesire: the same desire can be partly for its own sake and partly as a means (Schroeder's father case)."@en ;
+                 :partitionedBy :byJustificatoryStructure .
+
+
+###  https://w3id.org/ontodesire#MentalState
+:MentalState rdf:type owl:Class ;
+             rdfs:label "mental state"@en .
+
+
+###  https://w3id.org/ontodesire#MerelyInstrumentalDesire
+:MerelyInstrumentalDesire rdf:type owl:Class ;
+                          rdfs:subClassOf :InstrumentalDesire ;
+                          rdfs:label "merely instrumental desire"@en ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "Desired only as a means, in no measure for its own sake. This is the usual reinforced sense of 'instrumental'."@en .
+
+
+###  https://w3id.org/ontodesire#MonofactorialTheory
+:MonofactorialTheory rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( :TheoryOfDesire
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :identifiesDesireWith ;
+                                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                  owl:onClass :CharacteristicMark
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf :TheoryOfDesire ;
+                     rdfs:label "monofactorial theory"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Privileges exactly one characteristic mark as essential to desire."@en .
+
+
+###  https://w3id.org/ontodesire#NeuralRealizer
+:NeuralRealizer rdf:type owl:Class ;
+                rdfs:label "neural realizer"@en .
+
+
+###  https://w3id.org/ontodesire#NonHumanAnimal
+:NonHumanAnimal rdf:type owl:Class ;
+                rdfs:subClassOf :Bearer ;
+                rdfs:label "non-human animal"@en ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "Test case for good-based theories: the rat seems to desire escape from the cat without representing anything as good."@en .
+
+
+###  https://w3id.org/ontodesire#ObjectContentItem
+:ObjectContentItem rdf:type owl:Class ;
+                   rdfs:subClassOf :Content ;
+                   rdfs:label "object (as content)"@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Non-propositional content, posited by those who deny that all desires are propositional attitudes (Thagard 2006)."@en .
+
+
+###  https://w3id.org/ontodesire#ObjectDesire
+:ObjectDesire rdf:type owl:Class ;
+              rdfs:subClassOf :Desire ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasContent ;
+                                owl:allValuesFrom :ObjectContentItem
+                              ] ;
+              owl:disjointWith :StateOfAffairsDesire ;
+              rdfs:label "desire for an object"@en ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "Minority view; faithful to ordinary talk and to animal desire."@en ;
+              :partitionedBy :byContent .
+
+
+###  https://w3id.org/ontodesire#Objection
+:Objection rdf:type owl:Class ;
+           rdfs:label "objection"@en .
+
+
+###  https://w3id.org/ontodesire#OccurrentDesire
+:OccurrentDesire rdf:type owl:Class ;
+                 rdfs:subClassOf :Desire ;
+                 owl:disjointWith :StandingDesire ;
+                 rdfs:label "occurrent desire"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A desire playing some role in the psyche at the moment — not necessarily in control of action, nor necessarily conscious."@en ;
+                 :partitionedBy :byManifestation .
+
+
+###  https://w3id.org/ontodesire#OriginMechanism
+:OriginMechanism rdf:type owl:Class ;
+                 rdfs:label "origin mechanism"@en .
+
+
+###  https://w3id.org/ontodesire#PartitionCriterion
+:PartitionCriterion rdf:type owl:Class ;
+                    rdfs:label "partition criterion"@en .
+
+
+###  https://w3id.org/ontodesire#Philosopher
+:Philosopher rdf:type owl:Class ;
+             rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+             rdfs:label "philosopher"@en .
+
+
+###  https://w3id.org/ontodesire#Pleasure
+:Pleasure rdf:type owl:Class ;
+          rdfs:subClassOf :MentalState ;
+          rdfs:label "pleasure"@en .
+
+
+###  https://w3id.org/ontodesire#Preference
+:Preference rdf:type owl:Class ;
+            rdfs:subClassOf :ProAttitude ;
+            rdfs:label "preference"@en .
+
+
+###  https://w3id.org/ontodesire#ProAttitude
+:ProAttitude rdf:type owl:Class ;
+             rdfs:subClassOf :MentalState ;
+             rdfs:label "pro attitude"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The umbrella under which cognate conative states are grouped; whether they constitute one mental state or many is disputed."@en .
+
+
+###  https://w3id.org/ontodesire#Proposition
+:Proposition rdf:type owl:Class ;
+             rdfs:subClassOf :StateOfAffairs ;
+             rdfs:label "proposition"@en ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Subsuming propositions under states of affairs is a substantive simplification of the ontology of content (abstract truth-bearers vs. worldly truth-makers); it is declared below rather than made silently."@en ;
+             :commitsToStructuralStance :PropositionsAsStatesOfAffairs .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Proposition ;
+   owl:annotatedProperty :commitsToStructuralStance ;
+   owl:annotatedTarget :PropositionsAsStatesOfAffairs ;
+   :commitmentEvidence "Proposition rdfs:subClassOf StateOfAffairs (this module, Section 1)." ;
+   :commitmentNote "Declared by OntoDesire itself: a content-modelling convenience retained for compatibility with the propositional-attitude mainstream; contested in the ontology of content."
+ ] .
+
+
+###  https://w3id.org/ontodesire#Purpose
+:Purpose rdf:type owl:Class ;
+         rdfs:subClassOf :ProAttitude ;
+         rdfs:label "purpose"@en .
+
+
+###  https://w3id.org/ontodesire#RealizerDesire
+:RealizerDesire rdf:type owl:Class ;
+                rdfs:subClassOf :Desire ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :realizes ;
+                                  owl:someValuesFrom :IntrinsicDesire
+                                ] ;
+                rdfs:label "realizer desire"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A desire for an end that would count as one possible realization of an intrinsic desire — a realization relation, not a means-end relation."@en ;
+                :partitionedBy :byJustificatoryStructure .
+
+
+###  https://w3id.org/ontodesire#SecondOrderDesire
+:SecondOrderDesire rdf:type owl:Class ;
+                   rdfs:subClassOf :Desire ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasObjectAttitude ;
+                                     owl:someValuesFrom :Desire
+                                   ] ;
+                   rdfs:label "second-order desire"@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Frankfurt: the capacity to form them is what constitutes persons. Typically instrumental, though Lewis requires them intrinsic in valuing (Lewis, D. (1989). Dispositional theories of value. Proceedings of the Aristotelian Society, Supplementary Volume 63, 113-137)."@en ;
+                   :partitionedBy :byOrder .
+
+
+###  https://w3id.org/ontodesire#StandingDesire
+:StandingDesire rdf:type owl:Class ;
+                rdfs:subClassOf :Desire ;
+                rdfs:label "standing desire"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A desire playing no role in the psyche at the moment."@en ;
+                <http://www.w3.org/2004/02/skos/core#note> "Some deny these are genuine desires, treating them as mere dispositions to generate occurrent desires."@en ;
+                :partitionedBy :byManifestation .
+
+
+###  https://w3id.org/ontodesire#StateOfAffairs
+:StateOfAffairs rdf:type owl:Class ;
+                rdfs:subClassOf :Content ;
+                rdfs:label "state of affairs"@en .
+
+
+###  https://w3id.org/ontodesire#StateOfAffairsDesire
+:StateOfAffairsDesire rdf:type owl:Class ;
+                      rdfs:subClassOf :Desire ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasContent ;
+                                        owl:allValuesFrom :StateOfAffairs
+                                      ] ;
+                      rdfs:label "desire for a state of affairs"@en ;
+                      <http://www.w3.org/2004/02/skos/core#scopeNote> "Majority view: desires are propositional attitudes; enables logical relations among the contents of beliefs, desires and intentions."@en ;
+                      :partitionedBy :byContent .
+
+
+###  https://w3id.org/ontodesire#TheoryFamily
+:TheoryFamily rdf:type owl:Class .
+
+
+###  https://w3id.org/ontodesire#TheoryOfDesire
+:TheoryOfDesire rdf:type owl:Class .
+
+
+###  https://w3id.org/ontodesire#Wish
+:Wish rdf:type owl:Class ;
+      rdfs:subClassOf :ProAttitude ;
+      rdfs:label "wish"@en ;
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "Theoretical resource of action-based theories for accommodating 'desires' that action cannot satisfy (e.g. that pi be rational)."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ontodesire#ActionBasedFamily
+:ActionBasedFamily rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#ActionDisposition
+:ActionDisposition rdf:type owl:NamedIndividual ,
+                            :CharacteristicMark ;
+                   rdfs:label "disposition to take the actions one believes conducive to p"@en .
+
+
+###  https://w3id.org/ontodesire#ActionProductionFunction
+:ActionProductionFunction rdf:type owl:NamedIndividual ,
+                                   :CharacteristicMark ;
+                          rdfs:label "having the (biological) function of producing action"@en .
+
+
+###  https://w3id.org/ontodesire#AgnieszkaJaworska
+:AgnieszkaJaworska rdf:type owl:NamedIndividual ,
+                            :Philosopher ;
+                   <http://xmlns.com/foaf/0.1/name> "Agnieszka Jaworska" .
+
+
+###  https://w3id.org/ontodesire#AlexGregory
+:AlexGregory rdf:type owl:NamedIndividual ,
+                      :Philosopher ;
+             <http://xmlns.com/foaf/0.1/name> "Alex Gregory" .
+
+
+###  https://w3id.org/ontodesire#AnimalObjection
+:AnimalObjection rdf:type owl:NamedIndividual ,
+                          :Objection ;
+                 rdfs:label "non-human animal objection"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Rats seem to desire without representing anything as good; if desire does not require representing the good in them, why in us?"@en .
+
+
+###  https://w3id.org/ontodesire#AprioriImplausibilityObjection
+:AprioriImplausibilityObjection rdf:type owl:NamedIndividual ,
+                                         :Objection ;
+                                rdfs:label "a priori implausibility objection"@en ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "The theory admits desire in a creature incapable of acting or feeling, provided it represents and learns appropriately."@en .
+
+
+###  https://w3id.org/ontodesire#AssociativeLearningAcquisition
+:AssociativeLearningAcquisition rdf:type owl:NamedIndividual ,
+                                         :OriginMechanism ;
+                                :defendedBy :TimothySchroeder ;
+                                rdfs:label "acquisition via reward-based associative learning"@en ;
+                                <http://www.w3.org/2004/02/skos/core#note> "States of affairs that presage the satisfaction of existing intrinsic desires become intrinsically desired themselves."@en ;
+                                :generates :IntrinsicDesire .
+
+
+###  https://w3id.org/ontodesire#AttentionBasedFamily
+:AttentionBasedFamily rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#BehavioralTicObjection
+:BehavioralTicObjection rdf:type owl:NamedIndividual ,
+                                 :Objection ;
+                        rdfs:label "behavioral tic objection"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "The theory is too permissive: one who tends to stutter would count as desiring to stutter."@en .
+
+
+###  https://w3id.org/ontodesire#BiologicalFunctionCategory
+:BiologicalFunctionCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#CaringTheory
+:CaringTheory rdf:type owl:NamedIndividual ,
+                       :HolisticTheory ;
+              :belongsToFamily :HolisticFamily ;
+              :defendedBy :AgnieszkaJaworska ;
+              :identifiesDesireWith :ActionDisposition ,
+                                    :PleasureDisposition ,
+                                    :ReasonsAttention ;
+              :impliesCategory :CausalRoleStateCategory ;
+              rdfs:label "caring theory"@en ;
+              <http://www.w3.org/2004/02/skos/core#note> "Not intended as a theory of desire, but readable as a holistic theory of the subclass of desires that constitute caring."@en .
+
+
+###  https://w3id.org/ontodesire#CarolynMorillo
+:CarolynMorillo rdf:type owl:NamedIndividual ,
+                         :Philosopher ;
+                <http://xmlns.com/foaf/0.1/name> "Carolyn Morillo" .
+
+
+###  https://w3id.org/ontodesire#CausalPriorityObjection
+:CausalPriorityObjection rdf:type owl:NamedIndividual ,
+                                  :Objection ;
+                         rdfs:label "causal priority of desire over pleasure"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "If desire satisfaction is the standard cause of pleasure, desire and pleasure are ontologically distinct as cause and effect."@en .
+
+
+###  https://w3id.org/ontodesire#CausalRoleStateCategory
+:CausalRoleStateCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#DavidLewis
+:DavidLewis rdf:type owl:NamedIndividual ,
+                     :Philosopher ;
+            <http://xmlns.com/foaf/0.1/name> "David Lewis" .
+
+
+###  https://w3id.org/ontodesire#DavidPapineau
+:DavidPapineau rdf:type owl:NamedIndividual ,
+                        :Philosopher ;
+               <http://xmlns.com/foaf/0.1/name> "David Papineau" .
+
+
+###  https://w3id.org/ontodesire#DavidsonianInterpretationism
+:DavidsonianInterpretationism rdf:type owl:NamedIndividual ,
+                                       :HolisticTheory ;
+                              :belongsToFamily :HolisticFamily ;
+                              :defendedBy :DonaldDavidson ;
+                              :identifiesDesireWith :ActionDisposition ,
+                                                    :GoodBeliefDisposition ,
+                                                    :PleasureDisposition ,
+                                                    :ReasonsAttention ;
+                              :impliesCategory :CausalRoleStateCategory ;
+                              rdfs:label "Davidsonian interpretationism"@en ;
+                              <http://www.w3.org/2004/02/skos/core#scopeNote> "Desires as states of the whole organism, existing in virtue of interpretability."@en .
+
+
+###  https://w3id.org/ontodesire#DennisStampe
+:DennisStampe rdf:type owl:NamedIndividual ,
+                       :Philosopher ;
+              <http://xmlns.com/foaf/0.1/name> "Dennis Stampe" .
+
+
+###  https://w3id.org/ontodesire#DesireAsBeliefInGood
+:DesireAsBeliefInGood rdf:type owl:NamedIndividual ,
+                               :MonofactorialTheory ;
+                      :attributedTo :Socrates ;
+                      :belongsToFamily :GoodBasedFamily ;
+                      :defendedBy :AlexGregory ;
+                      :identifiesDesireWith :GoodBeliefDisposition ;
+                      :impliesCategory :DoxasticStateCategory ;
+                      :suffersObjection :AnimalObjection ,
+                                        :LewisDecisionTheoreticObjection ;
+                      rdfs:label "desire as belief in the good"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to believe that p is good (or, in the contemporary variant, that one has normative reason to bring p about)."@en ;
+                      <http://www.w3.org/2004/02/skos/core#note> "The attribution to Socrates is a classical antecedent (the Socratic thesis that we desire the good), not a formulation of the analysis; the analysis is actively defended in the contemporary literature (Gregory, Desire as Belief, OUP 2021)."@en .
+
+
+###  https://w3id.org/ontodesire#DesireAsPerceptionOfGood
+:DesireAsPerceptionOfGood rdf:type owl:NamedIndividual ,
+                                   :MonofactorialTheory ;
+                          :answersObjection :LewisDecisionTheoreticObjection ;
+                          :belongsToFamily :GoodBasedFamily ;
+                          :defendedBy :DennisStampe ,
+                                      :GrahamOddie ;
+                          :identifiesDesireWith :GoodAppearanceDisposition ;
+                          :impliesCategory :PerceptualStateCategory ;
+                          :suffersObjection :AnimalObjection ;
+                          rdfs:label "desire as perception of the good"@en ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "To desire p is for p to appear good to the organism — a high-level perceptual state, distinct from judgment."@en .
+
+
+###  https://w3id.org/ontodesire#DirectedAttention
+:DirectedAttention rdf:type owl:NamedIndividual ,
+                            :MonofactorialTheory ;
+                   :belongsToFamily :AttentionBasedFamily ;
+                   :defendedBy :TMScanlon ;
+                   :identifiesDesireWith :ReasonsAttention ;
+                   :impliesCategory :MentalProcessCategory ;
+                   :suffersObjection :NarrowAttentionObjection ;
+                   rdfs:label "directed-attention theory"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "To desire p is for the thought of p to keep occurring in a favourable light, with attention directed insistently toward considerations counting in favour of p."@en ;
+                   <http://www.w3.org/2004/02/skos/core#note> "Technically a sufficient condition rather than a full theory; fits occurrent desires best."@en .
+
+
+###  https://w3id.org/ontodesire#DispositionCategory
+:DispositionCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#DonaldDavidson
+:DonaldDavidson rdf:type owl:NamedIndividual ,
+                         :Philosopher ;
+                <http://xmlns.com/foaf/0.1/name> "Donald Davidson" .
+
+
+###  https://w3id.org/ontodesire#DopaminergicRewardSystem
+:DopaminergicRewardSystem rdf:type owl:NamedIndividual ,
+                                   :NeuralRealizer ;
+                          rdfs:label "dopaminergic reward system"@en ;
+                          <http://www.w3.org/2004/02/skos/core#note> "Common cause of action, pleasure and aspects of thought. Dispute: Morillo takes it to realize pleasure; Schroeder, to be one of its normal causes, its output being reward learning (cf. Berridge and Robinson 1998)."@en .
+
+
+###  https://w3id.org/ontodesire#DoubleFaultObjection
+:DoubleFaultObjection rdf:type owl:NamedIndividual ,
+                               :Objection ;
+                      :raisedBy :DennisStampe ;
+                      rdfs:label "double fault objection (Stampe)"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "Believing that serving just so will cause a double fault can dispose one to serve just so, without one desiring to double fault."@en .
+
+
+###  https://w3id.org/ontodesire#DoxasticStateCategory
+:DoxasticStateCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#ElizabethAnscombe
+:ElizabethAnscombe rdf:type owl:NamedIndividual ,
+                            :Philosopher ;
+                   <http://xmlns.com/foaf/0.1/name> "G. E. M. Anscombe" .
+
+
+###  https://w3id.org/ontodesire#FredDretske
+:FredDretske rdf:type owl:NamedIndividual ,
+                      :Philosopher ;
+             <http://xmlns.com/foaf/0.1/name> "Fred Dretske" .
+
+
+###  https://w3id.org/ontodesire#GFSchueler
+:GFSchueler rdf:type owl:NamedIndividual ,
+                     :Philosopher ;
+            <http://xmlns.com/foaf/0.1/name> "G. F. Schueler" .
+
+
+###  https://w3id.org/ontodesire#GalenStrawson
+:GalenStrawson rdf:type owl:NamedIndividual ,
+                        :Philosopher ;
+               <http://xmlns.com/foaf/0.1/name> "Galen Strawson" .
+
+
+###  https://w3id.org/ontodesire#GoodAppearanceDisposition
+:GoodAppearanceDisposition rdf:type owl:NamedIndividual ,
+                                    :CharacteristicMark ;
+                           rdfs:label "disposition for p to appear good (perceptually or quasi-perceptually)"@en .
+
+
+###  https://w3id.org/ontodesire#GoodBasedFamily
+:GoodBasedFamily rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#GoodBeliefDisposition
+:GoodBeliefDisposition rdf:type owl:NamedIndividual ,
+                                :CharacteristicMark ;
+                       rdfs:label "disposition to believe that p is good"@en .
+
+
+###  https://w3id.org/ontodesire#GrahamOddie
+:GrahamOddie rdf:type owl:NamedIndividual ,
+                      :Philosopher ;
+             <http://xmlns.com/foaf/0.1/name> "Graham Oddie" .
+
+
+###  https://w3id.org/ontodesire#HarryFrankfurt
+:HarryFrankfurt rdf:type owl:NamedIndividual ,
+                         :Philosopher ;
+                <http://xmlns.com/foaf/0.1/name> "Harry Frankfurt" .
+
+
+###  https://w3id.org/ontodesire#HedonicDispositional
+:HedonicDispositional rdf:type owl:NamedIndividual ,
+                               :MonofactorialTheory ;
+                      :belongsToFamily :PleasureBasedFamily ;
+                      :defendedBy :GFSchueler ,
+                                  :GalenStrawson ;
+                      :identifiesDesireWith :PleasureDisposition ;
+                      :impliesCategory :OccurrentFeelingCategory ;
+                      :suffersObjection :CausalPriorityObjection ;
+                      rdfs:label "hedonic dispositional theory"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to be disposed to take pleasure in its seeming that p and displeasure in its seeming that not-p."@en .
+
+
+###  https://w3id.org/ontodesire#HedonicNeural
+:HedonicNeural rdf:type owl:NamedIndividual ,
+                        :MonofactorialTheory ;
+               :belongsToFamily :PleasureBasedFamily ;
+               :defendedBy :CarolynMorillo ;
+               :identifiesDesireWith :PleasureDisposition ;
+               :impliesCategory :OccurrentAffectiveEpisodeCategory ;
+               :locatesDesireIn :DopaminergicRewardSystem ;
+               rdfs:label "hedonic neural-identity theory"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Pleasure episodes are identical to reward-system activity, and that activity does the work of desire; so desires are pleasure episodes."@en .
+
+
+###  https://w3id.org/ontodesire#HolisticFamily
+:HolisticFamily rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#InformationAttention
+:InformationAttention rdf:type owl:NamedIndividual ,
+                               :CharacteristicMark ;
+                      rdfs:label "capture of attention by information bearing on whether p"@en .
+
+
+###  https://w3id.org/ontodesire#InnateEndowment
+:InnateEndowment rdf:type owl:NamedIndividual ,
+                          :OriginMechanism ;
+                 rdfs:label "innate endowment"@en ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "The psychological hedonist holds there is a single, innate intrinsic desire: for pleasure."@en ;
+                 :generates :IntrinsicDesire .
+
+
+###  https://w3id.org/ontodesire#JohnMcDowell
+:JohnMcDowell rdf:type owl:NamedIndividual ,
+                       :Philosopher ;
+              <http://xmlns.com/foaf/0.1/name> "John McDowell" .
+
+
+###  https://w3id.org/ontodesire#LearningBasedFamily
+:LearningBasedFamily rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#LearningMechanismCategory
+:LearningMechanismCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#LewisDecisionTheoreticObjection
+:LewisDecisionTheoreticObjection rdf:type owl:NamedIndividual ,
+                                          :Objection ;
+                                 :raisedBy :DavidLewis ;
+                                 rdfs:label "Lewis's decision-theoretic objection"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "The Desire-as-Belief thesis generates inconsistencies within decision theory, given the differences between rational belief revision and rational motivation revision."@en .
+
+
+###  https://w3id.org/ontodesire#LewisianFunctionalism
+:LewisianFunctionalism rdf:type owl:NamedIndividual ,
+                                :HolisticTheory ;
+                       :belongsToFamily :HolisticFamily ;
+                       :defendedBy :DavidLewis ;
+                       :identifiesDesireWith :ActionDisposition ,
+                                             :GoodBeliefDisposition ,
+                                             :InformationAttention ,
+                                             :PleasureDisposition ,
+                                             :ReasonsAttention ;
+                       :impliesCategory :CausalRoleStateCategory ;
+                       rdfs:label "Lewisian functionalism"@en .
+
+
+###  https://w3id.org/ontodesire#MeansEndReasoning
+:MeansEndReasoning rdf:type owl:NamedIndividual ,
+                            :OriginMechanism ;
+                   rdfs:label "means-end reasoning"@en ;
+                   <http://www.w3.org/2004/02/skos/core#note> "Largely uncontroversial; the derived desire's strength grows with the intrinsic desire's strength and the apparent usefulness of the means."@en ;
+                   :generates :InstrumentalDesire ,
+                              :RealizerDesire .
+
+
+###  https://w3id.org/ontodesire#MentalMomentCategory
+:MentalMomentCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#MentalProcessCategory
+:MentalProcessCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#MichaelSmith
+:MichaelSmith rdf:type owl:NamedIndividual ,
+                       :Philosopher ;
+              <http://xmlns.com/foaf/0.1/name> "Michael Smith" .
+
+
+###  https://w3id.org/ontodesire#MindToWorld
+:MindToWorld rdf:type owl:NamedIndividual ,
+                      :DirectionOfFit ;
+             rdfs:label "mind-to-world"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Analogous to the declarative sentence: satisfied if the state conforms to the world."@en .
+
+
+###  https://w3id.org/ontodesire#MotivatingGoodBeliefObjection
+:MotivatingGoodBeliefObjection rdf:type owl:NamedIndividual ,
+                                        :Objection ;
+                               :raisedBy :JohnMcDowell ,
+                                         :TMScanlon ;
+                               rdfs:label "motivating belief-in-good objection"@en ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "Judgments of what is good or obligatory also dispose to action; action-based theories fail to distinguish desire from goodness judgment."@en .
+
+
+###  https://w3id.org/ontodesire#NarrowAttentionObjection
+:NarrowAttentionObjection rdf:type owl:NamedIndividual ,
+                                   :Objection ;
+                          rdfs:label "narrow attentional focus objection"@en ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "Desire directs attention also to information about p, to opportunities to obtain it, and to those discussing p — not only to reasons in favour of p."@en .
+
+
+###  https://w3id.org/ontodesire#Nora
+:Nora rdf:type owl:NamedIndividual ,
+               :Human ;
+      rdfs:label "Nora"@en .
+
+
+###  https://w3id.org/ontodesire#ObjectContent
+:ObjectContent rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#OccurrentAffectiveEpisodeCategory
+:OccurrentAffectiveEpisodeCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#OccurrentFeelingCategory
+:OccurrentFeelingCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#PerceptualStateCategory
+:PerceptualStateCategory rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#PleasureBasedFamily
+:PleasureBasedFamily rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#PleasureDisposition
+:PleasureDisposition rdf:type owl:NamedIndividual ,
+                              :CharacteristicMark ;
+                     rdfs:label "disposition to pleasure at its seeming that p, displeasure at its seeming that not-p"@en ;
+                     <http://www.w3.org/2004/02/skos/core#note> "Family-grain mark: the hedonic neural-identity theory reads it occurrently (desires ARE pleasure/reward episodes) rather than dispositionally, which is why the causal-priority objection targets only the dispositional variant. A dispositional/occurrent mark split, mirroring the good-based split, is a candidate refinement for the next version."@en .
+
+
+###  https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs
+:PropositionsAsStatesOfAffairs rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#RationalityAcquisition
+:RationalityAcquisition rdf:type owl:NamedIndividual ,
+                                 :OriginMechanism ;
+                        :defendedBy :MichaelSmith ;
+                        rdfs:label "acquisition via reasoning about one's rationality"@en ;
+                        <http://www.w3.org/2004/02/skos/core#note> "Believing that, were one rational, one would desire p tends to generate an intrinsic desire for p; breaks with the Humean dictum that beliefs do not dictate intrinsic desire."@en ;
+                        :generates :IntrinsicDesire .
+
+
+###  https://w3id.org/ontodesire#ReasonsAttention
+:ReasonsAttention rdf:type owl:NamedIndividual ,
+                           :CharacteristicMark ;
+                  rdfs:label "disposition to have attention drawn to reasons in favour of p"@en .
+
+
+###  https://w3id.org/ontodesire#RewardLearningDrive
+:RewardLearningDrive rdf:type owl:NamedIndividual ,
+                              :CharacteristicMark ;
+                     rdfs:label "use of representations of p to drive reward-based learning"@en .
+
+
+###  https://w3id.org/ontodesire#RewardLearningTheory
+:RewardLearningTheory rdf:type owl:NamedIndividual ,
+                               :MonofactorialTheory ;
+                      :anticipatedBy :FredDretske ;
+                      :belongsToFamily :LearningBasedFamily ;
+                      :defendedBy :TimothySchroeder ;
+                      :identifiesDesireWith :RewardLearningDrive ;
+                      :impliesCategory :LearningMechanismCategory ;
+                      :locatesDesireIn :DopaminergicRewardSystem ;
+                      :suffersObjection :AprioriImplausibilityObjection ;
+                      rdfs:label "reward-learning theory"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to use representations of p to drive reward-based learning."@en ;
+                      <http://www.w3.org/2004/02/skos/core#note> "Treats desire as a natural kind; the least a priori credible of the listed theories."@en .
+
+
+###  https://w3id.org/ontodesire#RuthMillikan
+:RuthMillikan rdf:type owl:NamedIndividual ,
+                       :Philosopher ;
+              <http://xmlns.com/foaf/0.1/name> "Ruth Millikan" .
+
+
+###  https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs
+:SatisfactionByStatesOfAffairs rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#SimpleActionDispositional
+:SimpleActionDispositional rdf:type owl:NamedIndividual ,
+                                    :MonofactorialTheory ;
+                           :belongsToFamily :ActionBasedFamily ;
+                           :identifiesDesireWith :ActionDisposition ;
+                           :impliesCategory :DispositionCategory ;
+                           :suffersObjection :BehavioralTicObjection ;
+                           rdfs:label "simple action-dispositional theory"@en ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to be disposed to act so as to bring about p."@en .
+
+
+###  https://w3id.org/ontodesire#SingleBearer
+:SingleBearer rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#Socrates
+:Socrates rdf:type owl:NamedIndividual ,
+                   :Philosopher ;
+          <http://xmlns.com/foaf/0.1/name> "Socrates" .
+
+
+###  https://w3id.org/ontodesire#SophisticatedActionDispositional
+:SophisticatedActionDispositional rdf:type owl:NamedIndividual ,
+                                           :MonofactorialTheory ;
+                                  :belongsToFamily :ActionBasedFamily ;
+                                  :defendedBy :MichaelSmith ;
+                                  :identifiesDesireWith :ActionDisposition ;
+                                  :impliesCategory :DispositionCategory ;
+                                  :suffersObjection :DoubleFaultObjection ,
+                                                    :MotivatingGoodBeliefObjection ,
+                                                    :UnactionableDesiresObjection ;
+                                  rdfs:label "sophisticated action-dispositional theory"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "To desire p is to be disposed to take whatever actions one believes are likely to bring about p."@en .
+
+
+###  https://w3id.org/ontodesire#StandingDesiresGenuine
+:StandingDesiresGenuine rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#StateOfAffairsContent
+:StateOfAffairsContent rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#TMScanlon
+:TMScanlon rdf:type owl:NamedIndividual ,
+                    :Philosopher ;
+           <http://xmlns.com/foaf/0.1/name> "T. M. Scanlon" .
+
+
+###  https://w3id.org/ontodesire#Teleofunctional
+:Teleofunctional rdf:type owl:NamedIndividual ,
+                          :MonofactorialTheory ;
+                 :answersObjection :DoubleFaultObjection ;
+                 :belongsToFamily :ActionBasedFamily ;
+                 :defendedBy :DavidPapineau ,
+                             :RuthMillikan ;
+                 :identifiesDesireWith :ActionProductionFunction ;
+                 :impliesCategory :BiologicalFunctionCategory ;
+                 :suffersObjection :MotivatingGoodBeliefObjection ;
+                 rdfs:label "teleofunctional action theory"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Desires are states whose function is to produce actions, whether or not they actually dispose the agent."@en .
+
+
+###  https://w3id.org/ontodesire#TimothySchroeder
+:TimothySchroeder rdf:type owl:NamedIndividual ,
+                           :Philosopher ;
+                  <http://xmlns.com/foaf/0.1/name> "Timothy Schroeder" .
+
+
+###  https://w3id.org/ontodesire#UnactionableDesiresObjection
+:UnactionableDesiresObjection rdf:type owl:NamedIndividual ,
+                                       :Objection ;
+                              rdfs:label "unactionable desires objection"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "Too restrictive: desiring that pi be rational, or never to have been born, does not seem to exist in virtue of dispositions to act."@en .
+
+
+###  https://w3id.org/ontodesire#UniversalWorldToMindFit
+:UniversalWorldToMindFit rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ontodesire#WorldToMind
+:WorldToMind rdf:type owl:NamedIndividual ,
+                      :DirectionOfFit ;
+             rdfs:label "world-to-mind"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Analogous to the imperative sentence: satisfied if the world comes to conform to the state."@en .
+
+
+###  https://w3id.org/ontodesire#byContent
+:byContent rdf:type owl:NamedIndividual ,
+                    :PartitionCriterion ;
+           rdfs:label "by content kind"@en .
+
+
+###  https://w3id.org/ontodesire#byJustificatoryStructure
+:byJustificatoryStructure rdf:type owl:NamedIndividual ,
+                                   :PartitionCriterion ;
+                          rdfs:label "by justificatory structure"@en .
+
+
+###  https://w3id.org/ontodesire#byManifestation
+:byManifestation rdf:type owl:NamedIndividual ,
+                          :PartitionCriterion ;
+                 rdfs:label "by mode of manifestation"@en .
+
+
+###  https://w3id.org/ontodesire#byOrder
+:byOrder rdf:type owl:NamedIndividual ,
+                  :PartitionCriterion ;
+         rdfs:label "by order"@en .
+
+
+###  https://w3id.org/ontodesire#noraDrinksTeaSoon
+:noraDrinksTeaSoon rdf:type owl:NamedIndividual ,
+                            :Proposition ;
+                   rdfs:label "Nora drinks a cup of tea soon"@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "The disambiguation among possessing/drinking and soon/someday is what motivates treating desires as propositional attitudes."@en .
+
+
+###  https://w3id.org/ontodesire#noraTriesNewTeas
+:noraTriesNewTeas rdf:type owl:NamedIndividual ,
+                           :Proposition ;
+                  rdfs:label "Nora tries teas she has not tried before"@en .
+
+
+###  https://w3id.org/ontodesire#norasDesireForTea
+:norasDesireForTea rdf:type owl:NamedIndividual ,
+                            :FirstOrderDesire ,
+                            :OccurrentDesire ,
+                            :StateOfAffairsDesire ;
+                   :hasBearer :Nora ;
+                   :hasContent :noraDrinksTeaSoon ;
+                   :hasStrength :norasTeaDesireStrength ;
+                   :isSatisfiedBy :noraDrinksTeaSoon ;
+                   rdfs:label "Nora's desire for tea"@en .
+
+
+###  https://w3id.org/ontodesire#norasStandingDesireForNewTeas
+:norasStandingDesireForNewTeas rdf:type owl:NamedIndividual ,
+                                        :IntrinsicDesire ,
+                                        :StandingDesire ;
+                               :hasBearer :Nora ;
+                               :hasContent :noraTriesNewTeas ;
+                               rdfs:label "Nora's standing desire to try new teas"@en ;
+                               <http://www.w3.org/2004/02/skos/core#note> "Example of the explanatory role of standing desires: explains why the new tin captures her attention and why she is delighted. No strength individual is asserted: under v0.3.0's max-1 axiom a desire need not carry a determinate cardinal strength."@en .
+
+
+###  https://w3id.org/ontodesire#norasTeaDesireStrength
+:norasTeaDesireStrength rdf:type owl:NamedIndividual ,
+                                 :DesireStrength .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Bearer
+                :Content
+                :MentalState
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ActionBasedFamily
+                        :AttentionBasedFamily
+                        :GoodBasedFamily
+                        :HolisticFamily
+                        :LearningBasedFamily
+                        :PleasureBasedFamily
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ActionDisposition
+                        :ActionProductionFunction
+                        :GoodAppearanceDisposition
+                        :GoodBeliefDisposition
+                        :InformationAttention
+                        :PleasureDisposition
+                        :ReasonsAttention
+                        :RewardLearningDrive
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :AnimalObjection
+                        :AprioriImplausibilityObjection
+                        :BehavioralTicObjection
+                        :CausalPriorityObjection
+                        :DoubleFaultObjection
+                        :LewisDecisionTheoreticObjection
+                        :MotivatingGoodBeliefObjection
+                        :NarrowAttentionObjection
+                        :UnactionableDesiresObjection
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :AssociativeLearningAcquisition
+                        :InnateEndowment
+                        :MeansEndReasoning
+                        :RationalityAcquisition
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :BiologicalFunctionCategory
+                        :CausalRoleStateCategory
+                        :DispositionCategory
+                        :DoxasticStateCategory
+                        :LearningMechanismCategory
+                        :MentalMomentCategory
+                        :MentalProcessCategory
+                        :OccurrentAffectiveEpisodeCategory
+                        :OccurrentFeelingCategory
+                        :PerceptualStateCategory
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :CaringTheory
+                        :DavidsonianInterpretationism
+                        :DesireAsBeliefInGood
+                        :DesireAsPerceptionOfGood
+                        :DirectedAttention
+                        :HedonicDispositional
+                        :HedonicNeural
+                        :LewisianFunctionalism
+                        :RewardLearningTheory
+                        :SimpleActionDispositional
+                        :SophisticatedActionDispositional
+                        :Teleofunctional
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :MindToWorld
+                        :WorldToMind
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ObjectContent
+                        :StateOfAffairsContent
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :PropositionsAsStatesOfAffairs
+                        :SatisfactionByStatesOfAffairs
+                        :SingleBearer
+                        :StandingDesiresGenuine
+                        :UniversalWorldToMindFit
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :byContent
+                        :byJustificatoryStructure
+                        :byManifestation
+                        :byOrder
+                      )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

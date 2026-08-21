@@ -1,0 +1,9 @@
+# CQ-M1: Which characteristic marks does each theory treat as essential?
+PREFIX odsr: <https://w3id.org/ontodesire#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?theory (GROUP_CONCAT(?mark; separator="; ") AS ?marks)
+WHERE {
+  ?t odsr:identifiesDesireWith ?m .
+  ?t rdfs:label ?theory . ?m rdfs:label ?mark .
+}
+GROUP BY ?theory ORDER BY ?theory

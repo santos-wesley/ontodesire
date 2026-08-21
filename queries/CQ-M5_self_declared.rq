@@ -1,0 +1,23 @@
+# CQ-M5: Which commitments does OntoDesire itself declare (dogfooding)?
+# The core module applies its own audit standard to itself: residual
+# structural commitments are declared with per-declaration evidence and
+# rationale via owl:Axiom annotation, and the deliberate essence-level
+# neutrality of the Desire class is itself machine-readable.
+PREFIX odsr: <https://w3id.org/ontodesire#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?subject ?kind ?declaration ?evidence
+WHERE {
+  ?ax a owl:Axiom ;
+      owl:annotatedSource ?s ;
+      owl:annotatedProperty ?p ;
+      owl:annotatedTarget ?t .
+  VALUES (?p ?kind) {
+    (odsr:commitsToStructuralStance "structural commitment")
+    (odsr:deliberatelyUncommittedOn "deliberate neutrality")
+  }
+  FILTER(STRSTARTS(STR(?s), "https://w3id.org/ontodesire#"))
+  ?s rdfs:label ?subject . ?t rdfs:label ?declaration .
+  OPTIONAL { ?ax odsr:commitmentEvidence ?evidence }
+}
+ORDER BY ?subject ?kind ?declaration

@@ -1,0 +1,111 @@
+@prefix odsr:  <https://w3id.org/ontodesire#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix bdi:   <https://w3id.org/fossr/ontology/bdi/> .
+@prefix sumo:  <https://w3id.org/sumo/kb/> .
+
+##################################################################
+# OntoDesire audit file (v0.3.0)
+#
+# Reconstructed theoretical commitments of existing ontologies
+# that represent desire or cognate conative states, expressed
+# with the OntoDesire commitments vocabulary. All commitments
+# below are RECONSTRUCTED BY THE AUDITORS from the sources'
+# published definitions and axioms; none is declared by the
+# source ontology itself (UFO-C's categorial commitment, declared
+# in its publications, is the partial exception). Evidence
+# strings quote the source.
+#
+# RECONSTRUCTION CRITERIA (full statement: audit/CRITERIA.md):
+#   C1 (theory family): attributable only if the source's text or
+#      axioms IDENTIFY desire itself with the family's
+#      characteristic mark (definitional identification), not
+#      merely describe a role, scope, or an associated state.
+#   C2 (content stance): attributable only if the source's axioms
+#      or definitions fix the content kind of the term.
+#   C3 (categorial stance): attributable only if the term's
+#      placement in the source's own taxonomy, or its explicit
+#      definition, fixes an ontological category.
+#   Outcomes: attributable / not attributable / declared-by-source.
+#   Every attribution carries verbatim quoted evidence.
+#
+# v0.3.0 recoding note: under C1, the v0.2.0 essence-level
+# attributions to MFOEM (pleasure-based) and FOSSR-BDI
+# (action-based) were RETRACTED as not attributable: in both
+# cases the quoted text characterizes, respectively, the feeling
+# of desire and desire's functional role in an agent
+# architecture -- readings compatible with several essence-level
+# theories. That the published definitions UNDERDETERMINE the
+# essence-level commitment is itself the sharpest form of the
+# transparency gap this resource addresses.
+#
+# PROVENANCE CONVENTION:
+#   - File-audited entries use the source's own published IRIs.
+#   - Paper-based entries (no published OWL term) use a proxy IRI
+#     in the OntoDesire namespace, named proxy-<source>-<Term>,
+#     with dct:source pointing to the publications. We do not
+#     mint IRIs in namespaces we do not control.
+#
+# Sources inspected (retrieved 2026-08-21; run
+# audit/retrieve-sources.sh to re-retrieve and record hashes.
+# Full SHA-256 pins: audit/SOURCES.sha256):
+#   MFOEM  http://purl.obolibrary.org/obo/MFOEM.owl  (2025-07-31)
+#   MF     http://purl.obolibrary.org/obo/MF.owl     (2025-07-08)
+#   SUMO   Merge.kif, github.com/ontologyportal/sumo
+#          (commit 4444031ad0c1643a9fa6808c35e5f47ecd7f1e3a)
+#   BDI    https://w3id.org/fossr/ontology/bdi       (v0.5)
+##################################################################
+
+<https://w3id.org/ontodesire/audit> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontodesire/commitments> ;
+    dct:title "OntoDesire commitments audit"@en ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "0.3.0" .
+
+#### Emotion Ontology (MFOEM) -- file-audited ####
+
+obo:MFOEM_000220
+    odsr:commitsToContentStance odsr:StateOfAffairsContent ;
+    odsr:commitsToCategorialStance odsr:OccurrentAffectiveEpisodeCategory ;
+    odsr:noAttributableCommitmentOn odsr:FamilyAxis ;
+    odsr:commitmentEvidence "feeling of desire: 'A subjective affective feeling that involves attraction to an imagined state of affairs.' Subclasses distinguish anticipated pleasure (feeling of want, MFOEM:000221) from anticipated relief from discomfort (feeling of need, MFOEM:000222). Taxonomic placement (grounds of the categorial coding): MFOEM:000220 rdfs:subClassOf MFOEM:000006 'subjective affective feeling'." ;
+    odsr:commitmentNote "Undeclared. Content stance and categorial stance attributable, REFERENT-SCOPED (criteria C2/C3): they code the content kind and category the source fixes for this term's referent -- the feeling of desire -- not a thesis about desire in general. Essence-level family NOT attributable under criterion C1 (retracted from v0.2.0): the definition characterizes the feeling of desire, not desire itself; representing only the feeling is a scope decision of an emotion ontology, and a pleasure-based theory of desire's essence, though suggested by the pleasure/relief subclass split, cannot be established from the source's text." .
+
+#### Mental Functioning Ontology (MF) -- file-audited ####
+
+obo:MF_0000045
+    odsr:commitsToContentStance odsr:StateOfAffairsContent ;
+    odsr:commitsToCategorialStance odsr:MentalProcessCategory ;
+    odsr:noAttributableCommitmentOn odsr:FamilyAxis ;
+    odsr:commitmentEvidence "wanting: 'A mental process that involves thinking about a state of affairs that is not yet the case together with a desire for that state of affairs to come about.'" ;
+    odsr:commitmentNote "Undeclared and circular: 'wanting' is defined in terms of 'desire', yet MF contains no class labelled 'desire'. The categorial commitment (process) is silently made and is referent-scoped: it fixes the category of wanting, within which desire figures as an undefined component; the essence-level commitment is left undetermined by the circularity." .
+
+#### SUMO -- file-audited ####
+
+sumo:desires
+    odsr:commitsToContentStance odsr:StateOfAffairsContent ;
+    odsr:noAttributableCommitmentOn odsr:FamilyAxis ;
+    odsr:commitmentEvidence "(instance desires PropositionalAttitude) (domain desires 1 CognitiveAgent) (domain desires 2 Formula); wants is an ObjectAttitude, and (=> (and (wants ?AGENT ?OBJ) (instance ?OBJ Object)) (desires ?AGENT (possesses ?AGENT ?OBJ)))." ;
+    odsr:commitmentNote "Undeclared. SUMO takes an explicit side on the content axis and reduces object-desire to a propositional desire about possession -- precisely the disambiguation the philosophical literature rejects for cases like Nora's tea, where the likely satisfier is drinking soon, not possessing. No essence-level commitment is attributable: the axioms fix content and inferential role, not what desiring essentially is." .
+
+#### BDI Ontology (FOSSR) -- file-audited ####
+
+bdi:Desire
+    odsr:commitsToCategorialStance odsr:CausalRoleStateCategory ;
+    odsr:noAttributableCommitmentOn odsr:FamilyAxis ;
+    odsr:commitmentEvidence "'The Desire class represents a motivational mental state of an agent [...] unlike intentions, they do not imply a commitment to act. Desires serve as the driving force behind an agent's decision-making process.' Axioms: Desire rdfs:subClassOf MentalState, [isMotivatedBy some Belief], [hasPart only Desire], [isDesireOf exactly 1 Agent]; the ontology separately models DesireProcess (a MentalProcess) and DesireProcessing activities that modify Desire states." ;
+    odsr:commitmentNote "Undeclared. Categorial stance attributable: desire is a MentalState characterized by its causal-functional role in the agent's decision-making architecture, and the separate Desire/DesireProcess state-process split corroborates the state-type coding. Essence-level family NOT attributable under criterion C1 (retracted from v0.2.0): a Bratman-style motivational-role description is compatible with action-based, holistic, and other essence-level readings; the definition does not identify desire with any characteristic mark. Observed outside the C1-C3 axes: the axiom [isMotivatedBy some Belief] makes every desire belief-motivated -- a substantive formation-level commitment (contestable for basic/instinctual desires) recorded here for the maintainers' attention." .
+
+#### UFO-C -- paper-based (proxy IRI; commitments from publications, not files) ####
+
+odsr:proxy-UFOC-Desire a owl:NamedIndividual ;
+    rdfs:label "proxy for the UFO-C concept Desire (no published OWL IRI)"@en ;
+    dct:source "Guizzardi et al. (2022), UFO: Unified Foundational Ontology, Applied Ontology 17(1); Guizzardi et al. (2020), A core ontology on decision making, ONTOBRAS 2020" ;
+    odsr:commitsToContentStance odsr:StateOfAffairsContent ;
+    odsr:commitsToCategorialStance odsr:MentalMomentCategory ;
+    odsr:declaredBySourceOn odsr:CategorialStanceAxis ;
+    odsr:noAttributableCommitmentOn odsr:FamilyAxis ;
+    odsr:commitmentEvidence "UFO-C: desire is a mental moment inhering in an agent, referring to 'the world as the agent would like it to be'; all mental moments have propositional content (Guizzardi et al., 2022; Guizzardi et al., 2020)." ;
+    odsr:commitmentNote "Partially declared by the source: the categorial commitment (moment/trope) is explicit and argued for in the publications; the essence-level question is not raised. Proxy IRI minted in the OntoDesire namespace because UFO-C's desire concept has no published OWL IRI; see the provenance convention in the header." .

@@ -1,0 +1,9 @@
+# CQ-M3: Which ontological category does each theory assign to desire?
+PREFIX odsr: <https://w3id.org/ontodesire#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?theory ?category
+WHERE {
+  ?t odsr:impliesCategory ?c .
+  ?t rdfs:label ?theory . ?c rdfs:label ?category .
+}
+ORDER BY ?category ?theory

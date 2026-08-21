@@ -1,0 +1,771 @@
+@prefix odsr: <https://w3id.org/ontodesire#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+##################################################################
+# OntoDesire (core module)
+#
+# A reference ontology of desire built from the philosophical
+# literature (anchored in Schroeder's SEP survey and primary
+# sources). DESIGN DECISION: the domain is theoretically
+# contested, so the class odsr:Desire carries only the structural
+# commitments shared by all parties; the rival theories are
+# reified as first-class individuals linked to the characteristic
+# marks each privileges. The ontology represents the debate
+# rather than adjudicating it.
+##################################################################
+
+<https://w3id.org/ontodesire> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontodesire/commitments> ;
+    dct:title "OntoDesire"@en ;
+    dct:description "A reference ontology of desire that reifies rival philosophical theories of desire as first-class entities, keeping the Desire class deliberately underdetermined. Includes characteristic marks, objections, the four orthogonal partitions of desire, per-theory categorial stances, and bibliographic anchoring."@en ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:source <https://plato.stanford.edu/entries/desire/> ;
+    owl:versionInfo "0.3.0" ;
+    owl:versionIRI <https://w3id.org/ontodesire/0.3.0> ;
+    rdfs:comment "For declaring commitments only, import <https://w3id.org/ontodesire/commitments> alone."@en .
+
+##################################################################
+# 1. TOP LEVEL
+##################################################################
+
+odsr:Bearer a owl:Class ;
+    rdfs:label "bearer"@en ;
+    skos:definition "An agent -- an organism or an artificial system -- capable of instantiating mental states. Restricting bearers to organisms would itself be a theoretical commitment, negated by the BDI agent-modelling use cases that motivate this resource."@en .
+
+odsr:Human a owl:Class ; rdfs:subClassOf odsr:Bearer ; rdfs:label "human"@en .
+odsr:NonHumanAnimal a owl:Class ; rdfs:subClassOf odsr:Bearer ; rdfs:label "non-human animal"@en ;
+    skos:scopeNote "Test case for good-based theories: the rat seems to desire escape from the cat without representing anything as good."@en .
+
+odsr:Content a owl:Class ; rdfs:label "intentional content"@en .
+odsr:StateOfAffairs a owl:Class ; rdfs:subClassOf odsr:Content ; rdfs:label "state of affairs"@en .
+odsr:Proposition a owl:Class ; rdfs:subClassOf odsr:StateOfAffairs ; rdfs:label "proposition"@en ;
+    skos:scopeNote "Subsuming propositions under states of affairs is a substantive simplification of the ontology of content (abstract truth-bearers vs. worldly truth-makers); it is declared below rather than made silently."@en ;
+    odsr:commitsToStructuralStance odsr:PropositionsAsStatesOfAffairs .
+
+[] a owl:Axiom ;
+    owl:annotatedSource odsr:Proposition ;
+    owl:annotatedProperty odsr:commitsToStructuralStance ;
+    owl:annotatedTarget odsr:PropositionsAsStatesOfAffairs ;
+    odsr:commitmentEvidence "Proposition rdfs:subClassOf StateOfAffairs (this module, Section 1)." ;
+    odsr:commitmentNote "Declared by OntoDesire itself: a content-modelling convenience retained for compatibility with the propositional-attitude mainstream; contested in the ontology of content." .
+odsr:ObjectContentItem a owl:Class ; rdfs:subClassOf odsr:Content ; rdfs:label "object (as content)"@en ;
+    skos:scopeNote "Non-propositional content, posited by those who deny that all desires are propositional attitudes (Thagard 2006)."@en .
+
+odsr:MentalState a owl:Class ; rdfs:label "mental state"@en .
+odsr:NeuralRealizer a owl:Class ; rdfs:label "neural realizer"@en .
+
+[] a owl:AllDisjointClasses ; owl:members ( odsr:MentalState odsr:Content odsr:Bearer ) .
+
+##################################################################
+# 2. MENTAL STATES AND THE PRO-ATTITUDE UMBRELLA
+##################################################################
+
+odsr:ProAttitude a owl:Class ;
+    rdfs:subClassOf odsr:MentalState ;
+    rdfs:label "pro attitude"@en ;
+    skos:definition "The umbrella under which cognate conative states are grouped; whether they constitute one mental state or many is disputed."@en .
+
+odsr:Desire a owl:Class ;
+    rdfs:subClassOf odsr:ProAttitude ;
+    rdfs:label "desire"@en ;
+    skos:definition "A conative mental state whose content specifies a satisfaction condition to be realized in the world. Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about."@en ;
+    # v0.3.0 self-declarations: OntoDesire applies its own audit standard to
+    # itself. Residual structural commitments retained by the core are
+    # declared with the commitments vocabulary rather than smuggled in
+    # silently, and the deliberate essence-level neutrality of this class is
+    # itself machine-readable (deliberatelyUncommittedOn). Per-declaration
+    # evidence and rationale are attached via owl:Axiom annotation (below,
+    # after this class block) -- the pattern any multi-axis declaration needs.
+    odsr:commitsToStructuralStance odsr:UniversalWorldToMindFit , odsr:SingleBearer , odsr:StandingDesiresGenuine ;
+    odsr:deliberatelyUncommittedOn odsr:FamilyAxis .
+
+#### Per-declaration evidence and rationale (owl:Axiom annotation) ####
+
+[] a owl:Axiom ;
+    owl:annotatedSource odsr:Desire ;
+    owl:annotatedProperty odsr:commitsToStructuralStance ;
+    owl:annotatedTarget odsr:UniversalWorldToMindFit ;
+    odsr:commitmentEvidence "Desire rdfs:subClassOf [ owl:onProperty hasDirectionOfFit ; owl:hasValue WorldToMind ] (this module, Section 7). The axiom is universal, not exclusive: nothing caps hasDirectionOfFit, so a desire may consistently also bear mind-to-world fit." ;
+    odsr:commitmentNote "Declared by OntoDesire itself. Retained deliberately: universal world-to-mind fit is the closest thing to common ground the debate has, but it is contested in the desire-as-belief debate that Lewis (1988) opened by attacking the thesis, by its contemporary defenders (Gregory 2021), and in the besire literature -- a commitment, not a neutral fact." .
+
+[] a owl:Axiom ;
+    owl:annotatedSource odsr:Desire ;
+    owl:annotatedProperty odsr:commitsToStructuralStance ;
+    owl:annotatedTarget odsr:SingleBearer ;
+    odsr:commitmentEvidence "Desire rdfs:subClassOf [ owl:onProperty hasBearer ; owl:cardinality 1 ] (this module, Section 12)." ;
+    odsr:commitmentNote "Declared by OntoDesire itself. Excludes plural/shared subjects of one desire token; collective-conation theorists would contest it." .
+
+[] a owl:Axiom ;
+    owl:annotatedSource odsr:Desire ;
+    owl:annotatedProperty odsr:commitsToStructuralStance ;
+    owl:annotatedTarget odsr:StandingDesiresGenuine ;
+    odsr:commitmentEvidence "Desire owl:equivalentClass [ owl:unionOf ( OccurrentDesire StandingDesire ) ] (this module, Section 3.3)." ;
+    odsr:commitmentNote "Declared by OntoDesire itself. Some dispositionalists deny that standing desires are genuine desires, reading them as mere dispositions to generate occurrent ones (see the skos:note on StandingDesire)." .
+
+[] a owl:Axiom ;
+    owl:annotatedSource odsr:Desire ;
+    owl:annotatedProperty odsr:deliberatelyUncommittedOn ;
+    owl:annotatedTarget odsr:FamilyAxis ;
+    odsr:commitmentEvidence "skos:definition of Desire: 'Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about.'" ;
+    odsr:commitmentNote "The flagship design decision in machine-readable form: the essence-level axis is deliberately uncommitted -- the rival theories are reified, not adjudicated." .
+
+odsr:Preference a owl:Class ; rdfs:subClassOf odsr:ProAttitude ; rdfs:label "preference"@en .
+odsr:Wish a owl:Class ; rdfs:subClassOf odsr:ProAttitude ; rdfs:label "wish"@en ;
+    skos:scopeNote "Theoretical resource of action-based theories for accommodating 'desires' that action cannot satisfy (e.g. that pi be rational)."@en .
+odsr:Craving a owl:Class ; rdfs:subClassOf odsr:ProAttitude ; rdfs:label "craving"@en .
+odsr:Goal a owl:Class ; rdfs:subClassOf odsr:ProAttitude ; rdfs:label "goal"@en .
+odsr:Purpose a owl:Class ; rdfs:subClassOf odsr:ProAttitude ; rdfs:label "purpose"@en .
+odsr:Inclination a owl:Class ; rdfs:subClassOf odsr:ProAttitude ; rdfs:label "inclination"@en ;
+    skos:scopeNote "Kantian term: a motive whose presence, for Kant, removes the moral praiseworthiness of an action."@en .
+odsr:Caring a owl:Class ; rdfs:subClassOf odsr:ProAttitude ; rdfs:label "caring"@en ;
+    skos:scopeNote "Jaworska: a package of motivation, affect, attention and emotion directed at someone's welfare; readable as a holistic theory of a subclass of desires."@en .
+
+odsr:Belief a owl:Class ; rdfs:subClassOf odsr:MentalState ; rdfs:label "belief"@en .
+odsr:BeliefInTheGood a owl:Class ; rdfs:subClassOf odsr:Belief ; rdfs:label "belief in the good"@en .
+odsr:Intention a owl:Class ; rdfs:subClassOf odsr:MentalState ; rdfs:label "intention"@en .
+odsr:Pleasure a owl:Class ; rdfs:subClassOf odsr:MentalState ; rdfs:label "pleasure"@en .
+odsr:Displeasure a owl:Class ; rdfs:subClassOf odsr:MentalState ; rdfs:label "displeasure"@en .
+odsr:AppearanceOfGood a owl:Class ; rdfs:subClassOf odsr:MentalState ; rdfs:label "appearance of good"@en ;
+    skos:scopeNote "High-level perceptual state, distinct from the judgment that something is good (Stampe 1987; Oddie 2005)."@en .
+odsr:Besire a owl:Class ; rdfs:subClassOf odsr:MentalState ; rdfs:label "besire"@en ;
+    skos:definition "Hybrid state posited as having both belief-like and desire-like directions of fit."@en .
+
+# v0.3.0: the disjointness axiom between Belief and Desire present in v0.2.0
+# has been REMOVED from the core. Desire-as-belief theories (reified in this
+# very ontology as odsr:DesireAsBeliefInGood; defended in the contemporary
+# literature) hold that desires ARE beliefs of a certain kind; the disjointness
+# axiom negated that theory by fiat and so was not a structural commitment
+# "virtually all parties accept". Consumers who want the orthodox separation
+# can assert it in their own extension.
+
+##################################################################
+# 3. THE FOUR PARTITIONS OF DESIRE (orthogonal facets)
+##################################################################
+
+odsr:PartitionCriterion a owl:Class ; rdfs:label "partition criterion"@en .
+odsr:byContent a odsr:PartitionCriterion , owl:NamedIndividual ; rdfs:label "by content kind"@en .
+odsr:byJustificatoryStructure a odsr:PartitionCriterion , owl:NamedIndividual ; rdfs:label "by justificatory structure"@en .
+odsr:byManifestation a odsr:PartitionCriterion , owl:NamedIndividual ; rdfs:label "by mode of manifestation"@en .
+odsr:byOrder a odsr:PartitionCriterion , owl:NamedIndividual ; rdfs:label "by order"@en .
+
+odsr:partitionedBy a owl:AnnotationProperty ;
+    rdfs:label "partitioned by"@en ;
+    skos:definition "Annotates a subclass of Desire with the orthogonal criterion that generates it, so that the four facets are not mistaken for a single tree."@en .
+
+#### 3.1 By content ####
+
+odsr:StateOfAffairsDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ,
+        [ a owl:Restriction ; owl:onProperty odsr:hasContent ; owl:allValuesFrom odsr:StateOfAffairs ] ;
+    odsr:partitionedBy odsr:byContent ;
+    rdfs:label "desire for a state of affairs"@en ;
+    skos:scopeNote "Majority view: desires are propositional attitudes; enables logical relations among the contents of beliefs, desires and intentions."@en .
+
+odsr:ObjectDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ,
+        [ a owl:Restriction ; owl:onProperty odsr:hasContent ; owl:allValuesFrom odsr:ObjectContentItem ] ;
+    odsr:partitionedBy odsr:byContent ;
+    rdfs:label "desire for an object"@en ;
+    skos:scopeNote "Minority view; faithful to ordinary talk and to animal desire."@en .
+
+odsr:ConditionalDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ;
+    rdfs:label "conditional desire"@en ;
+    skos:scopeNote "Hard case for content specification (McDaniel and Bradley 2008)."@en .
+
+[] a owl:AllDisjointClasses ; owl:members ( odsr:StateOfAffairsDesire odsr:ObjectDesire ) .
+
+#### 3.2 By justificatory structure ####
+
+odsr:IntrinsicDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ;
+    odsr:partitionedBy odsr:byJustificatoryStructure ;
+    rdfs:label "intrinsic desire"@en ;
+    skos:definition "A desire whose object is wanted at least partly for its own sake."@en ;
+    skos:note "NOT disjoint from InstrumentalDesire: the same desire can be partly for its own sake and partly as a means (Schroeder's father case)."@en .
+
+odsr:InstrumentalDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ,
+        [ a owl:Restriction ; owl:onProperty odsr:isMeansTo ; owl:someValuesFrom odsr:Desire ] ;
+    odsr:partitionedBy odsr:byJustificatoryStructure ;
+    rdfs:label "instrumental desire"@en ;
+    skos:altLabel "extrinsic desire"@en .
+
+odsr:MerelyInstrumentalDesire a owl:Class ;
+    rdfs:subClassOf odsr:InstrumentalDesire ;
+    owl:disjointWith odsr:IntrinsicDesire ;
+    rdfs:label "merely instrumental desire"@en ;
+    skos:definition "Desired only as a means, in no measure for its own sake. This is the usual reinforced sense of 'instrumental'."@en .
+
+odsr:RealizerDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ,
+        [ a owl:Restriction ; owl:onProperty odsr:realizes ; owl:someValuesFrom odsr:IntrinsicDesire ] ;
+    odsr:partitionedBy odsr:byJustificatoryStructure ;
+    rdfs:label "realizer desire"@en ;
+    skos:definition "A desire for an end that would count as one possible realization of an intrinsic desire — a realization relation, not a means-end relation."@en .
+
+#### 3.3 By mode of manifestation ####
+
+odsr:OccurrentDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ;
+    odsr:partitionedBy odsr:byManifestation ;
+    rdfs:label "occurrent desire"@en ;
+    skos:definition "A desire playing some role in the psyche at the moment — not necessarily in control of action, nor necessarily conscious."@en .
+
+odsr:StandingDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ;
+    odsr:partitionedBy odsr:byManifestation ;
+    rdfs:label "standing desire"@en ;
+    skos:definition "A desire playing no role in the psyche at the moment."@en ;
+    skos:note "Some deny these are genuine desires, treating them as mere dispositions to generate occurrent desires."@en .
+
+[] a owl:AllDisjointClasses ; owl:members ( odsr:OccurrentDesire odsr:StandingDesire ) .
+odsr:Desire owl:equivalentClass [ a owl:Class ; owl:unionOf ( odsr:OccurrentDesire odsr:StandingDesire ) ] .
+
+#### 3.4 By order ####
+
+# v0.3.0: the v0.2.0 restriction (hasContent only complementOf(ProAttitude))
+# has been removed as vacuous: range(hasContent) = Content and Content is
+# disjoint with MentalState, so every content value was already outside
+# ProAttitude. The order distinction is carried by hasObjectAttitude:
+# second-order desires bear it, first-order desires are those that do not --
+# a negative condition not constructively expressible under OWL's open-world
+# assumption, so FirstOrderDesire membership is asserted, not inferred.
+odsr:FirstOrderDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ;
+    odsr:partitionedBy odsr:byOrder ;
+    rdfs:label "first-order desire"@en ;
+    skos:definition "A desire whose object is not itself a pro-attitude of the same bearer; carried by the absence of hasObjectAttitude (see module comment)."@en .
+
+odsr:SecondOrderDesire a owl:Class ;
+    rdfs:subClassOf odsr:Desire ,
+        [ a owl:Restriction ; owl:onProperty odsr:hasObjectAttitude ; owl:someValuesFrom odsr:Desire ] ;
+    odsr:partitionedBy odsr:byOrder ;
+    rdfs:label "second-order desire"@en ;
+    skos:scopeNote "Frankfurt: the capacity to form them is what constitutes persons. Typically instrumental, though Lewis requires them intrinsic in valuing (Lewis, D. (1989). Dispositional theories of value. Proceedings of the Aristotelian Society, Supplementary Volume 63, 113-137)."@en .
+
+[] a owl:AllDisjointClasses ; owl:members ( odsr:FirstOrderDesire odsr:SecondOrderDesire ) .
+
+#### 3.5 Strength (a magnitude, not a partition) ####
+
+odsr:DesireStrength a owl:Class ;
+    rdfs:label "desire strength"@en ;
+    skos:definition "A continuous magnitude, canonically characterized by causal power over the control of action; each theory of desire induces its own corresponding metric."@en ;
+    skos:note "Puzzle: manifestations of strength fluctuate (mood, fatigue, temporal distance) without the strength itself seeming to vary — an advantage of holistic and learning-based theories, which do not reduce strength to a single observable."@en .
+
+##################################################################
+# 4. CHARACTERISTIC MARKS
+#    (the candidate essences the theories disagree about)
+##################################################################
+
+odsr:CharacteristicMark a owl:Class ;
+    rdfs:label "characteristic mark of desire"@en ;
+    skos:definition "An effect or disposition typically associated with desire. Each monofactorial theory elects exactly one as essential and treats the rest as contingent accompaniments."@en .
+
+odsr:ActionDisposition a odsr:CharacteristicMark , owl:NamedIndividual ;
+    rdfs:label "disposition to take the actions one believes conducive to p"@en .
+odsr:PleasureDisposition a odsr:CharacteristicMark , owl:NamedIndividual ;
+    rdfs:label "disposition to pleasure at its seeming that p, displeasure at its seeming that not-p"@en ;
+    skos:note "Family-grain mark: the hedonic neural-identity theory reads it occurrently (desires ARE pleasure/reward episodes) rather than dispositionally, which is why the causal-priority objection targets only the dispositional variant. A dispositional/occurrent mark split, mirroring the good-based split, is a candidate refinement for the next version."@en .
+# v0.3.0: the single mark "disposition to believe that p is good / for p to
+# appear good" has been split into a doxastic and an appearance variant. The
+# merged mark was coarser than the objection layer, which distinguishes the
+# two (Lewis's decision-theoretic objection hits only the doxastic variant).
+odsr:GoodBeliefDisposition a odsr:CharacteristicMark , owl:NamedIndividual ;
+    rdfs:label "disposition to believe that p is good"@en .
+odsr:GoodAppearanceDisposition a odsr:CharacteristicMark , owl:NamedIndividual ;
+    rdfs:label "disposition for p to appear good (perceptually or quasi-perceptually)"@en .
+odsr:ReasonsAttention a odsr:CharacteristicMark , owl:NamedIndividual ;
+    rdfs:label "disposition to have attention drawn to reasons in favour of p"@en .
+odsr:RewardLearningDrive a odsr:CharacteristicMark , owl:NamedIndividual ;
+    rdfs:label "use of representations of p to drive reward-based learning"@en .
+odsr:InformationAttention a odsr:CharacteristicMark , owl:NamedIndividual ;
+    rdfs:label "capture of attention by information bearing on whether p"@en .
+odsr:ActionProductionFunction a odsr:CharacteristicMark , owl:NamedIndividual ;
+    rdfs:label "having the (biological) function of producing action"@en .
+
+##################################################################
+# 5. THEORIES (reified)
+##################################################################
+
+# v0.3.0: strengthened from subclass axioms to equivalence axioms so that the
+# distinction is genuinely inferential: with the AllDifferent axiom over marks
+# (below), a theory asserted with >= 2 distinct marks is CLASSIFIED as
+# holistic by the reasoner, and a "monofactorial" theory asserted with two
+# distinct marks is INCONSISTENT (see tests/ for the provocation tests).
+odsr:MonofactorialTheory a owl:Class ;
+    owl:equivalentClass [ a owl:Class ; owl:intersectionOf ( odsr:TheoryOfDesire
+        [ a owl:Restriction ; owl:onProperty odsr:identifiesDesireWith ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onClass odsr:CharacteristicMark ] ) ] ;
+    rdfs:subClassOf odsr:TheoryOfDesire ;
+    rdfs:label "monofactorial theory"@en ;
+    skos:definition "Privileges exactly one characteristic mark as essential to desire."@en .
+
+odsr:HolisticTheory a owl:Class ;
+    owl:equivalentClass [ a owl:Class ; owl:intersectionOf ( odsr:TheoryOfDesire
+        [ a owl:Restriction ; owl:onProperty odsr:identifiesDesireWith ;
+          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+          owl:onClass odsr:CharacteristicMark ] ) ] ;
+    rdfs:subClassOf odsr:TheoryOfDesire ;
+    rdfs:label "holistic theory"@en ;
+    skos:definition "Refuses to privilege any mark; having a desire is exhibiting enough (a vague threshold) of the whole set."@en .
+
+#### 5.1 Theory individuals ####
+
+odsr:SimpleActionDispositional a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "simple action-dispositional theory"@en ;
+    skos:definition "To desire p is to be disposed to act so as to bring about p."@en ;
+    odsr:belongsToFamily odsr:ActionBasedFamily ;
+    odsr:identifiesDesireWith odsr:ActionDisposition ;
+    odsr:impliesCategory odsr:DispositionCategory ;
+    odsr:suffersObjection odsr:BehavioralTicObjection .
+
+odsr:SophisticatedActionDispositional a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "sophisticated action-dispositional theory"@en ;
+    skos:definition "To desire p is to be disposed to take whatever actions one believes are likely to bring about p."@en ;
+    odsr:belongsToFamily odsr:ActionBasedFamily ;
+    odsr:identifiesDesireWith odsr:ActionDisposition ;
+    odsr:impliesCategory odsr:DispositionCategory ;
+    odsr:defendedBy odsr:MichaelSmith ;
+    odsr:suffersObjection odsr:DoubleFaultObjection , odsr:MotivatingGoodBeliefObjection , odsr:UnactionableDesiresObjection .
+
+odsr:Teleofunctional a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "teleofunctional action theory"@en ;
+    skos:definition "Desires are states whose function is to produce actions, whether or not they actually dispose the agent."@en ;
+    odsr:belongsToFamily odsr:ActionBasedFamily ;
+    odsr:identifiesDesireWith odsr:ActionProductionFunction ;
+    odsr:impliesCategory odsr:BiologicalFunctionCategory ;
+    odsr:defendedBy odsr:RuthMillikan , odsr:DavidPapineau ;
+    odsr:answersObjection odsr:DoubleFaultObjection ;
+    odsr:suffersObjection odsr:MotivatingGoodBeliefObjection .
+
+odsr:HedonicDispositional a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "hedonic dispositional theory"@en ;
+    skos:definition "To desire p is to be disposed to take pleasure in its seeming that p and displeasure in its seeming that not-p."@en ;
+    odsr:belongsToFamily odsr:PleasureBasedFamily ;
+    odsr:identifiesDesireWith odsr:PleasureDisposition ;
+    odsr:impliesCategory odsr:OccurrentFeelingCategory ;
+    odsr:defendedBy odsr:GalenStrawson , odsr:GFSchueler ;
+    odsr:suffersObjection odsr:CausalPriorityObjection .
+
+odsr:HedonicNeural a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "hedonic neural-identity theory"@en ;
+    skos:definition "Pleasure episodes are identical to reward-system activity, and that activity does the work of desire; so desires are pleasure episodes."@en ;
+    odsr:belongsToFamily odsr:PleasureBasedFamily ;
+    odsr:identifiesDesireWith odsr:PleasureDisposition ;
+    # v0.3.0: category corrected. An identity theory on which desires ARE
+    # pleasure episodes implies an occurrent-episode category, not a
+    # disposition-to-episodes category.
+    odsr:impliesCategory odsr:OccurrentAffectiveEpisodeCategory ;
+    odsr:defendedBy odsr:CarolynMorillo ;
+    odsr:locatesDesireIn odsr:DopaminergicRewardSystem .
+
+odsr:DesireAsBeliefInGood a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "desire as belief in the good"@en ;
+    skos:definition "To desire p is to believe that p is good (or, in the contemporary variant, that one has normative reason to bring p about)."@en ;
+    odsr:belongsToFamily odsr:GoodBasedFamily ;
+    odsr:identifiesDesireWith odsr:GoodBeliefDisposition ;
+    odsr:impliesCategory odsr:DoxasticStateCategory ;
+    odsr:attributedTo odsr:Socrates ;
+    odsr:defendedBy odsr:AlexGregory ;
+    odsr:suffersObjection odsr:LewisDecisionTheoreticObjection , odsr:AnimalObjection ;
+    skos:note "The attribution to Socrates is a classical antecedent (the Socratic thesis that we desire the good), not a formulation of the analysis; the analysis is actively defended in the contemporary literature (Gregory, Desire as Belief, OUP 2021)."@en .
+
+odsr:DesireAsPerceptionOfGood a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "desire as perception of the good"@en ;
+    skos:definition "To desire p is for p to appear good to the organism — a high-level perceptual state, distinct from judgment."@en ;
+    odsr:belongsToFamily odsr:GoodBasedFamily ;
+    odsr:identifiesDesireWith odsr:GoodAppearanceDisposition ;
+    odsr:impliesCategory odsr:PerceptualStateCategory ;
+    odsr:defendedBy odsr:DennisStampe , odsr:GrahamOddie ;
+    odsr:answersObjection odsr:LewisDecisionTheoreticObjection ;
+    odsr:suffersObjection odsr:AnimalObjection .
+
+odsr:DirectedAttention a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "directed-attention theory"@en ;
+    skos:definition "To desire p is for the thought of p to keep occurring in a favourable light, with attention directed insistently toward considerations counting in favour of p."@en ;
+    odsr:belongsToFamily odsr:AttentionBasedFamily ;
+    odsr:identifiesDesireWith odsr:ReasonsAttention ;
+    odsr:impliesCategory odsr:MentalProcessCategory ;
+    odsr:defendedBy odsr:TMScanlon ;
+    odsr:suffersObjection odsr:NarrowAttentionObjection ;
+    skos:note "Technically a sufficient condition rather than a full theory; fits occurrent desires best."@en .
+
+odsr:RewardLearningTheory a odsr:MonofactorialTheory , owl:NamedIndividual ;
+    rdfs:label "reward-learning theory"@en ;
+    skos:definition "To desire p is to use representations of p to drive reward-based learning."@en ;
+    odsr:belongsToFamily odsr:LearningBasedFamily ;
+    odsr:identifiesDesireWith odsr:RewardLearningDrive ;
+    odsr:impliesCategory odsr:LearningMechanismCategory ;
+    odsr:defendedBy odsr:TimothySchroeder ;
+    odsr:anticipatedBy odsr:FredDretske ;
+    odsr:locatesDesireIn odsr:DopaminergicRewardSystem ;
+    odsr:suffersObjection odsr:AprioriImplausibilityObjection ;
+    skos:note "Treats desire as a natural kind; the least a priori credible of the listed theories."@en .
+
+odsr:LewisianFunctionalism a odsr:HolisticTheory , owl:NamedIndividual ;
+    rdfs:label "Lewisian functionalism"@en ;
+    odsr:belongsToFamily odsr:HolisticFamily ;
+    odsr:identifiesDesireWith odsr:ActionDisposition , odsr:PleasureDisposition , odsr:GoodBeliefDisposition , odsr:ReasonsAttention , odsr:InformationAttention ;
+    odsr:impliesCategory odsr:CausalRoleStateCategory ;
+    odsr:defendedBy odsr:DavidLewis .
+
+odsr:DavidsonianInterpretationism a odsr:HolisticTheory , owl:NamedIndividual ;
+    rdfs:label "Davidsonian interpretationism"@en ;
+    odsr:belongsToFamily odsr:HolisticFamily ;
+    odsr:identifiesDesireWith odsr:ActionDisposition , odsr:PleasureDisposition , odsr:GoodBeliefDisposition , odsr:ReasonsAttention ;
+    odsr:impliesCategory odsr:CausalRoleStateCategory ;
+    odsr:defendedBy odsr:DonaldDavidson ;
+    skos:scopeNote "Desires as states of the whole organism, existing in virtue of interpretability."@en .
+
+odsr:CaringTheory a odsr:HolisticTheory , owl:NamedIndividual ;
+    rdfs:label "caring theory"@en ;
+    odsr:belongsToFamily odsr:HolisticFamily ;
+    odsr:identifiesDesireWith odsr:ActionDisposition , odsr:PleasureDisposition , odsr:ReasonsAttention ;
+    odsr:impliesCategory odsr:CausalRoleStateCategory ;
+    odsr:defendedBy odsr:AgnieszkaJaworska ;
+    skos:note "Not intended as a theory of desire, but readable as a holistic theory of the subclass of desires that constitute caring."@en .
+
+##################################################################
+# 6. OBJECTIONS
+##################################################################
+
+odsr:Objection a owl:Class ; rdfs:label "objection"@en .
+
+odsr:BehavioralTicObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "behavioral tic objection"@en ;
+    skos:definition "The theory is too permissive: one who tends to stutter would count as desiring to stutter."@en .
+
+odsr:DoubleFaultObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "double fault objection (Stampe)"@en ;
+    skos:definition "Believing that serving just so will cause a double fault can dispose one to serve just so, without one desiring to double fault."@en ;
+    odsr:raisedBy odsr:DennisStampe .
+
+odsr:MotivatingGoodBeliefObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "motivating belief-in-good objection"@en ;
+    skos:definition "Judgments of what is good or obligatory also dispose to action; action-based theories fail to distinguish desire from goodness judgment."@en ;
+    odsr:raisedBy odsr:JohnMcDowell , odsr:TMScanlon .
+
+odsr:UnactionableDesiresObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "unactionable desires objection"@en ;
+    skos:definition "Too restrictive: desiring that pi be rational, or never to have been born, does not seem to exist in virtue of dispositions to act."@en .
+
+odsr:CausalPriorityObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "causal priority of desire over pleasure"@en ;
+    skos:definition "If desire satisfaction is the standard cause of pleasure, desire and pleasure are ontologically distinct as cause and effect."@en .
+
+odsr:LewisDecisionTheoreticObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "Lewis's decision-theoretic objection"@en ;
+    skos:definition "The Desire-as-Belief thesis generates inconsistencies within decision theory, given the differences between rational belief revision and rational motivation revision."@en ;
+    odsr:raisedBy odsr:DavidLewis .
+
+odsr:AnimalObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "non-human animal objection"@en ;
+    skos:definition "Rats seem to desire without representing anything as good; if desire does not require representing the good in them, why in us?"@en .
+
+odsr:NarrowAttentionObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "narrow attentional focus objection"@en ;
+    skos:definition "Desire directs attention also to information about p, to opportunities to obtain it, and to those discussing p — not only to reasons in favour of p."@en .
+
+odsr:AprioriImplausibilityObjection a odsr:Objection , owl:NamedIndividual ;
+    rdfs:label "a priori implausibility objection"@en ;
+    skos:definition "The theory admits desire in a creature incapable of acting or feeling, provided it represents and learns appropriately."@en .
+
+##################################################################
+# 7. DIRECTION OF FIT
+##################################################################
+
+odsr:DirectionOfFit a owl:Class ; rdfs:label "direction of fit"@en .
+odsr:MindToWorld a odsr:DirectionOfFit , owl:NamedIndividual ;
+    rdfs:label "mind-to-world"@en ;
+    skos:definition "Analogous to the declarative sentence: satisfied if the state conforms to the world."@en .
+odsr:WorldToMind a odsr:DirectionOfFit , owl:NamedIndividual ;
+    rdfs:label "world-to-mind"@en ;
+    skos:definition "Analogous to the imperative sentence: satisfied if the world comes to conform to the state."@en .
+
+odsr:Desire rdfs:subClassOf [ a owl:Restriction ; owl:onProperty odsr:hasDirectionOfFit ; owl:hasValue odsr:WorldToMind ] .
+odsr:Belief rdfs:subClassOf [ a owl:Restriction ; owl:onProperty odsr:hasDirectionOfFit ; owl:hasValue odsr:MindToWorld ] .
+odsr:Besire rdfs:subClassOf [ a owl:Restriction ; owl:onProperty odsr:hasDirectionOfFit ; owl:minCardinality "2"^^xsd:nonNegativeInteger ] .
+
+##################################################################
+# 8. ORIGINS OF DESIRES
+##################################################################
+
+odsr:OriginMechanism a owl:Class ; rdfs:label "origin mechanism"@en .
+
+odsr:MeansEndReasoning a odsr:OriginMechanism , owl:NamedIndividual ;
+    rdfs:label "means-end reasoning"@en ;
+    odsr:generates odsr:InstrumentalDesire , odsr:RealizerDesire ;
+    skos:note "Largely uncontroversial; the derived desire's strength grows with the intrinsic desire's strength and the apparent usefulness of the means."@en .
+
+odsr:InnateEndowment a odsr:OriginMechanism , owl:NamedIndividual ;
+    rdfs:label "innate endowment"@en ;
+    odsr:generates odsr:IntrinsicDesire ;
+    skos:scopeNote "The psychological hedonist holds there is a single, innate intrinsic desire: for pleasure."@en .
+
+odsr:RationalityAcquisition a odsr:OriginMechanism , owl:NamedIndividual ;
+    rdfs:label "acquisition via reasoning about one's rationality"@en ;
+    odsr:generates odsr:IntrinsicDesire ;
+    odsr:defendedBy odsr:MichaelSmith ;
+    skos:note "Believing that, were one rational, one would desire p tends to generate an intrinsic desire for p; breaks with the Humean dictum that beliefs do not dictate intrinsic desire."@en .
+
+odsr:AssociativeLearningAcquisition a odsr:OriginMechanism , owl:NamedIndividual ;
+    rdfs:label "acquisition via reward-based associative learning"@en ;
+    odsr:generates odsr:IntrinsicDesire ;
+    odsr:defendedBy odsr:TimothySchroeder ;
+    skos:note "States of affairs that presage the satisfaction of existing intrinsic desires become intrinsically desired themselves."@en .
+
+##################################################################
+# 9. NEURAL REALIZER
+##################################################################
+
+odsr:DopaminergicRewardSystem a odsr:NeuralRealizer , owl:NamedIndividual ;
+    rdfs:label "dopaminergic reward system"@en ;
+    skos:note "Common cause of action, pleasure and aspects of thought. Dispute: Morillo takes it to realize pleasure; Schroeder, to be one of its normal causes, its output being reward learning (cf. Berridge and Robinson 1998)."@en .
+
+##################################################################
+# 10. OBJECT PROPERTIES
+##################################################################
+
+odsr:hasContent a owl:ObjectProperty ;
+    rdfs:domain odsr:MentalState ; rdfs:range odsr:Content ;
+    rdfs:label "has content"@en .
+
+odsr:isSatisfiedBy a owl:ObjectProperty ;
+    rdfs:domain odsr:ProAttitude ; rdfs:range odsr:StateOfAffairs ;
+    rdfs:label "is satisfied by"@en ;
+    skos:scopeNote "For desires, satisfaction is the actual realization of the state of affairs, not the belief that it obtained."@en ;
+    odsr:commitsToStructuralStance odsr:SatisfactionByStatesOfAffairs .
+
+[] a owl:Axiom ;
+    owl:annotatedSource odsr:isSatisfiedBy ;
+    owl:annotatedProperty odsr:commitsToStructuralStance ;
+    owl:annotatedTarget odsr:SatisfactionByStatesOfAffairs ;
+    odsr:commitmentEvidence "isSatisfiedBy rdfs:range StateOfAffairs (this module, Section 10)." ;
+    odsr:commitmentNote "Declared by OntoDesire itself: even object-desires are given state-of-affairs satisfiers -- structurally adjacent to the possession-rewrite the audit flags in SUMO, retained here because satisfaction conditions, unlike contents, are standardly worldly; object-desire theorists may contest it." .
+
+odsr:hasDirectionOfFit a owl:ObjectProperty ;
+    rdfs:domain odsr:MentalState ; rdfs:range odsr:DirectionOfFit ;
+    rdfs:label "has direction of fit"@en .
+
+odsr:hasBearer a owl:ObjectProperty ;
+    rdfs:domain odsr:MentalState ; rdfs:range odsr:Bearer ;
+    rdfs:label "has bearer"@en .
+
+odsr:hasStrength a owl:ObjectProperty ;
+    rdfs:domain odsr:Desire ; rdfs:range odsr:DesireStrength ;
+    rdfs:label "has strength"@en .
+
+odsr:isMeansTo a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:domain odsr:Desire ; rdfs:range odsr:Desire ;
+    rdfs:label "is means to"@en .
+
+odsr:realizes a owl:ObjectProperty , owl:IrreflexiveProperty ;
+    rdfs:domain odsr:RealizerDesire ; rdfs:range odsr:IntrinsicDesire ;
+    rdfs:label "realizes"@en ;
+    skos:scopeNote "Distinct from isMeansTo: the realizer is an instance of the end, not a means of reaching it."@en .
+
+odsr:hasObjectAttitude a owl:ObjectProperty , owl:IrreflexiveProperty ;
+    rdfs:domain odsr:Desire ; rdfs:range odsr:ProAttitude ;
+    rdfs:label "has as object (a lower-order attitude)"@en .
+
+odsr:strongerThan a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:domain odsr:Desire ; rdfs:range odsr:Desire ;
+    rdfs:label "stronger than"@en ;
+    skos:definition "D1 is stronger than D2 iff the agent is disposed to act on D1 when: all else is equal, each desire is believed satisfiable by a distinct action, and they are believed not jointly satisfiable."@en .
+
+odsr:preferredTo a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:label "preferred to"@en .
+
+odsr:identifiesDesireWith a owl:ObjectProperty ;
+    rdfs:domain odsr:TheoryOfDesire ; rdfs:range odsr:CharacteristicMark ;
+    rdfs:label "identifies desire with"@en .
+
+odsr:belongsToFamily a owl:ObjectProperty ;
+    rdfs:domain odsr:TheoryOfDesire ; rdfs:range odsr:TheoryFamily ;
+    rdfs:label "belongs to family"@en .
+
+odsr:impliesCategory a owl:ObjectProperty ;
+    rdfs:domain odsr:TheoryOfDesire ; rdfs:range odsr:CategorialStance ;
+    rdfs:label "implies ontological category"@en ;
+    skos:definition "Relates a theory to the ontological category that desire would fall under if the theory were true. The theories disagree about category, not only about essence."@en .
+
+odsr:locatesDesireIn a owl:ObjectProperty ;
+    rdfs:domain odsr:TheoryOfDesire ; rdfs:range odsr:NeuralRealizer ;
+    rdfs:label "locates desire in"@en .
+
+odsr:suffersObjection a owl:ObjectProperty ;
+    rdfs:range odsr:Objection ; rdfs:label "suffers objection"@en .
+odsr:answersObjection a owl:ObjectProperty ;
+    rdfs:range odsr:Objection ; rdfs:label "answers objection"@en .
+odsr:raisedBy a owl:ObjectProperty ;
+    rdfs:domain odsr:Objection ; rdfs:range odsr:Philosopher ; rdfs:label "raised by"@en .
+odsr:defendedBy a owl:ObjectProperty ;
+    rdfs:range odsr:Philosopher ; rdfs:label "defended by"@en .
+odsr:attributedTo a owl:ObjectProperty ;
+    rdfs:range odsr:Philosopher ; rdfs:label "attributed to"@en .
+odsr:anticipatedBy a owl:ObjectProperty ;
+    rdfs:range odsr:Philosopher ; rdfs:label "anticipated by"@en .
+# v0.3.0: generates is an ANNOTATION property. Its objects are desire
+# CLASSES (InstrumentalDesire, IntrinsicDesire, ...), so an object property
+# would pun them as individuals with no inferential connection to the class
+# extensions -- the same reason partitionedBy is an annotation property.
+odsr:generates a owl:AnnotationProperty ;
+    rdfs:label "generates"@en ;
+    skos:scopeNote "Annotates an origin mechanism with the desire classes (by justificatory structure) whose instances it typically generates."@en .
+
+##################################################################
+# 11. DATA PROPERTIES
+##################################################################
+
+odsr:strengthDegree a owl:DatatypeProperty ;
+    rdfs:domain odsr:DesireStrength ; rdfs:range xsd:decimal ;
+    rdfs:label "strength degree"@en .
+
+odsr:isInnate a owl:DatatypeProperty ;
+    rdfs:domain odsr:Desire ; rdfs:range xsd:boolean ; rdfs:label "is innate"@en .
+
+odsr:isConscious a owl:DatatypeProperty ;
+    rdfs:domain odsr:Desire ; rdfs:range xsd:boolean ; rdfs:label "is conscious"@en ;
+    skos:note "Contested: some hold every occurrent desire is an element of conscious life; against this, the direction of fit of desire has been argued incompatible with that of elements of consciousness (Hulse, Read and Schroeder 2004)."@en .
+
+odsr:isSatisfied a owl:DatatypeProperty ;
+    rdfs:domain odsr:ProAttitude ; rdfs:range xsd:boolean ; rdfs:label "is satisfied"@en .
+
+##################################################################
+# 12. STRUCTURAL AXIOMS ON DESIRE
+##################################################################
+
+# v0.3.0: hasStrength relaxed from exact cardinality 1 to max cardinality 1.
+# Comparativists about conation take preference orderings as primitive and deny
+# that every desire carries a determinate cardinal strength; requiring exactly
+# one strength was therefore a theoretical commitment, not common ground. At
+# most one is retained (no desire has two strengths at a time).
+odsr:Desire rdfs:subClassOf
+    [ a owl:Restriction ; owl:onProperty odsr:hasContent ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ,
+    [ a owl:Restriction ; owl:onProperty odsr:hasBearer ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ,
+    [ a owl:Restriction ; owl:onProperty odsr:hasStrength ; owl:maxCardinality "1"^^xsd:nonNegativeInteger ] .
+
+##################################################################
+# 13. PHILOSOPHERS (bibliographic anchoring)
+##################################################################
+
+odsr:Philosopher a owl:Class ; rdfs:subClassOf foaf:Person ; rdfs:label "philosopher"@en .
+
+odsr:ElizabethAnscombe a odsr:Philosopher , owl:NamedIndividual ; foaf:name "G. E. M. Anscombe" .
+odsr:AgnieszkaJaworska a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Agnieszka Jaworska" .
+odsr:CarolynMorillo a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Carolyn Morillo" .
+odsr:DavidLewis a odsr:Philosopher , owl:NamedIndividual ; foaf:name "David Lewis" .
+odsr:DavidPapineau a odsr:Philosopher , owl:NamedIndividual ; foaf:name "David Papineau" .
+odsr:DennisStampe a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Dennis Stampe" .
+odsr:DonaldDavidson a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Donald Davidson" .
+odsr:FredDretske a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Fred Dretske" .
+odsr:GFSchueler a odsr:Philosopher , owl:NamedIndividual ; foaf:name "G. F. Schueler" .
+odsr:GalenStrawson a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Galen Strawson" .
+odsr:GrahamOddie a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Graham Oddie" .
+odsr:HarryFrankfurt a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Harry Frankfurt" .
+odsr:JohnMcDowell a odsr:Philosopher , owl:NamedIndividual ; foaf:name "John McDowell" .
+odsr:MichaelSmith a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Michael Smith" .
+odsr:RuthMillikan a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Ruth Millikan" .
+odsr:Socrates a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Socrates" .
+odsr:TMScanlon a odsr:Philosopher , owl:NamedIndividual ; foaf:name "T. M. Scanlon" .
+odsr:TimothySchroeder a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Timothy Schroeder" .
+odsr:AlexGregory a odsr:Philosopher , owl:NamedIndividual ; foaf:name "Alex Gregory" .
+
+##################################################################
+# 13b. INDIVIDUAL DISTINCTNESS (v0.3.0)
+#
+# OWL 2 does not assume unique names. Without these axioms every
+# cardinality axiom in this module (monofactorial exactly-1,
+# holistic min-2, bearer exactly-1, strength max-1, Besire min-2)
+# is unfalsifiable: a reasoner may satisfy the axioms by
+# identifying individuals. The AllDifferent axioms below make the
+# cardinality machinery genuinely checkable; see tests/ for the
+# provocation tests that exercise it.
+##################################################################
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:ActionDisposition odsr:PleasureDisposition
+    odsr:GoodBeliefDisposition odsr:GoodAppearanceDisposition
+    odsr:ReasonsAttention odsr:RewardLearningDrive
+    odsr:InformationAttention odsr:ActionProductionFunction ) .
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:SimpleActionDispositional odsr:SophisticatedActionDispositional
+    odsr:Teleofunctional odsr:HedonicDispositional odsr:HedonicNeural
+    odsr:DesireAsBeliefInGood odsr:DesireAsPerceptionOfGood
+    odsr:DirectedAttention odsr:RewardLearningTheory
+    odsr:LewisianFunctionalism odsr:DavidsonianInterpretationism
+    odsr:CaringTheory ) .
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:BehavioralTicObjection odsr:DoubleFaultObjection
+    odsr:MotivatingGoodBeliefObjection odsr:UnactionableDesiresObjection
+    odsr:CausalPriorityObjection odsr:LewisDecisionTheoreticObjection
+    odsr:AnimalObjection odsr:NarrowAttentionObjection
+    odsr:AprioriImplausibilityObjection ) .
+
+[] a owl:AllDifferent ; owl:distinctMembers ( odsr:MindToWorld odsr:WorldToMind ) .
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:byContent odsr:byJustificatoryStructure odsr:byManifestation odsr:byOrder ) .
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:MeansEndReasoning odsr:InnateEndowment
+    odsr:RationalityAcquisition odsr:AssociativeLearningAcquisition ) .
+
+# Distinctness of the commitments-module stance individuals lives HERE, not in
+# the commitments module, so that importing that module alone stays free of
+# axioms that could interact with a host's assertions (e.g. alignment sameAs).
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:ActionBasedFamily odsr:PleasureBasedFamily odsr:GoodBasedFamily
+    odsr:AttentionBasedFamily odsr:LearningBasedFamily odsr:HolisticFamily ) .
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:StateOfAffairsContent odsr:ObjectContent ) .
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:DispositionCategory odsr:BiologicalFunctionCategory odsr:OccurrentFeelingCategory
+    odsr:PerceptualStateCategory odsr:LearningMechanismCategory odsr:CausalRoleStateCategory
+    odsr:MentalMomentCategory odsr:MentalProcessCategory odsr:OccurrentAffectiveEpisodeCategory
+    odsr:DoxasticStateCategory ) .
+
+[] a owl:AllDifferent ; owl:distinctMembers (
+    odsr:UniversalWorldToMindFit odsr:PropositionsAsStatesOfAffairs
+    odsr:SingleBearer odsr:SatisfactionByStatesOfAffairs odsr:StandingDesiresGenuine ) .
+
+##################################################################
+# 14. WORKED EXAMPLE (Nora and the tea)
+##################################################################
+
+odsr:Nora a odsr:Human , owl:NamedIndividual ; rdfs:label "Nora"@en .
+
+odsr:norasDesireForTea a odsr:OccurrentDesire , odsr:StateOfAffairsDesire , odsr:FirstOrderDesire , owl:NamedIndividual ;
+    rdfs:label "Nora's desire for tea"@en ;
+    odsr:hasBearer odsr:Nora ;
+    odsr:hasContent odsr:noraDrinksTeaSoon ;
+    odsr:isSatisfiedBy odsr:noraDrinksTeaSoon ;
+    odsr:hasStrength odsr:norasTeaDesireStrength .
+
+odsr:norasTeaDesireStrength a odsr:DesireStrength , owl:NamedIndividual .
+
+odsr:noraDrinksTeaSoon a odsr:Proposition , owl:NamedIndividual ;
+    rdfs:label "Nora drinks a cup of tea soon"@en ;
+    skos:scopeNote "The disambiguation among possessing/drinking and soon/someday is what motivates treating desires as propositional attitudes."@en .
+
+odsr:norasStandingDesireForNewTeas a odsr:StandingDesire , odsr:IntrinsicDesire , owl:NamedIndividual ;
+    rdfs:label "Nora's standing desire to try new teas"@en ;
+    odsr:hasBearer odsr:Nora ;
+    odsr:hasContent odsr:noraTriesNewTeas ;
+    skos:note "Example of the explanatory role of standing desires: explains why the new tin captures her attention and why she is delighted. No strength individual is asserted: under v0.3.0's max-1 axiom a desire need not carry a determinate cardinal strength."@en .
+
+odsr:noraTriesNewTeas a odsr:Proposition , owl:NamedIndividual ;
+    rdfs:label "Nora tries teas she has not tried before"@en .

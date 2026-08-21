@@ -1,0 +1,227 @@
+@prefix odsr: <https://w3id.org/ontodesire#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+##################################################################
+# OntoDesire Commitments Module
+#
+# A lightweight, import-only vocabulary that lets ANY ontology
+# declare which theory of desire (and which content / categorial
+# stance) one of its terms presupposes, in a single triple:
+#
+#     ex:MyDesireClass  odsr:commitsTo  odsr:PleasureBasedFamily .
+#
+# All properties in this module are ANNOTATION properties, and
+# the module asserts no logical axioms over host terms (its only
+# logical content is the declaration of its own classes and
+# individuals; the AllDifferent axioms over stances live in the
+# core module). Importing it therefore never changes the DL
+# profile or the entailments over a host ontology's terms.
+##################################################################
+
+<https://w3id.org/ontodesire/commitments> a owl:Ontology ;
+    dct:title "OntoDesire Commitments Module"@en ;
+    dct:description "Lightweight annotation vocabulary for declaring theoretical commitments about desire. Part of OntoDesire."@en ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:source <https://plato.stanford.edu/entries/desire/> ;
+    owl:versionInfo "0.3.0" ;
+    owl:versionIRI <https://w3id.org/ontodesire/commitments/0.3.0> ;
+    rdfs:comment "Import this module alone if you only need to declare or query commitments. The full model lives in <https://w3id.org/ontodesire>."@en .
+
+#################### Classes ####################
+
+odsr:TheoryOfDesire a owl:Class ;
+    rdfs:label "theory of desire"@en ;
+    skos:definition "A theory that states what it is, essentially, for an organism to desire something."@en .
+
+odsr:TheoryFamily a owl:Class ;
+    rdfs:label "theory family"@en ;
+    skos:definition "A family of theories of desire grouped by the characteristic mark they privilege as essential."@en .
+
+odsr:ContentStance a owl:Class ;
+    rdfs:label "content stance"@en ;
+    skos:definition "A position on what kind of content desires have (states of affairs vs. objects)."@en .
+
+odsr:CategorialStance a owl:Class ;
+    rdfs:label "categorial stance"@en ;
+    skos:definition "A position on which ontological category desire falls under (disposition, process, function, etc.)."@en .
+
+odsr:StructuralStance a owl:Class ;
+    rdfs:label "structural stance"@en ;
+    skos:definition "A position on a structural feature of desire (e.g. direction of fit, content subsumption) that is widely but not universally accepted. Introduced in v0.3.0 so that OntoDesire can declare, with its own vocabulary, the residual commitments its core module knowingly retains."@en .
+
+#################### Theory families ####################
+
+odsr:ActionBasedFamily a odsr:TheoryFamily , owl:NamedIndividual ;
+    rdfs:label "action-based theories"@en ;
+    skos:definition "To desire p is to be disposed to act (or for one's states to have the function of producing action) so as to bring about p."@en .
+
+odsr:PleasureBasedFamily a odsr:TheoryFamily , owl:NamedIndividual ;
+    rdfs:label "pleasure-based theories"@en ;
+    skos:definition "To desire p is to be disposed to take pleasure in its seeming that p and displeasure in its seeming that not-p."@en .
+
+odsr:GoodBasedFamily a odsr:TheoryFamily , owl:NamedIndividual ;
+    rdfs:label "good-based theories"@en ;
+    skos:definition "To desire p is to believe, or to perceive, that p is good."@en .
+
+odsr:AttentionBasedFamily a odsr:TheoryFamily , owl:NamedIndividual ;
+    rdfs:label "attention-based theories"@en ;
+    skos:definition "To desire p is for one's attention to be insistently directed toward considerations that present themselves as counting in favour of p."@en .
+
+odsr:LearningBasedFamily a odsr:TheoryFamily , owl:NamedIndividual ;
+    rdfs:label "learning-based theories"@en ;
+    skos:definition "To desire p is to use representations of p to drive reward-based learning."@en .
+
+odsr:HolisticFamily a odsr:TheoryFamily , owl:NamedIndividual ;
+    rdfs:label "holistic theories"@en ;
+    skos:definition "To desire p is to exhibit enough of the whole package of desire-like features; no single feature is privileged."@en .
+
+#################### Content stances ####################
+
+odsr:StateOfAffairsContent a odsr:ContentStance , owl:NamedIndividual ;
+    rdfs:label "desires are for states of affairs"@en ;
+    skos:definition "All desires have propositional content; a desire for tea is a desire for a state of affairs involving tea."@en .
+
+odsr:ObjectContent a odsr:ContentStance , owl:NamedIndividual ;
+    rdfs:label "desires are for objects"@en ;
+    skos:definition "Some or all desires take objects, not states of affairs, as their content."@en .
+
+#################### Categorial stances ####################
+
+odsr:DispositionCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as disposition"@en .
+
+odsr:BiologicalFunctionCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as state with a biological function"@en .
+
+odsr:OccurrentFeelingCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as disposition to occurrent affective states"@en .
+
+odsr:PerceptualStateCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as high-level perceptual state"@en .
+
+odsr:LearningMechanismCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as reward-learning mechanism"@en .
+
+odsr:CausalRoleStateCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as state type occupying a causal role"@en .
+
+odsr:MentalMomentCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as mental moment (trope) inhering in an agent"@en .
+
+odsr:MentalProcessCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as mental process"@en .
+
+odsr:OccurrentAffectiveEpisodeCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as occurrent affective episode"@en ;
+    skos:scopeNote "For identity theories on which desires ARE occurrent (e.g. neural/affective) episodes, as opposed to dispositions to such episodes (OccurrentFeelingCategory). Added in v0.3.0. In audit use, the attribution is referent-scoped: it codes the category the source fixes for the audited term's referent (see commitsToCategorialStance)."@en .
+
+odsr:DoxasticStateCategory a odsr:CategorialStance , owl:NamedIndividual ;
+    rdfs:label "desire as doxastic state (a kind of belief)"@en ;
+    skos:scopeNote "For desire-as-belief theories: if desiring p is believing p good (or believing one has reason to bring p about), desire falls under whatever category belief falls under. Added in v0.3.0; in v0.2.0 this was conflated with the causal-role category."@en .
+
+#################### Structural stances ####################
+
+odsr:UniversalWorldToMindFit a odsr:StructuralStance , owl:NamedIndividual ;
+    rdfs:label "every desire has world-to-mind direction of fit"@en ;
+    skos:definition "Every desire is satisfied if the world comes to conform to it. The stance is universal, not exclusive: it says nothing about whether a desire may ALSO bear a belief-like, mind-to-world direction of fit, as besire and desire-as-belief readings hold."@en .
+
+odsr:PropositionsAsStatesOfAffairs a odsr:StructuralStance , owl:NamedIndividual ;
+    rdfs:label "propositions modelled as states of affairs"@en ;
+    skos:definition "The content model subsumes propositions under states of affairs, collapsing the distinction between abstract truth-bearers and worldly truth-makers for the purposes of content specification."@en .
+
+odsr:SingleBearer a odsr:StructuralStance , owl:NamedIndividual ;
+    rdfs:label "every desire has exactly one bearer"@en ;
+    skos:definition "Each desire inheres in exactly one agent. Excludes plural/shared subjects of a single desire token (Gilbert- and Searle-style collective conation)."@en .
+
+odsr:SatisfactionByStatesOfAffairs a odsr:StructuralStance , owl:NamedIndividual ;
+    rdfs:label "satisfaction conditions are states of affairs"@en ;
+    skos:definition "Whatever a desire's content kind (state of affairs or object), its satisfier is the realization of a state of affairs. Object-desire theorists may resist stating even satisfaction propositionally."@en .
+
+odsr:StandingDesiresGenuine a odsr:StructuralStance , owl:NamedIndividual ;
+    rdfs:label "standing desires are genuine desires, and every desire is occurrent or standing"@en ;
+    skos:definition "The manifestation partition is covering: desires divide exhaustively into occurrent and standing, and standing desires are desires proper rather than mere dispositions to generate occurrent ones — the latter reading is denied by some dispositionalists."@en .
+
+# NOTE (v0.3.0): the owl:AllDifferent axioms over families and stances live in
+# the CORE module, not here. This module stays free of axioms that could
+# interact with a host's assertions: importing it adds no logical axioms over
+# host terms, so declaring a commitment remains logically free.
+
+#################### Commitment axes and audit outcomes ####################
+# The audit's outcome vocabulary is machine-readable: a positive commitment is
+# a commitsTo* triple; the two non-positive outcomes are expressed with the
+# annotation properties below, so underdetermination and declared-by-source
+# status are queryable rather than living only in prose notes.
+
+odsr:CommitmentAxis a owl:Class ;
+    rdfs:label "commitment axis"@en ;
+    skos:definition "One of the independent axes on which a term can commit: theory family, content stance, categorial stance, structural stance."@en .
+
+odsr:FamilyAxis a odsr:CommitmentAxis , owl:NamedIndividual ;
+    rdfs:label "theory-family (essence-level) axis"@en .
+odsr:ContentStanceAxis a odsr:CommitmentAxis , owl:NamedIndividual ;
+    rdfs:label "content-stance axis"@en .
+odsr:CategorialStanceAxis a odsr:CommitmentAxis , owl:NamedIndividual ;
+    rdfs:label "categorial-stance axis"@en .
+odsr:StructuralStanceAxis a odsr:CommitmentAxis , owl:NamedIndividual ;
+    rdfs:label "structural-stance axis"@en .
+
+#################### Annotation properties ####################
+
+odsr:commitsTo a owl:AnnotationProperty ;
+    rdfs:label "commits to"@en ;
+    skos:definition "Relates a term of any ontology (typically a class or predicate intended to represent desire or a cognate conative state) to the theory family, content stance, or categorial stance that its definition or axiomatization presupposes."@en ;
+    rdfs:comment "Being an annotation property, assertions of commitsTo never alter the logical entailments of the host ontology."@en .
+
+odsr:commitmentEvidence a owl:AnnotationProperty ;
+    rdfs:label "commitment evidence"@en ;
+    skos:definition "A quotation of, or pointer to, the textual definition or axiom that grounds a commitsTo assertion."@en .
+
+odsr:commitmentNote a owl:AnnotationProperty ;
+    rdfs:label "commitment note"@en ;
+    skos:definition "Free-text commentary on a commitment, including whether it is declared by the source ontology or reconstructed by an auditor."@en .
+
+#################### Axis-specific subproperties (v0.3.0) ####################
+# Machine-checkable declarations: each subproperty fixes the axis of the
+# commitment, and the SHACL shapes shipped with the resource
+# (shapes/ontodesire-shapes.ttl) validate that its object is one of the
+# enumerated individuals of that axis. Plain commitsTo remains valid as the
+# generic superproperty.
+
+odsr:commitsToFamily a owl:AnnotationProperty ;
+    rdfs:subPropertyOf odsr:commitsTo ;
+    rdfs:label "commits to theory family"@en ;
+    skos:definition "Relates a term to the TheoryFamily its definition or axiomatization presupposes. Use only when the source identifies desire itself with the family's characteristic mark (audit criterion C1)."@en .
+
+odsr:commitsToContentStance a owl:AnnotationProperty ;
+    rdfs:subPropertyOf odsr:commitsTo ;
+    rdfs:label "commits to content stance"@en ;
+    skos:definition "Relates a term to the ContentStance its definition or axiomatization presupposes. REFERENT SCOPING: when the audited term represents a desire-cognate rather than desire itself (e.g. the feeling of desire), the attribution codes the content kind the source fixes for that term's referent, not a thesis about desire in general (audit criterion C2)."@en .
+
+odsr:commitsToCategorialStance a owl:AnnotationProperty ;
+    rdfs:subPropertyOf odsr:commitsTo ;
+    rdfs:label "commits to categorial stance"@en ;
+    skos:definition "Relates a term to the CategorialStance its definition, axiomatization, or taxonomic placement presupposes. REFERENT SCOPING: when the audited term represents a desire-cognate rather than desire itself, the attribution codes the ontological category the source fixes for that term's referent, not a thesis about desire in general (audit criterion C3)."@en .
+
+odsr:commitsToStructuralStance a owl:AnnotationProperty ;
+    rdfs:subPropertyOf odsr:commitsTo ;
+    rdfs:label "commits to structural stance"@en ;
+    skos:definition "Relates a term to a StructuralStance its axiomatization presupposes. Used by OntoDesire itself to declare the residual commitments of its core module."@en .
+
+#################### Audit-outcome properties (v0.3.0) ####################
+
+odsr:noAttributableCommitmentOn a owl:AnnotationProperty ;
+    rdfs:label "no attributable commitment on axis"@en ;
+    skos:definition "Auditor outcome: the source's published definitions and axioms UNDERDETERMINE the term's commitment on the given CommitmentAxis. Distinct from silence (axis not audited) and from deliberate neutrality (deliberatelyUncommittedOn)."@en .
+
+odsr:deliberatelyUncommittedOn a owl:AnnotationProperty ;
+    rdfs:label "deliberately uncommitted on axis"@en ;
+    skos:definition "Source self-declaration: the ontology takes no position on the given CommitmentAxis by design. This is the one-triple way for a maintainer to declare neutrality — OntoDesire's own Desire class uses it for the essence-level axis."@en .
+
+odsr:declaredBySourceOn a owl:AnnotationProperty ;
+    rdfs:label "commitment declared by the source on axis"@en ;
+    skos:definition "Auditor outcome: the source itself states and argues its commitment on the given CommitmentAxis (recorded alongside the corresponding commitsTo* attribution)."@en .

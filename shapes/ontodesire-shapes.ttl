@@ -1,0 +1,135 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix odsr: <https://w3id.org/ontodesire#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+##################################################################
+# OntoDesire SHACL shapes (v0.3.0)
+#
+# Complements the OWL axioms with CLOSED-WORLD validation. Under
+# OWL's open-world assumption, an individual desire lacking an
+# asserted content can never make the ontology inconsistent; the
+# shapes below flag such data-completeness problems, and validate
+# that commitment declarations target the enumerated individuals
+# of the right axis (annotation properties have no enforceable
+# OWL range, so typos would otherwise pass silently).
+#
+# Run:  python3 -m pyshacl -s shapes/ontodesire-shapes.ttl \
+#         -df turtle <data files merged>
+##################################################################
+
+#### Structural completeness of Desire individuals ####
+
+odsr:DesireShape a sh:NodeShape ;
+    sh:targetClass odsr:Desire ;
+    sh:property [
+        sh:path odsr:hasContent ;
+        sh:minCount 1 ;
+        sh:message "Every desire must have at least one asserted content."
+    ] ;
+    sh:property [
+        sh:path odsr:hasBearer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "Every desire must have exactly one asserted bearer."
+    ] ;
+    sh:property [
+        sh:path odsr:hasStrength ;
+        sh:maxCount 1 ;
+        sh:message "A desire has at most one strength (v0.3.0: strength is optional; comparativists deny cardinal strength)."
+    ] .
+
+#### Commitment declarations: axis-correct targets ####
+
+odsr:CommitsToFamilyShape a sh:NodeShape ;
+    sh:targetSubjectsOf odsr:commitsToFamily ;
+    sh:property [
+        sh:path odsr:commitsToFamily ;
+        sh:in ( odsr:ActionBasedFamily odsr:PleasureBasedFamily odsr:GoodBasedFamily
+                odsr:AttentionBasedFamily odsr:LearningBasedFamily odsr:HolisticFamily ) ;
+        sh:message "commitsToFamily must target one of the six enumerated theory families."
+    ] .
+
+odsr:CommitsToContentStanceShape a sh:NodeShape ;
+    sh:targetSubjectsOf odsr:commitsToContentStance ;
+    sh:property [
+        sh:path odsr:commitsToContentStance ;
+        sh:in ( odsr:StateOfAffairsContent odsr:ObjectContent ) ;
+        sh:message "commitsToContentStance must target one of the two enumerated content stances."
+    ] .
+
+odsr:CommitsToCategorialStanceShape a sh:NodeShape ;
+    sh:targetSubjectsOf odsr:commitsToCategorialStance ;
+    sh:property [
+        sh:path odsr:commitsToCategorialStance ;
+        sh:in ( odsr:DispositionCategory odsr:BiologicalFunctionCategory
+                odsr:OccurrentFeelingCategory odsr:PerceptualStateCategory
+                odsr:LearningMechanismCategory odsr:CausalRoleStateCategory
+                odsr:MentalMomentCategory odsr:MentalProcessCategory
+                odsr:OccurrentAffectiveEpisodeCategory odsr:DoxasticStateCategory ) ;
+        sh:message "commitsToCategorialStance must target one of the ten enumerated categorial stances."
+    ] .
+
+odsr:CommitsToStructuralStanceShape a sh:NodeShape ;
+    sh:targetSubjectsOf odsr:commitsToStructuralStance ;
+    sh:property [
+        sh:path odsr:commitsToStructuralStance ;
+        sh:in ( odsr:UniversalWorldToMindFit odsr:PropositionsAsStatesOfAffairs
+                odsr:SingleBearer odsr:SatisfactionByStatesOfAffairs
+                odsr:StandingDesiresGenuine ) ;
+        sh:message "commitsToStructuralStance must target one of the enumerated structural stances."
+    ] .
+
+#### Audit-outcome properties: targets must be commitment axes ####
+
+odsr:OutcomeAxisShape a sh:NodeShape ;
+    sh:targetSubjectsOf odsr:noAttributableCommitmentOn , odsr:deliberatelyUncommittedOn ,
+                        odsr:declaredBySourceOn ;
+    sh:property [
+        sh:path [ sh:alternativePath ( odsr:noAttributableCommitmentOn
+                                       odsr:deliberatelyUncommittedOn
+                                       odsr:declaredBySourceOn ) ] ;
+        sh:in ( odsr:FamilyAxis odsr:ContentStanceAxis
+                odsr:CategorialStanceAxis odsr:StructuralStanceAxis ) ;
+        sh:message "Audit-outcome properties must target one of the four enumerated commitment axes."
+    ] .
+
+odsr:CommitsToGenericShape a sh:NodeShape ;
+    sh:targetSubjectsOf odsr:commitsTo ;
+    sh:property [
+        sh:path odsr:commitsTo ;
+        sh:in ( odsr:ActionBasedFamily odsr:PleasureBasedFamily odsr:GoodBasedFamily
+                odsr:AttentionBasedFamily odsr:LearningBasedFamily odsr:HolisticFamily
+                odsr:StateOfAffairsContent odsr:ObjectContent
+                odsr:DispositionCategory odsr:BiologicalFunctionCategory
+                odsr:OccurrentFeelingCategory odsr:PerceptualStateCategory
+                odsr:LearningMechanismCategory odsr:CausalRoleStateCategory
+                odsr:MentalMomentCategory odsr:MentalProcessCategory
+                odsr:OccurrentAffectiveEpisodeCategory odsr:DoxasticStateCategory
+                odsr:UniversalWorldToMindFit odsr:PropositionsAsStatesOfAffairs
+                odsr:SingleBearer odsr:SatisfactionByStatesOfAffairs
+                odsr:StandingDesiresGenuine ) ;
+        sh:message "commitsTo must target an enumerated family, content stance, categorial stance, or structural stance."
+    ] .
+
+#### Evidence discipline for external audits ####
+
+odsr:AuditEvidenceShape a sh:NodeShape ;
+    sh:targetSubjectsOf odsr:commitsToFamily , odsr:commitsToContentStance ,
+                        odsr:commitsToCategorialStance ;
+    sh:property [
+        sh:path odsr:commitmentEvidence ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "A commitment declaration should carry quoted evidence (commitmentEvidence)."
+    ] .
+
+odsr:StructuralEvidenceShape a sh:NodeShape ;
+    sh:targetSubjectsOf odsr:commitsToStructuralStance ;
+    sh:or (
+        [ sh:path odsr:commitmentEvidence ; sh:minCount 1 ]
+        [ sh:path ( [ sh:inversePath owl:annotatedSource ] odsr:commitmentEvidence ) ;
+          sh:minCount 1 ]
+    ) ;
+    sh:severity sh:Warning ;
+    sh:message "A structural-stance self-declaration should carry quoted evidence, either on the subject or via owl:Axiom annotation (the per-declaration pattern)." .

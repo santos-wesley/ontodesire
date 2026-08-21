@@ -1,0 +1,2596 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#commitsToStructuralStance"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://w3id.org/ontodesire#isSatisfiedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs"
+  } ],
+  "https://w3id.org/ontodesire#commitmentEvidence" : [ {
+    "@value" : "isSatisfiedBy rdfs:range StateOfAffairs (this module, Section 10)."
+  } ],
+  "https://w3id.org/ontodesire#commitmentNote" : [ {
+    "@value" : "Declared by OntoDesire itself: even object-desires are given state-of-affairs satisfiers -- structurally adjacent to the possession-rewrite the audit flags in SUMO, retained here because satisfaction conditions, unlike contents, are standardly worldly; object-desire theorists may contest it."
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasStrength"
+  } ]
+}, {
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#byContent"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#byJustificatoryStructure"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#byManifestation"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#byOrder"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#commitsToStructuralStance"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "https://w3id.org/ontodesire#SingleBearer"
+  } ],
+  "https://w3id.org/ontodesire#commitmentEvidence" : [ {
+    "@value" : "Desire rdfs:subClassOf [ owl:onProperty hasBearer ; owl:cardinality 1 ] (this module, Section 12)."
+  } ],
+  "https://w3id.org/ontodesire#commitmentNote" : [ {
+    "@value" : "Declared by OntoDesire itself. Excludes plural/shared subjects of one desire token; collective-conation theorists would contest it."
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#commitsToStructuralStance"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "https://w3id.org/ontodesire#StandingDesiresGenuine"
+  } ],
+  "https://w3id.org/ontodesire#commitmentEvidence" : [ {
+    "@value" : "Desire owl:equivalentClass [ owl:unionOf ( OccurrentDesire StandingDesire ) ] (this module, Section 3.3)."
+  } ],
+  "https://w3id.org/ontodesire#commitmentNote" : [ {
+    "@value" : "Declared by OntoDesire itself. Some dispositionalists deny that standing desires are genuine desires, reading them as mere dispositions to generate occurrent ones (see the skos:note on StandingDesire)."
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#commitsToStructuralStance"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "https://w3id.org/ontodesire#UniversalWorldToMindFit"
+  } ],
+  "https://w3id.org/ontodesire#commitmentEvidence" : [ {
+    "@value" : "Desire rdfs:subClassOf [ owl:onProperty hasDirectionOfFit ; owl:hasValue WorldToMind ] (this module, Section 7). The axiom is universal, not exclusive: nothing caps hasDirectionOfFit, so a desire may consistently also bear mind-to-world fit."
+  } ],
+  "https://w3id.org/ontodesire#commitmentNote" : [ {
+    "@value" : "Declared by OntoDesire itself. Retained deliberately: universal world-to-mind fit is the closest thing to common ground the debate has, but it is contested in the desire-as-belief debate that Lewis (1988) opened by attacking the thesis, by its contemporary defenders (Gregory 2021), and in the besire literature -- a commitment, not a neutral fact."
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#deliberatelyUncommittedOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "https://w3id.org/ontodesire#FamilyAxis"
+  } ],
+  "https://w3id.org/ontodesire#commitmentEvidence" : [ {
+    "@value" : "skos:definition of Desire: 'Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about.'"
+  } ],
+  "https://w3id.org/ontodesire#commitmentNote" : [ {
+    "@value" : "The flagship design decision in machine-readable form: the essence-level axis is deliberately uncommitted -- the rival theories are reified, not adjudicated."
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#TheoryOfDesire"
+    }, {
+      "@id" : "_:genid17"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#identifiesDesireWith"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#isMeansTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/ontodesire#MindToWorld"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasDirectionOfFit"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#TheoryOfDesire"
+    }, {
+      "@id" : "_:genid22"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#identifiesDesireWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontodesire#ObjectContentItem"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasContent"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#commitsToStructuralStance"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://w3id.org/ontodesire#Proposition"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs"
+  } ],
+  "https://w3id.org/ontodesire#commitmentEvidence" : [ {
+    "@value" : "Proposition rdfs:subClassOf StateOfAffairs (this module, Section 1)."
+  } ],
+  "https://w3id.org/ontodesire#commitmentNote" : [ {
+    "@value" : "Declared by OntoDesire itself: a content-modelling convenience retained for compatibility with the propositional-attitude mainstream; contested in the ontology of content."
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#realizes"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontodesire#IntrinsicDesire"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasObjectAttitude"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontodesire#StateOfAffairs"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasContent"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#Bearer"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#Content"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#MentalState"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasDirectionOfFit"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#ActionBasedFamily"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#AttentionBasedFamily"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#GoodBasedFamily"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#HolisticFamily"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#LearningBasedFamily"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#PleasureBasedFamily"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#OccurrentDesire"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#StandingDesire"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#ActionDisposition"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#ActionProductionFunction"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#GoodAppearanceDisposition"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#GoodBeliefDisposition"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#InformationAttention"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#PleasureDisposition"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#ReasonsAttention"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#RewardLearningDrive"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#AnimalObjection"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#AprioriImplausibilityObjection"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#BehavioralTicObjection"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#CausalPriorityObjection"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#DoubleFaultObjection"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#LewisDecisionTheoreticObjection"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#MotivatingGoodBeliefObjection"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#NarrowAttentionObjection"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#UnactionableDesiresObjection"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#AssociativeLearningAcquisition"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#InnateEndowment"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#MeansEndReasoning"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#RationalityAcquisition"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#BiologicalFunctionCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#CausalRoleStateCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#DispositionCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#DoxasticStateCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#LearningMechanismCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#MentalMomentCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#MentalProcessCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#OccurrentAffectiveEpisodeCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#OccurrentFeelingCategory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#PerceptualStateCategory"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/ontodesire#WorldToMind"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasDirectionOfFit"
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#CaringTheory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#DavidsonianInterpretationism"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#DesireAsBeliefInGood"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#DesireAsPerceptionOfGood"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#DirectedAttention"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#HedonicDispositional"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#HedonicNeural"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#LewisianFunctionalism"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#RewardLearningTheory"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#SimpleActionDispositional"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#SophisticatedActionDispositional"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#Teleofunctional"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasContent"
+  } ]
+}, {
+  "@id" : "_:genid88",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#MindToWorld"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#WorldToMind"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontodesire#hasBearer"
+  } ]
+}, {
+  "@id" : "_:genid91",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#ObjectContent"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#StateOfAffairsContent"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid94",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#SingleBearer"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#StandingDesiresGenuine"
+    }, {
+      "@id" : "https://w3id.org/ontodesire#UniversalWorldToMindFit"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "A reference ontology of desire that reifies rival philosophical theories of desire as first-class entities, keeping the Desire class deliberately underdetermined. Includes characteristic marks, objections, the four orthogonal partitions of desire, per-theory categorial stances, and bibliographic anchoring."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@id" : "https://plato.stanford.edu/entries/desire/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "OntoDesire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For declaring commitments only, import <https://w3id.org/ontodesire/commitments> alone."
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/ontodesire/commitments"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/ontodesire/0.3.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.3.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ActionBasedFamily",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ActionDisposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "disposition to take the actions one believes conducive to p"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ActionProductionFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "having the (biological) function of producing action"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#AgnieszkaJaworska",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Agnieszka Jaworska"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#AlexGregory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Alex Gregory"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#AnimalObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "non-human animal objection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Rats seem to desire without representing anything as good; if desire does not require representing the good in them, why in us?"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#AppearanceOfGood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "appearance of good"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "High-level perceptual state, distinct from the judgment that something is good (Stampe 1987; Oddie 2005)."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#AprioriImplausibilityObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "a priori implausibility objection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The theory admits desire in a creature incapable of acting or feeling, provided it represents and learns appropriately."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#AssociativeLearningAcquisition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#OriginMechanism"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "acquisition via reward-based associative learning"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "States of affairs that presage the satisfaction of existing intrinsic desires become intrinsically desired themselves."
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#TimothySchroeder"
+  } ],
+  "https://w3id.org/ontodesire#generates" : [ {
+    "@id" : "https://w3id.org/ontodesire#IntrinsicDesire"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#AttentionBasedFamily",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Bearer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "bearer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An agent -- an organism or an artificial system -- capable of instantiating mental states. Restricting bearers to organisms would itself be a theoretical commitment, negated by the BDI agent-modelling use cases that motivate this resource."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#BehavioralTicObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "behavioral tic objection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The theory is too permissive: one who tends to stutter would count as desiring to stutter."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Belief",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belief"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#BeliefInTheGood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belief in the good"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Belief"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Besire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "besire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  }, {
+    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Hybrid state posited as having both belief-like and desire-like directions of fit."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#BiologicalFunctionCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Caring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "caring"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Jaworska: a package of motivation, affect, attention and emotion directed at someone's welfare; readable as a holistic theory of a subclass of desires."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#CaringTheory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#HolisticTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "caring theory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Not intended as a theory of desire, but readable as a holistic theory of the subclass of desires that constitute caring."
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#HolisticFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#AgnieszkaJaworska"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionDisposition"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#PleasureDisposition"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#ReasonsAttention"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#CausalRoleStateCategory"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#CarolynMorillo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Carolyn Morillo"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#CategorialStance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#CausalPriorityObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "causal priority of desire over pleasure"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "If desire satisfaction is the standard cause of pleasure, desire and pleasure are ontologically distinct as cause and effect."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#CausalRoleStateCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#CharacteristicMark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "characteristic mark of desire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An effect or disposition typically associated with desire. Each monofactorial theory elects exactly one as essential and treats the rest as contingent accompaniments."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ConditionalDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "conditional desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Hard case for content specification (McDaniel and Bradley 2008)."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Content",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "intentional content"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Craving",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "craving"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DavidLewis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "David Lewis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DavidPapineau",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "David Papineau"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DavidsonianInterpretationism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#HolisticTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Davidsonian interpretationism"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Desires as states of the whole organism, existing in virtue of interpretability."
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#HolisticFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#DonaldDavidson"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionDisposition"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#GoodBeliefDisposition"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#PleasureDisposition"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#ReasonsAttention"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#CausalRoleStateCategory"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DennisStampe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Dennis Stampe"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Desire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A conative mental state whose content specifies a satisfaction condition to be realized in the world. Deliberately underdetermined: the essential nature of desire is what the reified theories in this ontology disagree about."
+  } ],
+  "https://w3id.org/ontodesire#commitsToStructuralStance" : [ {
+    "@id" : "https://w3id.org/ontodesire#SingleBearer"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#StandingDesiresGenuine"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#UniversalWorldToMindFit"
+  } ],
+  "https://w3id.org/ontodesire#deliberatelyUncommittedOn" : [ {
+    "@id" : "https://w3id.org/ontodesire#FamilyAxis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DesireAsBeliefInGood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "desire as belief in the good"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "To desire p is to believe that p is good (or, in the contemporary variant, that one has normative reason to bring p about)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "The attribution to Socrates is a classical antecedent (the Socratic thesis that we desire the good), not a formulation of the analysis; the analysis is actively defended in the contemporary literature (Gregory, Desire as Belief, OUP 2021)."
+  } ],
+  "https://w3id.org/ontodesire#attributedTo" : [ {
+    "@id" : "https://w3id.org/ontodesire#Socrates"
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#GoodBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#AlexGregory"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#GoodBeliefDisposition"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#DoxasticStateCategory"
+  } ],
+  "https://w3id.org/ontodesire#suffersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#AnimalObjection"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#LewisDecisionTheoreticObjection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DesireAsPerceptionOfGood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "desire as perception of the good"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "To desire p is for p to appear good to the organism — a high-level perceptual state, distinct from judgment."
+  } ],
+  "https://w3id.org/ontodesire#answersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#LewisDecisionTheoreticObjection"
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#GoodBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#DennisStampe"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#GrahamOddie"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#GoodAppearanceDisposition"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#PerceptualStateCategory"
+  } ],
+  "https://w3id.org/ontodesire#suffersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#AnimalObjection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DesireStrength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "desire strength"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A continuous magnitude, canonically characterized by causal power over the control of action; each theory of desire induces its own corresponding metric."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Puzzle: manifestations of strength fluctuate (mood, fatigue, temporal distance) without the strength itself seeming to vary — an advantage of holistic and learning-based theories, which do not reduce strength to a single observable."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DirectedAttention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directed-attention theory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "To desire p is for the thought of p to keep occurring in a favourable light, with attention directed insistently toward considerations counting in favour of p."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Technically a sufficient condition rather than a full theory; fits occurrent desires best."
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#AttentionBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#TMScanlon"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#ReasonsAttention"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalProcessCategory"
+  } ],
+  "https://w3id.org/ontodesire#suffersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#NarrowAttentionObjection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DirectionOfFit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "direction of fit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Displeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "displeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DispositionCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DonaldDavidson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Donald Davidson"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DopaminergicRewardSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#NeuralRealizer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "dopaminergic reward system"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Common cause of action, pleasure and aspects of thought. Dispute: Morillo takes it to realize pleasure; Schroeder, to be one of its normal causes, its output being reward learning (cf. Berridge and Robinson 1998)."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DoubleFaultObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "double fault objection (Stampe)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Believing that serving just so will cause a double fault can dispose one to serve just so, without one desiring to double fault."
+  } ],
+  "https://w3id.org/ontodesire#raisedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#DennisStampe"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#DoxasticStateCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ElizabethAnscombe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "G. E. M. Anscombe"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#FirstOrderDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "first-order desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#SecondOrderDesire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A desire whose object is not itself a pro-attitude of the same bearer; carried by the absence of hasObjectAttitude (see module comment)."
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byOrder"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#FredDretske",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Fred Dretske"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#GFSchueler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "G. F. Schueler"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#GalenStrawson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Galen Strawson"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Goal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "goal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#GoodAppearanceDisposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "disposition for p to appear good (perceptually or quasi-perceptually)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#GoodBasedFamily",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#GoodBeliefDisposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "disposition to believe that p is good"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#GrahamOddie",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Graham Oddie"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#HarryFrankfurt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Harry Frankfurt"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#HedonicDispositional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hedonic dispositional theory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "To desire p is to be disposed to take pleasure in its seeming that p and displeasure in its seeming that not-p."
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#PleasureBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#GFSchueler"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#GalenStrawson"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#PleasureDisposition"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#OccurrentFeelingCategory"
+  } ],
+  "https://w3id.org/ontodesire#suffersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#CausalPriorityObjection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#HedonicNeural",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hedonic neural-identity theory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Pleasure episodes are identical to reward-system activity, and that activity does the work of desire; so desires are pleasure episodes."
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#PleasureBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#CarolynMorillo"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#PleasureDisposition"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#OccurrentAffectiveEpisodeCategory"
+  } ],
+  "https://w3id.org/ontodesire#locatesDesireIn" : [ {
+    "@id" : "https://w3id.org/ontodesire#DopaminergicRewardSystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#HolisticFamily",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#HolisticTheory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "holistic theory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#TheoryOfDesire"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid15"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Refuses to privilege any mark; having a desire is exhibiting enough (a vague threshold) of the whole set."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Human",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "human"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Bearer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Inclination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "inclination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Kantian term: a motive whose presence, for Kant, removes the moral praiseworthiness of an action."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#InformationAttention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "capture of attention by information bearing on whether p"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#InnateEndowment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#OriginMechanism"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "innate endowment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The psychological hedonist holds there is a single, innate intrinsic desire: for pleasure."
+  } ],
+  "https://w3id.org/ontodesire#generates" : [ {
+    "@id" : "https://w3id.org/ontodesire#IntrinsicDesire"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#InstrumentalDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "instrumental desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  }, {
+    "@id" : "_:genid19"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "extrinsic desire"
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byJustificatoryStructure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Intention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "intention"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#IntrinsicDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "intrinsic desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#MerelyInstrumentalDesire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A desire whose object is wanted at least partly for its own sake."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "NOT disjoint from InstrumentalDesire: the same desire can be partly for its own sake and partly as a means (Schroeder's father case)."
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byJustificatoryStructure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#JohnMcDowell",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "John McDowell"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#LearningBasedFamily",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#LearningMechanismCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#LewisDecisionTheoreticObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lewis's decision-theoretic objection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The Desire-as-Belief thesis generates inconsistencies within decision theory, given the differences between rational belief revision and rational motivation revision."
+  } ],
+  "https://w3id.org/ontodesire#raisedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#DavidLewis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#LewisianFunctionalism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#HolisticTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lewisian functionalism"
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#HolisticFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#DavidLewis"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionDisposition"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#GoodBeliefDisposition"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#InformationAttention"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#PleasureDisposition"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#ReasonsAttention"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#CausalRoleStateCategory"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MeansEndReasoning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#OriginMechanism"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "means-end reasoning"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Largely uncontroversial; the derived desire's strength grows with the intrinsic desire's strength and the apparent usefulness of the means."
+  } ],
+  "https://w3id.org/ontodesire#generates" : [ {
+    "@id" : "https://w3id.org/ontodesire#InstrumentalDesire"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#RealizerDesire"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MentalMomentCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MentalProcessCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MentalState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "mental state"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MerelyInstrumentalDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "merely instrumental desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#InstrumentalDesire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Desired only as a means, in no measure for its own sake. This is the usual reinforced sense of 'instrumental'."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MichaelSmith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Michael Smith"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MindToWorld",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#DirectionOfFit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "mind-to-world"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Analogous to the declarative sentence: satisfied if the state conforms to the world."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MonofactorialTheory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "monofactorial theory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#TheoryOfDesire"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid20"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Privileges exactly one characteristic mark as essential to desire."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#MotivatingGoodBeliefObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "motivating belief-in-good objection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Judgments of what is good or obligatory also dispose to action; action-based theories fail to distinguish desire from goodness judgment."
+  } ],
+  "https://w3id.org/ontodesire#raisedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#JohnMcDowell"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#TMScanlon"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#NarrowAttentionObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "narrow attentional focus objection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Desire directs attention also to information about p, to opportunities to obtain it, and to those discussing p — not only to reasons in favour of p."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#NeuralRealizer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "neural realizer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#NonHumanAnimal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "non-human animal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Bearer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Test case for good-based theories: the rat seems to desire escape from the cat without representing anything as good."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Nora",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Human"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nora"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ObjectContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ObjectContentItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "object (as content)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Content"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Non-propositional content, posited by those who deny that all desires are propositional attitudes (Thagard 2006)."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ObjectDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "desire for an object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  }, {
+    "@id" : "_:genid24"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#StateOfAffairsDesire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Minority view; faithful to ordinary talk and to animal desire."
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byContent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Objection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "objection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#OccurrentAffectiveEpisodeCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#OccurrentDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "occurrent desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#StandingDesire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A desire playing some role in the psyche at the moment — not necessarily in control of action, nor necessarily conscious."
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byManifestation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#OccurrentFeelingCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#OriginMechanism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "origin mechanism"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#PartitionCriterion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "partition criterion"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#PerceptualStateCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Philosopher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "philosopher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Pleasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pleasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#PleasureBasedFamily",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#PleasureDisposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "disposition to pleasure at its seeming that p, displeasure at its seeming that not-p"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Family-grain mark: the hedonic neural-identity theory reads it occurrently (desires ARE pleasure/reward episodes) rather than dispositionally, which is why the causal-priority objection targets only the dispositional variant. A dispositional/occurrent mark split, mirroring the good-based split, is a candidate refinement for the next version."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Preference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "preference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ProAttitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pro attitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The umbrella under which cognate conative states are grouped; whether they constitute one mental state or many is disputed."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Proposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "proposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#StateOfAffairs"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Subsuming propositions under states of affairs is a substantive simplification of the ontology of content (abstract truth-bearers vs. worldly truth-makers); it is declared below rather than made silently."
+  } ],
+  "https://w3id.org/ontodesire#commitsToStructuralStance" : [ {
+    "@id" : "https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#PropositionsAsStatesOfAffairs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Purpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "purpose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#RationalityAcquisition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#OriginMechanism"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "acquisition via reasoning about one's rationality"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Believing that, were one rational, one would desire p tends to generate an intrinsic desire for p; breaks with the Humean dictum that beliefs do not dictate intrinsic desire."
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#MichaelSmith"
+  } ],
+  "https://w3id.org/ontodesire#generates" : [ {
+    "@id" : "https://w3id.org/ontodesire#IntrinsicDesire"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#RealizerDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "realizer desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  }, {
+    "@id" : "_:genid26"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A desire for an end that would count as one possible realization of an intrinsic desire — a realization relation, not a means-end relation."
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byJustificatoryStructure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#ReasonsAttention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "disposition to have attention drawn to reasons in favour of p"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#RewardLearningDrive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "use of representations of p to drive reward-based learning"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#RewardLearningTheory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "reward-learning theory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "To desire p is to use representations of p to drive reward-based learning."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Treats desire as a natural kind; the least a priori credible of the listed theories."
+  } ],
+  "https://w3id.org/ontodesire#anticipatedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#FredDretske"
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#LearningBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#TimothySchroeder"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#RewardLearningDrive"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#LearningMechanismCategory"
+  } ],
+  "https://w3id.org/ontodesire#locatesDesireIn" : [ {
+    "@id" : "https://w3id.org/ontodesire#DopaminergicRewardSystem"
+  } ],
+  "https://w3id.org/ontodesire#suffersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#AprioriImplausibilityObjection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#RuthMillikan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Ruth Millikan"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#SecondOrderDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "second-order desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  }, {
+    "@id" : "_:genid27"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Frankfurt: the capacity to form them is what constitutes persons. Typically instrumental, though Lewis requires them intrinsic in valuing (Lewis, D. (1989). Dispositional theories of value. Proceedings of the Aristotelian Society, Supplementary Volume 63, 113-137)."
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byOrder"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#SimpleActionDispositional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "simple action-dispositional theory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "To desire p is to be disposed to act so as to bring about p."
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionDisposition"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#DispositionCategory"
+  } ],
+  "https://w3id.org/ontodesire#suffersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#BehavioralTicObjection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#SingleBearer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Socrates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Socrates"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#SophisticatedActionDispositional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "sophisticated action-dispositional theory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "To desire p is to be disposed to take whatever actions one believes are likely to bring about p."
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#MichaelSmith"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionDisposition"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#DispositionCategory"
+  } ],
+  "https://w3id.org/ontodesire#suffersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#DoubleFaultObjection"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#MotivatingGoodBeliefObjection"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#UnactionableDesiresObjection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#StandingDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "standing desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A desire playing no role in the psyche at the moment."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Some deny these are genuine desires, treating them as mere dispositions to generate occurrent desires."
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byManifestation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#StandingDesiresGenuine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#StateOfAffairs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "state of affairs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Content"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#StateOfAffairsContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#StateOfAffairsDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "desire for a state of affairs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  }, {
+    "@id" : "_:genid28"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Majority view: desires are propositional attitudes; enables logical relations among the contents of beliefs, desires and intentions."
+  } ],
+  "https://w3id.org/ontodesire#partitionedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#byContent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#TMScanlon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "T. M. Scanlon"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Teleofunctional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#MonofactorialTheory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "teleofunctional action theory"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Desires are states whose function is to produce actions, whether or not they actually dispose the agent."
+  } ],
+  "https://w3id.org/ontodesire#answersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#DoubleFaultObjection"
+  } ],
+  "https://w3id.org/ontodesire#belongsToFamily" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionBasedFamily"
+  } ],
+  "https://w3id.org/ontodesire#defendedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#DavidPapineau"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#RuthMillikan"
+  } ],
+  "https://w3id.org/ontodesire#identifiesDesireWith" : [ {
+    "@id" : "https://w3id.org/ontodesire#ActionProductionFunction"
+  } ],
+  "https://w3id.org/ontodesire#impliesCategory" : [ {
+    "@id" : "https://w3id.org/ontodesire#BiologicalFunctionCategory"
+  } ],
+  "https://w3id.org/ontodesire#suffersObjection" : [ {
+    "@id" : "https://w3id.org/ontodesire#MotivatingGoodBeliefObjection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#TheoryFamily",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#TheoryOfDesire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#TimothySchroeder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Timothy Schroeder"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#UnactionableDesiresObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "unactionable desires objection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Too restrictive: desiring that pi be rational, or never to have been born, does not seem to exist in virtue of dispositions to act."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#UniversalWorldToMindFit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#Wish",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "wish"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Theoretical resource of action-based theories for accommodating 'desires' that action cannot satisfy (e.g. that pi be rational)."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#WorldToMind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#DirectionOfFit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "world-to-mind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Analogous to the imperative sentence: satisfied if the world comes to conform to the state."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#answersObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "answers objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#anticipatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "anticipated by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#attributedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "attributed to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#belongsToFamily",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#TheoryOfDesire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belongs to family"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#TheoryFamily"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#byContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#PartitionCriterion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "by content kind"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#byJustificatoryStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#PartitionCriterion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "by justificatory structure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#byManifestation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#PartitionCriterion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "by mode of manifestation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#byOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#PartitionCriterion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "by order"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#commitmentEvidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#commitmentNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#commitsToStructuralStance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#defendedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "defended by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#deliberatelyUncommittedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#generates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "generates"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Annotates an origin mechanism with the desire classes (by justificatory structure) whose instances it typically generates."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#hasBearer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has bearer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Bearer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#hasContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has content"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Content"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#hasDirectionOfFit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#MentalState"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has direction of fit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#DirectionOfFit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#hasObjectAttitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has as object (a lower-order attitude)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#hasStrength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has strength"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#DesireStrength"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#identifiesDesireWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#TheoryOfDesire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifies desire with"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#CharacteristicMark"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#impliesCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#TheoryOfDesire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "implies ontological category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#CategorialStance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a theory to the ontological category that desire would fall under if the theory were true. The theories disagree about category, not only about essence."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#isConscious",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is conscious"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Contested: some hold every occurrent desire is an element of conscious life; against this, the direction of fit of desire has been argued incompatible with that of elements of consciousness (Hulse, Read and Schroeder 2004)."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#isInnate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is innate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#isMeansTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is means to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#isSatisfied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is satisfied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#isSatisfiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#ProAttitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is satisfied by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#StateOfAffairs"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "For desires, satisfaction is the actual realization of the state of affairs, not the belief that it obtained."
+  } ],
+  "https://w3id.org/ontodesire#commitsToStructuralStance" : [ {
+    "@id" : "https://w3id.org/ontodesire#SatisfactionByStatesOfAffairs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#locatesDesireIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#TheoryOfDesire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "locates desire in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#NeuralRealizer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#noraDrinksTeaSoon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Proposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nora drinks a cup of tea soon"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The disambiguation among possessing/drinking and soon/someday is what motivates treating desires as propositional attitudes."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#noraTriesNewTeas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#Proposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nora tries teas she has not tried before"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#norasDesireForTea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#FirstOrderDesire"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#OccurrentDesire"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#StateOfAffairsDesire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nora's desire for tea"
+  } ],
+  "https://w3id.org/ontodesire#hasBearer" : [ {
+    "@id" : "https://w3id.org/ontodesire#Nora"
+  } ],
+  "https://w3id.org/ontodesire#hasContent" : [ {
+    "@id" : "https://w3id.org/ontodesire#noraDrinksTeaSoon"
+  } ],
+  "https://w3id.org/ontodesire#hasStrength" : [ {
+    "@id" : "https://w3id.org/ontodesire#norasTeaDesireStrength"
+  } ],
+  "https://w3id.org/ontodesire#isSatisfiedBy" : [ {
+    "@id" : "https://w3id.org/ontodesire#noraDrinksTeaSoon"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#norasStandingDesireForNewTeas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#IntrinsicDesire"
+  }, {
+    "@id" : "https://w3id.org/ontodesire#StandingDesire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nora's standing desire to try new teas"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "Example of the explanatory role of standing desires: explains why the new tin captures her attention and why she is delighted. No strength individual is asserted: under v0.3.0's max-1 axiom a desire need not carry a determinate cardinal strength."
+  } ],
+  "https://w3id.org/ontodesire#hasBearer" : [ {
+    "@id" : "https://w3id.org/ontodesire#Nora"
+  } ],
+  "https://w3id.org/ontodesire#hasContent" : [ {
+    "@id" : "https://w3id.org/ontodesire#noraTriesNewTeas"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#norasTeaDesireStrength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontodesire#DesireStrength"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#partitionedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "partitioned by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Annotates a subclass of Desire with the orthogonal criterion that generates it, so that the four facets are not mistaken for a single tree."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#preferredTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "preferred to"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#raisedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "raised by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Philosopher"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#realizes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#RealizerDesire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "realizes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#IntrinsicDesire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Distinct from isMeansTo: the realizer is an instance of the end, not a means of reaching it."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#strengthDegree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#DesireStrength"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "strength degree"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#strongerThan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "stronger than"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Desire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "D1 is stronger than D2 iff the agent is disposed to act on D1 when: all else is equal, each desire is believed satisfiable by a distinct action, and they are believed not jointly satisfiable."
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontodesire#suffersObjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "suffers objection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontodesire#Objection"
+  } ]
+} ]
