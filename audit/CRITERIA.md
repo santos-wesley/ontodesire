@@ -82,11 +82,13 @@ the sharpest form of the transparency gap OntoDesire addresses.
 
 ## Validation status and maintainer engagement
 
-The coding was performed by the resource authors. As external validation,
-each reconstruction is submitted to the source project's issue tracker
-(drafts in `audit/issue-drafts/`); maintainer responses
-(confirmed / contested / no response) will be recorded in
-`odsr:commitmentNote` in subsequent releases.
+The coding was performed by the resource author, so it carries the bias of a
+single interpreter. As external validation, each reconstruction is being
+filed with the source project's issue tracker (texts in
+`audit/issue-drafts/`); maintainer responses (confirmed / contested / no
+response) will be recorded in `odsr:commitmentNote` in subsequent releases.
+Until those responses arrive, every coding here should be read as a
+documented reconstruction open to correction, not as a settled attribution.
 
 ## v0.2.0 → v0.3.0 recoding log
 
