@@ -3,16 +3,16 @@
 
 **Title**: Theoretical commitments of `feeling of desire` (MFOEM:000220) — external audit, request for confirmation
 
-Hello — as part of OntoDesire (https://github.com/santos-wesley/ontodesire), a resource for
+Hello. As part of OntoDesire (https://github.com/santos-wesley/ontodesire), a resource for
 declaring theoretical commitments about desire, we audited how existing
 ontologies represent desire and cognate states. We reconstructed the
 following for MFOEM:000220 (*feeling of desire*), version 2025-07-31, and
 would value your confirmation or correction:
 
-1. **Content stance**: desires-are-for-states-of-affairs — grounded in the
+1. **Content stance**: desires-are-for-states-of-affairs, grounded in the
    definition "A subjective affective feeling that involves attraction to an
    imagined state of affairs."
-2. **Categorial stance**: occurrent affective episode — the term is itself a
+2. **Categorial stance**: occurrent affective episode, since the term is itself a
    feeling.
 3. **Essence-level theory**: we coded this **not attributable**: the
    definition characterizes the *feeling of* desire rather than desire, which
@@ -31,5 +31,5 @@ https://github.com/santos-wesley/ontodesire/blob/main/audit/CRITERIA.md and comm
 be recorded (confirmed / contested) in the audit's next release.
 
 Note: since v0.3.0 the vocabulary also lets a source declare *neutrality*
-in one triple — ex: `obo:MFOEM_000220 odsr:deliberatelyUncommittedOn odsr:FamilyAxis .`
-— so 'we take no position' is itself a declarable, queryable outcome.
+in one triple: `obo:MFOEM_000220 odsr:deliberatelyUncommittedOn odsr:FamilyAxis .`
+So 'we take no position' is itself a declarable, queryable outcome.
